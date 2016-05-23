@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetInventoryItemsListInCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemsListInCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemsListInCSVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CPagingInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TotalPage" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="PageIndex" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxRow" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SortColumn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SortType" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalRows" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CObjectBase" />
+      <s:complexType name="CItems">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemTypeID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="GroupID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SalePrice" type="s:double" />
+              <s:element minOccurs="0" maxOccurs="1" name="CostMethod" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreditAccount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="DebitAccount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="UnitID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryItemsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemsListResult" type="tns:ArrayOfCItems" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCItems">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CItems" nillable="true" type="tns:CItems" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetInventoryItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemResult" type="tns:CItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInventoryItemResult" type="tns:CApplicationMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CApplicationMessage">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryItemGroupListInCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemGroupListInCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemGroupListInCSVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemGroupList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemGroupListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemGroupListResult" type="tns:ArrayOfCItemGroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCItemGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CItemGroup" nillable="true" type="tns:CItemGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CItemGroup">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryItemGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryItemGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryItemGroupResult" type="tns:CItemGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryItemGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryItemGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInventoryItemGroupResult" type="tns:CApplicationMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryStockListInCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryStockListInCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryStockListInCSVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryStockList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryStockListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryStockListResult" type="tns:ArrayOfCStock" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCStock">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CStock" nillable="true" type="tns:CStock" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CStock">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentID" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryStockResult" type="tns:CStock" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInventoryStockResult" type="tns:CApplicationMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryTaxListInCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryTaxListInCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryTaxListInCSVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryTaxList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryTaxListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryTaxListResult" type="tns:ArrayOfCTax" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCTax">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CTax" nillable="true" type="tns:CTax" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CTax">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Percent" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastUpdatedDateTime" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryTax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryTaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryTaxResult" type="tns:CTax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryTax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryTaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInventoryTaxResult" type="tns:CApplicationMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryUnitListInCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryUnitListInCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryUnitListInCSVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryUnitList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryUnitListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryUnitListResult" type="tns:ArrayOfCUnit" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageInfo" type="tns:CPagingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCUnit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CUnit" nillable="true" type="tns:CUnit" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CUnit">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CObjectBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedBy" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUpdatedDateTime" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInventoryUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInventoryUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInventoryUnitResult" type="tns:CUnit" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInventoryUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInventoryUnitResult" type="tns:CApplicationMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetInventoryItemsListInCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemsListInCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemsListInCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemsListInCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemsList" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItem" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryItemSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryItem" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryItemSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupListInCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroupListInCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupListInCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroupListInCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroupList" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryItemGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryItemGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryItemGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryItemGroup" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryItemGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryItemGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockListInCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryStockListInCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockListInCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryStockListInCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryStockList" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryStockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryStock" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryStockSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryStockSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryStock" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryStockSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxListInCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryTaxListInCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxListInCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryTaxListInCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryTaxList" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryTaxListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryTax" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryTaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryTaxSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryTax" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryTaxSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitListInCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnitListInCSV" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitListInCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnitListInCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnitList" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnitListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnit" />
+  </wsdl:message>
+  <wsdl:message name="GetInventoryUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInventoryUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryUnit" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInventoryUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryUnitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InventoryServiceSoap">
+    <wsdl:operation name="GetInventoryItemsListInCSV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemsListInCSVSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemsListInCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemsList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemsListSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItem">
+      <wsdl:input message="tns:UpdateInventoryItemSoapIn" />
+      <wsdl:output message="tns:UpdateInventoryItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupListInCSV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemGroupListInCSVSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemGroupListInCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemGroupListSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemGroupListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryItemGroupSoapIn" />
+      <wsdl:output message="tns:GetInventoryItemGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItemGroup">
+      <wsdl:input message="tns:UpdateInventoryItemGroupSoapIn" />
+      <wsdl:output message="tns:UpdateInventoryItemGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockListInCSV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryStockListInCSVSoapIn" />
+      <wsdl:output message="tns:GetInventoryStockListInCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryStockListSoapIn" />
+      <wsdl:output message="tns:GetInventoryStockListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryStockSoapIn" />
+      <wsdl:output message="tns:GetInventoryStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryStock">
+      <wsdl:input message="tns:UpdateInventoryStockSoapIn" />
+      <wsdl:output message="tns:UpdateInventoryStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxListInCSV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryTaxListInCSVSoapIn" />
+      <wsdl:output message="tns:GetInventoryTaxListInCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryTaxListSoapIn" />
+      <wsdl:output message="tns:GetInventoryTaxListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTax">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryTaxSoapIn" />
+      <wsdl:output message="tns:GetInventoryTaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryTax">
+      <wsdl:input message="tns:UpdateInventoryTaxSoapIn" />
+      <wsdl:output message="tns:UpdateInventoryTaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitListInCSV">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" Code="SearchCode" Name ="SearchName"/&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryUnitListInCSVSoapIn" />
+      <wsdl:output message="tns:GetInventoryUnitListInCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" Code="SearchCode" Name ="SearchName" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryUnitListSoapIn" />
+      <wsdl:output message="tns:GetInventoryUnitListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">InputValue=&amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" /&amp;gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetInventoryUnitSoapIn" />
+      <wsdl:output message="tns:GetInventoryUnitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryUnit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert And Update Inventory Unit
+ InputValue: &amp;lt;InputValue UserID="1" Session="ED45A7F1-9FB8-4D82-9D48-1B2238DC666C" ID="1" Code="abc" .... &amp;gt; </wsdl:documentation>
+      <wsdl:input message="tns:UpdateInventoryUnitSoapIn" />
+      <wsdl:output message="tns:UpdateInventoryUnitSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InventoryServiceSoap" type="tns:InventoryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInventoryItemsListInCSV">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItemsListInCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemsList">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItemsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItem">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItem">
+      <soap:operation soapAction="http://tempuri.org/UpdateInventoryItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupListInCSV">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItemGroupListInCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupList">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItemGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroup">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryItemGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItemGroup">
+      <soap:operation soapAction="http://tempuri.org/UpdateInventoryItemGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockListInCSV">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryStockListInCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockList">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryStockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStock">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryStock">
+      <soap:operation soapAction="http://tempuri.org/UpdateInventoryStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxListInCSV">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryTaxListInCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxList">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryTaxList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTax">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryTax">
+      <soap:operation soapAction="http://tempuri.org/UpdateInventoryTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitListInCSV">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryUnitListInCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitList">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryUnitList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnit">
+      <soap:operation soapAction="http://tempuri.org/GetInventoryUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryUnit">
+      <soap:operation soapAction="http://tempuri.org/UpdateInventoryUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InventoryServiceSoap12" type="tns:InventoryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInventoryItemsListInCSV">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItemsListInCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemsList">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItemsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItem">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItem">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInventoryItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupListInCSV">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItemGroupListInCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroupList">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItemGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryItemGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryItemGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryItemGroup">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInventoryItemGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockListInCSV">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryStockListInCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStockList">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryStockList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryStock">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryStock">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInventoryStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxListInCSV">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryTaxListInCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTaxList">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryTaxList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTax">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryTax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryTax">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInventoryTax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitListInCSV">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryUnitListInCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnitList">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryUnitList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryUnit">
+      <soap12:operation soapAction="http://tempuri.org/GetInventoryUnit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryUnit">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInventoryUnit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryService">
+    <wsdl:port name="InventoryServiceSoap" binding="tns:InventoryServiceSoap">
+      <soap:address location="http://localhost:10616/Inventory/InventoryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InventoryServiceSoap12" binding="tns:InventoryServiceSoap12">
+      <soap12:address location="http://localhost:10616/Inventory/InventoryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
