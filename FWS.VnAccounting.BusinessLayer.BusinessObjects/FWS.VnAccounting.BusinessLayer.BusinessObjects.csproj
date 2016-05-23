@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EE8F701-29D0-493B-9E26-A7C2EC45FA50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.VnAccounting.BusinessLayer.BusinessObjects</RootNamespace>
+    <AssemblyName>FWS.VnAccounting.BusinessLayer.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\Dll\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AP\CVendor.cs" />
+    <Compile Include="AP\CVendorGroup.cs" />
+    <Compile Include="AR\CCustomer.cs" />
+    <Compile Include="AR\CCustomerGroup.cs" />
+    <Compile Include="Asset\CAsset.cs" />
+    <Compile Include="Asset\CTransactions.cs" />
+    <Compile Include="Base\CObjectBase.cs" />
+    <Compile Include="Cash\CCurrency.cs" />
+    <Compile Include="Cash\CExchangeRate.cs" />
+    <Compile Include="Core\CApplication.cs" />
+    <Compile Include="Core\CApplicationMessage.cs" />
+    <Compile Include="Core\CCClientGroupConfig.cs" />
+    <Compile Include="Core\CClientGroup.cs" />
+    <Compile Include="Core\CControl.cs" />
+    <Compile Include="Core\CControlData.cs" />
+    <Compile Include="Core\CDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\CDesignParameter.cs" />
+    <Compile Include="Core\CGridColumnConfig.cs" />
+    <Compile Include="Core\CGridConfig.cs" />
+    <Compile Include="Core\CGroupBase.cs" />
+    <Compile Include="Core\CIntdefination.cs" />
+    <Compile Include="Core\CInterfaceFunction.cs" />
+    <Compile Include="Core\CItem.cs" />
+    <Compile Include="Core\CLanguage.cs" />
+    <Compile Include="Core\CModule.cs" />
+    <Compile Include="Core\COutputValue.cs" />
+    <Compile Include="Core\CPagingInfo.cs" />
+    <Compile Include="Core\CPerson.cs" />
+    <Compile Include="Core\CPersonRole.cs" />
+    <Compile Include="Core\CRefNo.cs" />
+    <Compile Include="Core\CResource.cs" />
+    <Compile Include="Core\CUserGroup.cs" />
+    <Compile Include="Core\CUserList.cs" />
+    <Compile Include="Core\CViewList.cs" />
+    <Compile Include="GeneralLedger\CRefType.cs" />
+    <Compile Include="GeneralLedger\CTransaction.cs" />
+    <Compile Include="GeneralLedger\CTransactionDetail.cs" />
+    <Compile Include="GeneralLedger\CAccountList.cs" />
+    <Compile Include="GeneralLedger\CEmployee.cs" />
+    <Compile Include="GeneralLedger\CTransactionAccountDetail.cs" />
+    <Compile Include="Inventory\CActiveIngredient.cs" />
+    <Compile Include="Inventory\CCostMethod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CInventoryBase.cs" />
+    <Compile Include="Inventory\CInward.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CInwardDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CItemGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CItemType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\COutward.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\COutwardDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CStock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CTax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Inventory\CTransactionsStock.cs" />
+    <Compile Include="Inventory\CTransactionsStockDetails.cs" />
+    <Compile Include="Inventory\CUnit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nippon\CProjectTracking.cs" />
+    <Compile Include="Nippon\CProjectTrackingDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\CReportList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
