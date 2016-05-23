@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C02FD87-FCC3-4CF4-95B1-383A7D82CA84}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.VnAccounting.Service.Data</RootNamespace>
+    <AssemblyName>FWS.VnAccounting.Service.Data</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AP\VendorService.asmx" />
+    <Content Include="AR\CustomerService.asmx" />
+    <Content Include="Asset\AssetService.asmx" />
+    <Content Include="Asset\Class\EmailTemplate_GuiCongAn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Class\EmailTemplate_GuiGCNKhachHang.txt" />
+    <Content Include="Asset\Class\EmailTemplate_GuiHaNoi_TBHuy.txt" />
+    <Content Include="Asset\Class\EmailTemplate_GuiHaNoi_TBNhacNo.txt" />
+    <Content Include="Asset\Class\EmailTemplate_GuiKhachHang.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Class\EmailTemplate_GuiKhachHang_TBPhi.txt" />
+    <Content Include="Asset\Class\EmailTemplate_PhanHoiCapNhat.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Class\EmailTemplate_PhanHoiTuChoi.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Class\ReadMe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Base\BaseService.asmx" />
+    <Content Include="Cash\CashService.asmx" />
+    <Content Include="Cash\CurrencyService.asmx" />
+    <Content Include="Core\CoreService.asmx" />
+    <Content Include="Documents\Document.htm" />
+    <Content Include="GeneralLedger\GeneralLedgerService.asmx" />
+    <Content Include="Global.asax" />
+    <Content Include="Inventory\InventoryService.asmx" />
+    <Content Include="Nippon\TrackingService.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AP\Class\CVendorService.cs" />
+    <Compile Include="AP\VendorService.asmx.cs">
+      <DependentUpon>VendorService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AR\Class\CCustomerService.cs" />
+    <Compile Include="AR\CustomerService.asmx.cs">
+      <DependentUpon>CustomerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Asset\AssetService.asmx.cs">
+      <DependentUpon>AssetService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Asset\Class\CAssetService.cs" />
+    <Compile Include="Asset\Class\CMessageToCustomer.cs" />
+    <Compile Include="Base\BaseService.asmx.cs">
+      <DependentUpon>BaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Class\CGroupBaseService.cs" />
+    <Compile Include="Cash\CashService.asmx.cs">
+      <DependentUpon>CashService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cash\Class\CCurrencyService.cs" />
+    <Compile Include="Cash\CurrencyService.asmx.cs">
+      <DependentUpon>CurrencyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Class\CApplicationService.cs" />
+    <Compile Include="Core\Class\CClientGroupService.cs" />
+    <Compile Include="Core\Class\CControlService.cs" />
+    <Compile Include="Core\Class\CCoreService.cs" />
+    <Compile Include="Core\Class\CGridService.cs" />
+    <Compile Include="Core\Class\CIntDefinationService.cs" />
+    <Compile Include="Core\Class\CLanguageService.cs" />
+    <Compile Include="Core\Class\CModuleService.cs" />
+    <Compile Include="Core\Class\CInterfaceFunctionService.cs" />
+    <Compile Include="Core\Class\CItemService.cs" />
+    <Compile Include="Core\Class\CPersonService.cs" />
+    <Compile Include="Core\Class\CRefNoService.cs" />
+    <Compile Include="Core\Class\CUserGroupService.cs" />
+    <Compile Include="Core\Class\CUserService.cs" />
+    <Compile Include="Core\Class\CViewService.cs" />
+    <Compile Include="Core\CoreService.asmx.cs">
+      <DependentUpon>CoreService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeneralLedger\Class\CAccountListService.cs" />
+    <Compile Include="GeneralLedger\Class\CEmployeeService.cs" />
+    <Compile Include="GeneralLedger\Class\CRefTypeService.cs" />
+    <Compile Include="GeneralLedger\Class\CTrasactionService.cs" />
+    <Compile Include="GeneralLedger\GeneralLedgerService.asmx.cs">
+      <DependentUpon>GeneralLedgerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Nippon\TrackingService.asmx.cs">
+      <DependentUpon>TrackingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CXML.cs" />
+    <Compile Include="Inventory\Class\CCostMethodService.cs" />
+    <Compile Include="Inventory\Class\CItemService.cs" />
+    <Compile Include="Inventory\Class\CItemTypeService.cs" />
+    <Compile Include="Inventory\Class\CInwardService.cs" />
+    <Compile Include="Inventory\Class\COutwardService.cs" />
+    <Compile Include="Inventory\Class\CStockService.cs" />
+    <Compile Include="Inventory\Class\CTaxService.cs" />
+    <Compile Include="Inventory\Class\CTransferService.cs.cs" />
+    <Compile Include="Inventory\Class\CUnitService.cs" />
+    <Compile Include="Inventory\InventoryService.asmx.cs">
+      <DependentUpon>InventoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_WebServiceReference\CServiceReference.cs" />
+    <Compile Include="_WebServiceReference\Soap\CCallcenter.cs" />
+    <Compile Include="_WebServiceReference\Soap\CReportService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Nippon\Class\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FWS.Framework\FWS.Framework.csproj">
+      <Project>{E411581A-01C2-44B3-A120-B706A0409076}</Project>
+      <Name>FWS.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.VnAccounting.BusinessLayer.BusinessObjects\FWS.VnAccounting.BusinessLayer.BusinessObjects.csproj">
+      <Project>{8EE8F701-29D0-493B-9E26-A7C2EC45FA50}</Project>
+      <Name>FWS.VnAccounting.BusinessLayer.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.VnAccounting.DataLayer.DataObjects\FWS.VnAccounting.DataLayer.DataObjects.csproj">
+      <Project>{44C8AA7C-076A-4084-85E3-3AA6D07B4979}</Project>
+      <Name>FWS.VnAccounting.DataLayer.DataObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Process of Sale Module.vsd" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10616</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
