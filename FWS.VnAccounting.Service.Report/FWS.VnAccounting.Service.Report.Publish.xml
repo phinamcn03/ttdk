@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\DEVELOP\Build\vtnt.Service.Report" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="04/27/2014 12:56:04" />
+    <file relUrl="bin/FWS.VnAccounting.DataLayer.DataObjects.pdb" publishTime="04/27/2014 12:55:54" />
+    <file relUrl="bin/FWS.Framework.pdb" publishTime="04/27/2014 12:55:53" />
+    <file relUrl="bin/FWS.VnAccounting.BusinessLayer.BusinessObjects.dll" publishTime="04/27/2014 12:55:53" />
+    <file relUrl="Service/ReportService.asmx" publishTime="10/11/2013 22:23:04" />
+    <file relUrl="bin/FWS.VnAccounting.DataLayer.DataObjects.dll" publishTime="04/27/2014 12:55:54" />
+    <file relUrl="bin/Newtonsoft.Json.Net20.dll" publishTime="03/02/2012 09:33:17" />
+    <file relUrl="bin/FWS.VnAccounting.Service.Report.dll" publishTime="04/27/2014 12:55:55" />
+    <file relUrl="bin/FWS.Framework.dll" publishTime="04/27/2014 12:55:53" />
+    <file relUrl="bin/FWS.VnAccounting.BusinessLayer.BusinessObjects.pdb" publishTime="04/27/2014 12:55:53" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="10/11/2013 22:22:48" />
+    <file relUrl="Images/Note.txt" publishTime="10/11/2013 22:23:04" />
+    <file relUrl="bin/FWS.VnAccounting.Service.Report.pdb" publishTime="04/27/2014 12:55:55" />
+  </publishProfile>
+</publishData>
