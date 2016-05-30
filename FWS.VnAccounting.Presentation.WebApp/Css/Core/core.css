@@ -1,0 +1,916 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    font-family: Arial,Verdana,Tahoma;
+    font-size: 11px;
+}
+*
+{
+    outline: none !important;
+}
+.clear
+{
+    clear: both;
+}
+.left
+{
+    text-align: left;
+}
+.right
+{
+    text-align: right;
+}
+.fleft
+{
+    float: left;
+}
+#Header-Logo
+{
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(img.core/logo-bg.png) repeat-y;
+    line-height: 50px;
+}
+#Header-Description
+{
+    background: url(img.core/header-background.png) top left repeat-x;
+    color: white;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.5px;
+    text-shadow: #333 0 1px 0;
+}
+#Header-Description-Corner
+{
+    float: right;
+}
+#Header-Description-Corner p
+{
+    background: url("img.core/top-sep-a.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 34px;
+    margin: 0;
+    padding: 0 0 0 2px;
+}
+#Header-Description-Corner p a
+{
+    background: url("img.core/top-logout-a.png") repeat-x scroll 0 0 transparent;
+    float: left;
+    font-size: 1em;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#Header-Description-Corner p a img
+{
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+#Header-Description-Corner ul.corner-tools
+{
+    background: url("img.core/top-sep-a.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    font-size: 1em;
+    height: 34px;
+    line-height: 33px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 0 0 2px;
+    text-transform: uppercase;
+}
+#Header-Description-Corner ul.corner-tools, #Accounting-Logout
+{
+    display: none;
+}
+#Header-Description-Corner ul.corner-tools li
+{
+    float: left;
+    position: relative;
+}
+#Header-Description-Corner ul.corner-tools li a
+{
+    background: url("img.core/top-tools-a.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    font-size: 1em;
+    height: 34px;
+    overflow: hidden;
+    text-indent: -10001px;
+    width: 26px;
+}
+#Header-Description-Corner ul.corner-tools li a.tools-home
+{
+    background-position: -22px 0;
+}
+#Header-Description-Corner ul.corner-tools li a.tools-preferences
+{
+    background-position: -70px 0;
+}
+#Header-Description-Corner ul.corner-tools li a.tools-info
+{
+    background-position: -118px 0;
+}
+#Header-Description-Corner ul.corner-tools li a.tools-help
+{
+    background-position: -94px 0;
+}
+#Header-Description-Corner ul.corner-tools li a.tools-cache
+{
+    background: url("img.core/clear_cache.png") no-repeat scroll 0 0 transparent;
+}
+.Layout-Navigation
+{
+    clear: both;
+    overflow: hidden;
+    height: 34px;
+    background: url(img.core/nav-bg-a.png) repeat-x;
+}
+#Accordion-Menu
+{
+    background: #5A5858;
+}
+#Accordion-Menu ul.tree li
+{
+    color: #fff;
+    border-bottom: solid 1px #676565;
+}
+#Accordion-Menu ul.tree li .tree-node:hover
+{
+    cursor: pointer;
+    color: #15428B;
+    background-color: #FBEC88;
+}
+#Navigation
+{
+    clear: both;
+    overflow: hidden;
+    height: 34px;
+    background: url(img.core/nav-bg-a.png) repeat-x;
+}
+#Navigation ul
+{
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 6px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#Navigation ul li
+{
+    overflow: hidden;
+    float: left;
+    margin: 0 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#Navigation ul li a
+{
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 0 0 0 3px;
+    background: url(img.core/nav-items-a.png) no-repeat;
+    color: #EEE;
+    text-shadow: #222 0 1px 0;
+}
+#Navigation ul li a span
+{
+    display: block;
+    float: left;
+    min-width: 60px;
+    height: 23px;
+    padding: 0 9px 0 6px;
+    background: url(img.core/nav-items-a.png) 100% 0 no-repeat;
+    line-height: 22px;
+}
+#Navigation ul li a:hover, #Navigation ul li a:focus, #Navigation ul li a.active
+{
+    background-position: 0 -23px;
+    color: #fff;
+}
+
+#Navigation ul li a:hover span, #Navigation ul li a:focus span, #Navigation ul li a.active span
+{
+    background-position: 100% -23px;
+}
+#MainTitle
+{
+    padding: 5px;
+    font-size: 20px;
+    color: #3a3a3a;
+    letter-spacing: 1px;
+    border-bottom: 0px inset #999;
+}
+#MainContent, .MainContent
+{
+    height: 100%;
+    width: 100%;
+}
+#ContentCoreMain-Layout > .layout-panel-west > .layout-body > .panel-header
+{
+    position: absolute;
+    background: transparent;
+    z-index: 99;
+    width: 12px !important;
+    height: 12px;
+    right: 0;
+    border: 0;
+}
+#ContentCoreMain-Layout > .layout-panel-west > .layout-body > .panel-header .panel-title
+{
+    display: none;
+}
+#Accordion-Menu .panel .accordion-header .panel-tool .accordion-collapse
+{
+    display: none;
+}
+
+#ContentCoreMain-Layout > .layout-panel-center > .panel-header
+{
+    height: 11px;
+    line-height: 11px;
+}
+/* FORM */
+
+fieldset.border-layout-form
+{
+    padding-bottom: 5px;
+}
+fieldset.border-layout-form > div
+{
+    overflow: hidden;
+    padding: 5px 5px 0px 5px;
+    clear: both;
+}
+fieldset.border-layout-form > div > label
+{
+    width: 100px;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+fieldset.border-layout-form > div input[type=text], fieldset.border-layout-form > div select, fieldset.border-layout-form > div input[type=password], fieldset.border-layout-form > div textarea
+{
+    width: 370px;
+    display: inline-block;
+    float: left;
+}
+
+fieldset.border-layout-form .combo.datebox
+{
+    float: left;
+}
+.border-layout-form-action
+{
+    text-align: right;
+    padding: 5px 10px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+fieldset.border-layout-form.form-login
+{
+}
+.img-login
+{
+    width: 150px;
+    height: 155px;
+    background: transparent url(img.core/img-login.jpg) no-repeat;
+}
+fieldset.border-layout-form.form-login > div input[type=text], fieldset.border-layout-form.form-login > div select, fieldset.border-layout-form.form-login > div input[type=password], fieldset.border-layout-form.form-login > div textarea
+{
+    width: 150px;
+}
+/* Sub Form */
+fieldset.border-layout-subform > div
+{
+    overflow: hidden;
+    padding: 5px 5px 0px 5px;
+    clear: both;
+}
+fieldset.border-layout-form > div input[type=checkbox]
+{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    margin-top: 5px;
+}
+fieldset.border-layout-subform input[type=text], fieldset.border-layout-subform select, fieldset.border-layout-subform > div input[type=password], fieldset.border-layout-subform > div textarea
+{
+    width: 150px;
+    display: inline-block;
+    float: left;
+}
+fieldset.border-layout-subform > div > label
+{
+    width: 100px;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* Border Layout */
+.border-layout
+{
+}
+/* fieldset chuc nang */
+fieldset.border-layout-functions
+{
+    height: 23px;
+    padding: 2px;
+    padding-left: 5px;
+    border-bottom: solid 0px #999;
+    box-shadow: 0 2px 5px #999;
+    margin-bottom: 1px;
+    background: url('img.core/separator_bar.png') no-repeat 2px center;
+}
+fieldset.border-layout-functions legend
+{
+    display: none;
+}
+fieldset.border-layout-functions > a
+{
+}
+/* fieldset tim kiem */
+fieldset.border-layout-search
+{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    margin-top: 0px;
+}
+
+fieldset.border-layout-search legend
+{
+    display: none;
+}
+fieldset.border-layout-search > input
+{
+    margin-right: 10px;
+}
+fieldset.border-layout-search .border-layout-search-content
+{
+    padding: 5px;
+    padding-left: 8px;
+    background: #E8E8E8 url(img.core/bg_search.png) center;
+    box-shadow: 0 5px 5px #999;
+    display: none;
+}
+fieldset.border-layout-search .border-layout-search-bar
+{
+    border-top: 0;
+    cursor: pointer;
+}
+.border-layout-search-bar .border-layout-search-bar-icon
+{
+    display: inline-block;
+    width: 42px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: -131px 0px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.border-layout-search-bar .border-layout-search-bar-icon.search-bar-icon-up
+{
+    background-image: url('img.core/search-bar-close.png');
+}
+.border-layout-search-bar .border-layout-search-bar-icon.search-bar-icon-down
+{
+    background-image: url('img.core/search-bar-open.png');
+}
+.border-layout-search-bar .border-layout-search-bar-icon:hover
+{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+fieldset.border-layout-search.relative
+{
+    position: relative;
+}
+fieldset.border-layout-search.relative .border-layout-search-content
+{
+    display: block;
+}
+fieldset.border-layout-search.relative .border-layout-search-bar
+{
+    display: none;
+}
+.border-layout-search-code
+{
+    width: 80px;
+}
+.border-layout-search-name
+{
+    width: 200px;
+}
+.border-layout-search-group
+{
+    width: 80px;
+}
+
+/* fieldset Luoi */
+fieldset.border-layout-list
+{
+    padding: 5px;
+    padding-top: 6px;
+}
+fieldset.border-layout-list legend
+{
+    display: none;
+}
+/* From Fieldset */
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+fieldset.fleft
+{
+    margin-right: 25px;
+}
+fieldset label
+{
+    display: inline-block;
+}
+fieldset input:not([type]), fieldset input[type=text], fieldset textarea, fieldset select, fieldset input[type=password]
+{
+    height: 22px;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid 1px #999;
+    padding: 0;
+    margin: 0;
+}
+fieldset input[readonly="readonly"], fieldset input[readonly]
+{
+    background: #F0F0F0;
+    border: solid 1px #999;
+}
+/* layout-table */
+.layout-table-columns
+{
+    overflow: hidden;
+}
+.layout-table-column
+{
+    float: left;
+    margin-left: 10px;
+}
+.layout-table-column:first-child
+{
+    margin-left: 0;
+}
+.layout-table-column ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.layout-table-column ul.layout-table-column-label
+{
+    margin-right: 5px;
+    overflow: hidden;
+}
+.layout-table-column ul li
+{
+    line-height: 25px;
+}
+.layout-table-column.new-row
+{
+    clear: both;
+    margin-left: 0;
+}
+/* Overide Autocomplete */
+.fws-autocomplete-result
+{
+    border: 1px solid #999;
+}
+.fws-autocomplete-result .ac_odd
+{
+    background-color: #E1E1E1;
+}
+.fws-autocomplete-result .ac_over
+{
+    background-color: #0083FF;
+}
+.fws-autocomplete-input
+{
+    border: solid 1px #999;
+    background: transparent url('../themes/jquery-easy-ui/icons/search.png') no-repeat center right;
+    background-color: White;
+}
+.fws-autocomplete-loading
+{
+}
+
+/* Overide jGrid */
+.ui-pg-input
+{
+    width: 25px !important;
+    height: 19px !important;
+    font-size: 11px !important;
+}
+.ui-icon-trash, .ui-icon-pencil
+{
+    cursor: pointer;
+}
+.ui-icon-trash:hover, .ui-icon-pencil:hover
+{
+    background-image: url(../Themes/jquery-ui/smothness/Images/ui-icons_2e83ff_256x240.png) !important;
+}
+.ui-jqgrid .tree-leaf
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+}
+.ui-jqgrid
+{
+}
+table.ui-jqgrid-btable tr.jqgrow
+{
+    border: 1px solid #E3E3E3;
+}
+table.ui-jqgrid-btable tr.jqgrow.ui-state-hover td:first-child
+{
+    background: none;
+    color: #000;
+}
+table.ui-jqgrid-btable tr.jqgrow.ui-state-hover
+{
+    cursor: pointer;
+    background: #EAE9F0;
+    color: #000;
+    border: 1px solid #E3E3E3;
+}
+table.ui-jqgrid-btable tr.jqgrow.ui-state-highlight td:first-child
+{
+    color: #8B261D;
+    font-weight: bold;
+}
+table.ui-jqgrid-btable tr.jqgrow.ui-state-highlight
+{
+    border: 1px solid #E3E3E3;
+    color: #8B261D;
+}
+.frozen-bdiv
+{
+    background: #FFF;
+}
+.ui-jqgrid tr.ui-search-toolbar th
+{
+    padding: 1px;
+}
+.ui-jqgrid tr.ui-search-toolbar th input
+{
+    margin: 0;
+    width: 100% !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+    background: #FDFEFA;
+}
+.ui-jqgrid .ui-jqgrid-htable th div
+{
+    line-height: 17px;
+    color: #0070BA;
+    font-weight: bold;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
+{
+    border-color: #D3D3D3;
+    background-color: #F6FCE3;
+}
+/* easyui layout*/
+.layout-panel
+{
+    overflow: hidden;
+}
+.panel-body
+{
+    overflow: hidden;
+}
+.panel-header
+{
+    overflow: hidden;
+}
+.combo-panel.panel-body
+{
+    overflow: auto;
+}
+.panel-tool a
+{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.panel-tool a:hover
+{
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+/* Overide easyui combo */
+fieldset span.combo
+{
+    height: 20px;
+}
+.combo.datebox
+{
+    height: 20px;
+}
+fieldset input.combo-text
+{
+    height: 20px;
+}
+fieldset .combo, fieldset .searchbox
+{
+    border-color: #999;
+}
+fieldset input.combo-text, fieldset input.searchbox-text
+{
+    border: 0;
+}
+.combobox-item
+{
+}
+.combobox-item-hover
+{
+    background: #FAE86F;
+    cursor: pointer;
+}
+.combo-arrow
+{
+    background-position: center;
+    height: 20px;
+}
+/* Overide Tree */
+#Accordion-Menu ul.tree li .tree-collapsed
+{
+    background: url(img.core/tree_arrows.gif) no-repeat;
+}
+#Accordion-Menu ul.tree li .tree-collapsed-hover
+{
+    background: url(img.core/tree_arrows.gif) no-repeat -32px 0px;
+}
+#Accordion-Menu ul.tree li .tree-expanded
+{
+    background: url(img.core/tree_arrows.gif) no-repeat -18px 0px;
+}
+#Accordion-Menu ul.tree li .tree-expanded-hover
+{
+    background: url(img.core/tree_arrows.gif) no-repeat -50px 0px;
+}
+#Accordion-Menu ul.tree li .tree-node-selected
+{
+    color: #000;
+}
+.tree-node
+{
+    padding: 2px 0;
+}
+.tree-folder
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+}
+.tree-folder-open
+{
+}
+.tree-file
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+}
+#Accordion-Menu ul.tree li .tree-loading
+{
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    vertical-align: middle;
+}
+/* Overide easyui Link Button */
+a.l-btn, .messager-button a.l-btn
+{
+    _padding: 0px 5px 0px 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+a.l-btn-plain
+{
+    _padding: 0px 5px 0px 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    height: 21px;
+}
+/* Overide easyui accordion */
+.accordion .accordion-header
+{
+    background: url(img.core/sidenav-link-a.png) 100% 0;
+    color: #fff;
+    border: 0;
+    padding: 3px 5px;
+}
+.accordion .accordion-header .panel-tool
+{
+    top: 2px;
+}
+.accordion .panel-body
+{
+    border: 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+/* Overide tabs */
+.tabs
+{
+    height:20px;
+}
+.tabs li
+{
+    margin-right:1px;
+}
+.tabs-header
+{
+    background:transparent;
+    border:0;
+}
+.tabs-panels
+{
+    padding:3px;
+}
+.tabs li.tabs-selected a.tabs-inner
+{
+    border-top: solid 2px orange;
+    height: 17px;
+}
+
+.tabs li a.tabs-inner
+{
+    height:19px;
+    line-height:19px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+}
+.tabs-panels .border-layout-list
+{
+    padding:0;
+}
+/**********************************/
+.myAltRowClass
+{
+    background: #F3F3F3;
+    color: #000;
+}
+.DeleteClass
+{
+    text-decoration: line-through !important;
+    color: red !important;
+}
+.ui-dropdownchecklist-dropcontainer-wrapper
+{
+    z-index: 9999;
+    background: #fff;
+}
+.ui-dropdownchecklist-wrapper
+{
+    background: #F0F0F0;
+    border: solid 1px #999;
+}
+
+.BR2
+{
+    border-right: solid 1px #666 !important;
+}
+.legendDiv
+{
+    border: 1px solid #AAA;
+    height: 23px;
+    line-height: 23px;
+    color: #0070BA;
+    color: #0070BA;
+    font-weight: bold;
+    padding-left: 23px;
+    border-bottom-width: 0px;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.gridFixCol_Scrollbar
+{
+    height: 17px;
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    float: right;
+}
+
+.SubTab
+{
+    clear: both;
+    overflow: hidden;    
+}
+.SubTab ul
+{
+    list-style: none;
+    overflow: hidden;    
+    margin: 6px 0;    
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 1px #ccc solid;
+    border: 1px #ccc solid;
+    border-width: 0px 0px 1px 0px;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.SubTab ul li
+{
+    overflow: hidden;
+    float: left;    
+    margin: 0 2px;    
+    text-align: center;    
+   /* border-left: 1px #ccc solid;
+    border-top: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+    background: url(img.core/nav-items-a.png) no-repeat;*/
+}
+.SubTab ul li.active
+{
+    padding-bottom: 1px;       
+    background-position: 100% -23px;
+}
+.SubTab ul li.active a span
+{    
+    background-position: 100% -23px;
+    color: #fff;
+}
+.SubTab ul li a
+{
+    text-decoration: none;
+    display: block;
+    float: left;
+    color: #eee;
+    text-shadow: #222 0 1px 0;    
+}
+.SubTab ul li a span
+{
+    display: block;
+    float: left;
+    min-width: 60px;
+    height: 23px;
+    padding: 0 9px 0 6px;
+    background: url(img.core/nav-items-a.png) 100% 0 no-repeat;
+    line-height: 22px;
+}
+.SubTab ul li.active a:hover, .SubTab ul li.active a:focus, .SubTab ul li.active a.active
+{   
+    
+}
+
+.SubTab ul li a:hover, .SubTab ul li a:focus, .SubTab ul li a.active
+{
+    background-position: 100% -23px;
+    color:#fff;        
+}
+
+.SubTab ul li a:hover span, .SubTab ul li a:focus span, .SubTab ul li a.active span
+{
+    background-position: 100% -23px;
+}
+.easyui-dialog.report-preview{
+    
+}
