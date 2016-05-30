@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0073)http://dktructuyen.moj.gov.vn/secured/UCCFiling/InitialNotice.aspx?ftid=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Cục đăng ký quốc gia giao dich bảo đảm - Bộ Tư Pháp
+</title><link href="./DKTruc Tuyen_files/CalendarControl.css" type="text/css" rel="stylesheet"><link href="./DKTruc Tuyen_files/Design.css" type="text/css" rel="stylesheet"><link href="./DKTruc Tuyen_files/Grids.css" type="text/css" rel="stylesheet"><link href="./DKTruc Tuyen_files/Main.css" type="text/css" rel="stylesheet"><script type="text/javascript" language="javascript">
+function PrintTab(sTabContent)
+{
+   var settings = "toolbar=yes,location=no,resizable=yes,directories=yes,menubar=yes,scrollbars=yes,width=900,height=600,left=100,top=25";
+    var tabcontent = document.getElementById(sTabContent).innerHTML;
+    var docprint=window.open("","",settings); 
+    
+    docprint.document.open(); 
+    docprint.document.write('<html><head><title>Print</title>'); 
+    docprint.document.write('<link href="../../App_Themes/VNTheme/Design.css" type="text/css" rel="stylesheet" />');
+    docprint.document.write('<link href="../../App_Themes/VNTheme/Grids.css" type="text/css" rel="stylesheet" />');
+    docprint.document.write('<link href="../../App_Themes/VNTheme/Main.css" type="text/css" rel="stylesheet" />');
+    docprint.document.write('</head><body onLoad="self.print()">');
+    docprint.document.write('<table><tr><td>');          
+    docprint.document.write(tabcontent);
+    docprint.document.write('</td></tr></table></body></html>');
+    docprint.document.close();
+    docprint.focus();
+    
+    return false;
+}
+function pickDate(imgCtl, Hdn1,Src,strRelativePath, event)
+{
+        var isIE, isOther  = false;
+        //alert(navigator.appName );
+        
+        x=event.clientX; 
+        y=event.clientY + 140; 
+        //alert(x);
+        //alert(y);
+        var rht = 220;
+        var rwt = 220;
+        //alert(strRelativePath + "?src=" + Src, "_blank", "height=" + rht + ",width=" + rwt + ",status=no,toolbar=no,menubar=no,top="+ y +",left="+ x +",scrollbars=no");
+        window.open(strRelativePath + "?src=" + Src + "&hdn=" + Hdn1, "_blank", "height=" + rht + ",width=" + rwt + ",status=no,toolbar=no,menubar=no,top="+ y +",left="+ x +",scrollbars=no");
+    }
+    function setFocus() {
+        var flag = false;
+        for (z = 0; z < document.forms.length; z++) {
+            var form = document.forms[z];
+            var elements = form.elements;
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                if ((element.type == 'text'
+                    || element.type == 'checkbox'
+                    || element.type == 'password'
+                    || element.type == 'radio'
+                    || element.type == 'select-one'
+                    || element.type == 'select-multiple')&&
+                !element.readOnly &&
+                !element.disabled) {
+                    try
+                    {
+                        element.focus();
+                        flag = true;
+                        break;
+                    }
+                    catch (err) 
+                    {}
+                }
+            }
+            if (flag) break;
+        }
+    }
+    function DateTextBox_OnKeyPress(e){
+	    var keycode;
+
+	    if (window.event)
+		    keycode = window.event.keyCode;
+	    else if (e) 
+		    keycode = e.which;
+	    else 
+		    return true;
+
+	    return ((keycode > 47 && keycode < 58) || keycode == 47 || keycode == 0 || keycode == 8 || keycode == 9 || keycode == 11 || keycode == 37 || keycode == 39);
+    }    
+ function getFileValue(){
+	var fullPath = document.getElementById('ctl00_cphBody_ucScanDocument_txtFileUpload').value;
+	if(fullPath){
+		alert(fullPath);
+	}else
+	{
+		alert("No file")
+	}
+ }
+</script><script type="text/javascript" src="./DKTruc Tuyen_files/jquery-1.5.1.min.js"></script></head>
+
+
+    <body style="width:960px; margin-top:0px; margin-left: auto; margin-right: auto;" bgcolor="#656565" onload="setFocus();">
+        <form name="aspnetForm" method="post" action="./DKTruc Tuyen_files/DKTruc Tuyen.html" id="aspnetForm" enctype="multipart/form-data" autocomplete="off">
+<div>
+<input type="hidden" name="ctl00_RadScriptManager1_HiddenField" id="ctl00_RadScriptManager1_HiddenField" value=";;System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:vi-VN:d0c4ca6e-6b5d-49b6-922d-5244924fb100:ea597d4b:b25378d2;Telerik.Web.UI, Version=2009.2.826.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4:vi-VN:d2d891f5-3533-469c-b9a2-ac7d16eb23ff:16e4e7cd:ed16cbdc">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__vsKey" id="__vsKey" value="f6f3244e-0800-4350-a0b8-622f1b962e4d">
+<input type="hidden" name="__VIEWSTATE" id="
+__VIEWSTATE" value="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./DKTruc Tuyen_files/WebResource.axd" type="text/javascript"></script>
+
+<script type="text/javascript">
+</script><script>
+<!-- 
+function IntTextBox_OnKeyPress(e){
+	var keycode;
+
+
+	if (window.event)
+		keycode = window.event.keyCode;
+	else if (e) 
+		keycode = e.which;
+	else 
+		return true;
+	
+    var isValidKeycode = ((keycode > 47 && keycode < 58) || (keycode == 0 || keycode == 8 || keycode == 9 || keycode == 11 || keycode == 37 || keycode == 39));
+
+    if(isValidKeycode)
+    {
+        return true;
+    }
+    else
+    {
+        if(window.event)
+        {
+            window.event.returnValue = null;
+        }
+        else
+        {
+            e.preventDefault(); 
+        }
+    	return false;
+    }
+}
+// -->
+</script>
+<script src="./DKTruc Tuyen_files/Telerik.Web.UI.WebResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAL+raDpAgKm6KmQBQKl6KmQBQKg6KmQBYmaFP1cMDQcMfRIm705eTFZOoup">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$RadAjaxManager1SU'], [], [], 90);
+//]]>
+</script>
+
+        <!-- 2009.2.826.35 --><div id="ctl00_RadAjaxManager1SU" style="display: none;">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+            
+
+<script type="text/javascript">
+		
+var menuwidth='250px' //default menu width
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:' + menuwidth + ';" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ 
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) 
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu
+
+</script><div id="dropmenudiv" style="visibility:hidden;width:250px;" onmouseover="clearhidemenu()" onmouseout="dynamichide(event)"></div>
+<div id="ctl00_PageHeader1_pnlPageHeader" style="text-align:center;margin-left: auto; margin-right: auto; margin-bottom:0px; margin-top:0px;">
+	
+    <table id="tblHeader" width="960" border="0" cellpadding="0" cellspacing="0" style="padding: 0 0 0 0; margin-bottom:0px; margin-top:0px; vertical-align:bottom;"> 
+	    <tbody><tr>
+            <td id="ctl00_PageHeader1_tdHeader" colspan="2" style="height:80px;width:960px;background-image:url(/images/Site/VN/en-US/banner.jpg);"><div class="PageHeader"><font class="PageHeaderMinor" style="font-family:Times new roman;font-size:14px">
+BỘ TƯ PHÁP
+<br>CỤC ĐĂNG KÝ QUỐC GIA GIAO DỊCH BẢO ĐẢM</font><br>
+<font class="PageHeaderMajor" color="yellow" style="font-family:Times new roman;font-weight:bold;font-size:28px">HỆ THỐNG ĐĂNG KÝ TRỰC TUYẾN</font></div></td>
+	
+	    </tr>	         
+        <tr>
+            <td id="ctl00_PageHeader1_tdMenu" class="RootMenu" align="left" style="background-color:#2191F5">&nbsp;&nbsp;<a href="http://dktructuyen.moj.gov.vn/secured/ca/clienthome.aspx" class="RootMenuItem" tooltip="Menu_Home_ToolTip">Trang chủ</a>&nbsp;|&nbsp;<a href="http://dktructuyen.moj.gov.vn/public/logout.aspx" class="RootMenuItem" tooltip="Menu_Logout_ToolTip">Thoát</a>&nbsp;|&nbsp;</td>
+	
+            <td id="ctl00_PageHeader1_tdLoginInfo" class="RootMenu" align="left" style="background-color:#2191F5"><div class="PageHeaderLoginInfo"><font class="PageHeaderLoginInfo">Người dùng ldthien | Tài khoản: Ngân Hàng Tmcp Việt Nam Thịnh Vượng Chi Nhánh Sài Gòn</font>&nbsp;&nbsp;</div><br></td>
+	
+        </tr>
+        <tr valign="bottom" style="vertical-align:bottom; padding: 0 0 0 0; margin-bottom:0px; margin-top:0px;">
+        <td colspan="2" style="padding: 0 0 0 0; margin-bottom:0px; margin-top:0px;">
+        <table cellpadding="0" cellspacing="0" style="padding: 0 0 0 0;">
+        <tbody><tr valign="bottom" style="vertical-align:bottom; height:15px;">
+        <td id="ctl00_PageHeader1_tdTopNavSpacerLeft" width="200" style="padding: 0 0 0 0; margin-bottom:0px; margin-top:0px;"><img src="./DKTruc Tuyen_files/spacer_r_top_bg.gif" id="ctl00_PageHeader1_topnavspacerleft" width="200" style="height:12px; margin-bottom:0px; margin-top:0px;"></td>
+	<td id="ctl00_PageHeader1_tdTopNavSpacerRight" width="760" style="padding: 0 0 0 0; margin-bottom:0px; margin-top:0px;"><img src="./DKTruc Tuyen_files/spacer_top_bg.gif" id="ctl00_PageHeader1_topnavspacerright" width="760" style="height:12px; margin-bottom:0px; margin-top:0px;"></td>
+	</tr></tbody></table></td></tr>
+    </tbody></table>
+
+</div>
+
+            <div id="ctl00_pnlContent" style="text-align:center;">
+	
+                <table bgcolor="#FFFFFF" id="tblContent" border="0" cellpadding="0" cellspacing="0" width="960" style="text-align:left">
+                    <tbody><tr>
+                        <td id="ctl00_tdLeftNav" valign="top" width="200px" style="background-image:url(/images/site/sidebar_l_bg.gif);">
+                            <div id="left-column">
+                            <ul>
+                                <li class="left-nav-group">
+
+<a id="ctl00_lnkPublic_ctl" class="selected">Thông tin chung</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink1_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/AboutFilingOffice.aspx">Thông tin về hệ thống đăng ký</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink2_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/FAQ.aspx">Các câu hỏi thường gặp</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink12_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/Legend.aspx">Các nút và các biểu tượng</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink3_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/Fees.aspx">Bảng phí</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink5_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/UCCSearch.aspx">Tra cứu thông tin miễn phí</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink6_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/Contact.aspx">Liên hệ</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink8_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/TechSupport.aspx">Hỗ trợ kỹ thuật</a></li>
+                                <li class="left-nav-group">
+
+<a id="ctl00_lnkHowTo_ctl" class="selected">Làm thế nào để...</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink11_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToAccessFilingOfficeWebSite.aspx">Truy cập hệ thống đăng ký</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink4_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToOpenClientAccount.aspx">Tạo một tài khoản khách hàng</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink13_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToOpenNonClientAccount.aspx">Đăng ký không cần tài khoản</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink7_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToFileNotices.aspx">Đăng ký lần đầu</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink9_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToFileChangeNotice.aspx">Đăng ký thay đổi</a></li>
+                                <li>
+
+<a id="ctl00_UcHyperlink10_ctl" class="&lt;%= ClassPrefix %&gt;Control" href="http://dktructuyen.moj.gov.vn/Public/HowToSearchNotices.aspx">Tra cứu thông tin</a></li>
+                            </ul>
+                            </div>
+                        </td>
+	
+                        <td align="trái" valign="top" colspan="2">
+                            <div><img id="ctl00_Image2" src="./DKTruc Tuyen_files/clear.gif" style="height:16px;width:1px;border-width:0px;"></div>
+                            <div id="middle-column">
+                                
+<style type="text/css">
+P.pagebreakhere {page-break-before: always}
+</style>   
+<script type="text/javascript" language="javascript">
+function Print(sID)
+{
+
+   window.open('./PrintFiling.aspx?id=' + sID, null, 'height=600,width=770,resizable=yes,scrollbars=yes,status=yes,toolbar=no,menubar=no,location=no');
+
+   return false;
+}
+
+function SetupControl(sClientID, sControlName, IsRowVisible)
+{
+
+    var ctl = document.getElementById(sClientID + '_' + sControlName + '_ctl');
+    var reqval = document.getElementById(sClientID + '_' + sControlName + '_reqval');
+    var regval = document.getElementById(sClientID + '_' + sControlName + '_regval');
+    var comval = document.getElementById(sClientID + '_' + sControlName + '_comval');
+    var cusval = document.getElementById(sClientID + '_' + sControlName + '_cusval');
+
+    if(ctl != null)
+    {
+
+        if (IsRowVisible==false)
+        {
+            ctl.value = "";
+        }
+        if (reqval != null)
+        {
+            ValidatorEnable(reqval, IsRowVisible);
+        }
+        if (regval != null) {
+            ValidatorEnable(regval, IsRowVisible);
+        }
+        if (comval != null) {
+            ValidatorEnable(comval, IsRowVisible);
+        }
+        if (cusval != null) {
+            ValidatorEnable(cusval, IsRowVisible);
+        }
+        
+        
+    }
+
+    return true;
+
+}
+function SetRowVisibility(rowId, showRow)
+{
+    var row = document.getElementById(rowId);
+
+    if(row != null)
+    {
+        if(showRow)
+        {
+            row.style.display = "block";
+        }
+        else
+        {
+            row.style.display = "none";
+        }
+    }
+    
+}
+function SetupPage(sClientID)
+{
+
+    //Get the name type
+    var keyNameTypeId = document.getElementById(sClientID + '_keyNameType_ctl');
+    var nameTypeId = 6;
+    if(keyNameTypeId != null)
+    {
+       nameTypeId = keyNameTypeId.value;
+   }
+
+    //1	Citizen
+    //2	Registered Legal Entity (Company)
+    //3	Foreigner
+    //4	Foreign Investor
+    //5	Other Entity
+    //6	Secured Party
+    //7 Stateless Person
+
+    SetRowVisibility(sClientID + '_' + 'RowOldNationalIdentityCardNumber', nameTypeId == 1);
+    SetRowVisibility(sClientID + '_' + 'RowNationalIdentityCardNumber', nameTypeId == 1);
+    SetRowVisibility(sClientID + '_' + 'RowOtherIdentityNumber', nameTypeId == 1);
+    SetRowVisibility(sClientID + '_' + 'RowEntityRegistrationNumber', nameTypeId == 2);
+    SetRowVisibility(sClientID + '_' + 'RowInvestmentCertificateNumber', nameTypeId == 4);
+    SetRowVisibility(sClientID + '_' + 'RowTaxPayerIdNumber', nameTypeId == 2 || nameTypeId == 4);
+    SetRowVisibility(sClientID + '_' + 'RowOtherEntityName', nameTypeId == 5);
+    SetRowVisibility(sClientID + '_' + 'RowIndividualName', nameTypeId == 3 || nameTypeId == 7);
+    SetRowVisibility(sClientID + '_' + 'RowPassport', nameTypeId == 3);
+    SetRowVisibility(sClientID + '_' + 'RowResidentId', nameTypeId == 7);
+    SetRowVisibility(sClientID + '_' + 'RowSecuringPartyName', nameTypeId == 1 || nameTypeId == 2 || nameTypeId == 4);
+    
+    
+    
+    //Enable/Disable Validators and clear control
+    SetupControl(sClientID, 'txtOldNationalIdentityCardNumber', nameTypeId == 1);
+    SetupControl(sClientID, 'txtNationalIdentityCardNumber', nameTypeId == 1);
+    SetupControl(sClientID, 'txtEntityRegistrationNumber', nameTypeId == 2);
+    SetupControl(sClientID, 'txtInvestmentCertificateNumber', nameTypeId == 4);
+    SetupControl(sClientID, 'txtTaxPayerIdNumber', nameTypeId == 2 || nameTypeId == 4);
+    SetupControl(sClientID, 'txtOtherEntityName', nameTypeId == 5);
+    SetupControl(sClientID, 'txtIndividualName1', nameTypeId == 3 || nameTypeId == 7);
+    SetupControl(sClientID, 'txtIndividualName2', nameTypeId == 3 || nameTypeId == 7);
+    SetupControl(sClientID, 'txtIndividualName3', nameTypeId == 3 || nameTypeId == 7);
+    SetupControl(sClientID, 'txtPassportNumber', nameTypeId == 3);
+    SetupControl(sClientID, 'txtPassportCountry', nameTypeId == 3);
+    SetupControl(sClientID, 'txtResidentId', nameTypeId == 7);    
+    SetupControl(sClientID, 'txtSecuringPartyName', nameTypeId == 1 || nameTypeId == 2 || nameTypeId == 4);
+            
+}
+</script>
+
+    <!-- form header -->
+    
+<table cellpadding="0" cellspacing="0" class="BorderedFormTable" width="100%">
+    <tbody><tr>
+        <td class="BorderedFormTitle" colspan="1">						    
+       
+       <span id="ctl00_cphBody_InitialNotice_title">Đăng ký lần đầu</span>
+        </td>
+    </tr>
+    <tr id="ctl00_cphBody_InitialNotice_trToolBar" style="padding:0px">
+		<td id="ctl00_cphBody_InitialNotice_tdToolBar" align="left" valign="middle" style="background-color:#FFFFFF;height:26;border-bottom: 1px #CCCCCC solid;" colspan="1"><img src="./DKTruc Tuyen_files/clear(1).gif" style="height:25px;width:5px;border-width:0px;"><input type="image" name="ctl00$cphBody$InitialNotice$ctl02" src="./DKTruc Tuyen_files/confirm.png" onclick="if (typeof(Page_ClientValidate) == &#39;function&#39;) { var oldPage_IsValid = Page_IsValid; var oldPage_BlockSubmit = Page_BlockSubmit;if (Page_ClientValidate(&#39;&#39;) == false) { Page_IsValid = oldPage_IsValid; Page_BlockSubmit = oldPage_BlockSubmit; return false; }} this.disabled = true;__doPostBack(&#39;ctl00$cphBody$InitialNotice$ctl02&#39;,&#39;&#39;);return true;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphBody$InitialNotice$ctl02&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">&nbsp;
+		<input type="image" name="ctl00$cphBody$InitialNotice$ctl03" src="./DKTruc Tuyen_files/edit.png" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphBody$InitialNotice$ctl03&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width:0px;">&nbsp;
+		<input type="image" name="ctl00$cphBody$InitialNotice$ctl04" src="./DKTruc Tuyen_files/cancel.png" style="border-width:0px;">&nbsp;
+		
+		
+		<input type="submit" name="btnTest" value="Check File" onclick="getFileValue(); return fasle;"  style="border-width:0px;" />&nbsp;</td>
+	</tr>
+	
+    <tr>
+	    <td colspan="1" class="BorderedFormDescription">						    
+            <div id="ctl00_cphBody_InitialNotice_vs" class="FormValidationSummary" style="color:Red;background-color:#EEEEEE;display:none;">
+
+	</div>				    
+        </td>
+    </tr>
+ 
+
+       
+    <tr id="ctl00_cphBody_trScanDocument">
+		<td>
+            
+<table>
+    <tbody><tr>
+        <td colspan="2">
+            <span id="ctl00_cphBody_ucScanDocument_lblAttachment_lbl" class="&lt;%= ClassPrefix %&gt;Label" style="font-weight:bold;">Tập tin PDF được quét:</span>
+<br>
+            <span id="ctl00_cphBody_ucScanDocument_lblAttachmentInstruction_lbl" class="&lt;%= ClassPrefix %&gt;Label" style="font-weight:normal;">Quét đơn đăng ký và lưu vào máy của bạn dưới định dạng PDF. Sau đó nhấn nút "Browse" để mở hộp thoại và chọn file PDF để tải lên.
+	Sau khi chọn file, nhấn nút "Xác nhận" để tải file lên máy chủ và đánh dấu trong hệ thống là đơn đã được lưu.
+Nếu bạn muốn xóa một file đã tải, hãy đảm bảo rằng bạn nhập đúng số đơn đăng ký và nhấn nút "Xóa file".</span>
+<br>
+            <input type="file" name="ctl00$cphBody$ucScanDocument$txtFileUpload" id="ctl00_cphBody_ucScanDocument_txtFileUpload" style="background-color:White;width:400px;" >
+        </td>
+    </tr>
+</tbody></table>
+
+      
+
+        </td>
+	</tr>
+	
+    <tr id="ctl00_cphBody_pnlFilingReview">
+		<td>
+            <fieldset><legend id="ctl00_cphBody_legfilingdetailreview_ctl">Chi tiết đơn đăng ký</legend>
+  
+                
+
+<table class="FormTable" width="100%">
+    <tbody><tr id="ctl00_cphBody_ucFilingDetailReview_trConfirmationStatement" valign="top">
+			<td colspan="4">
+            <span id="ctl00_cphBody_ucFilingDetailReview_lblConfirmation_lbl" class="&lt;%= ClassPrefix %&gt;Label" style="font-weight:normal;">Bạn hãy kiểm tra lại chi tiết đơn đăng ký phía dưới. Nếu các thông tin là chính xác, bạn hãy click vào nút "Xác nhận" để gửi thông tin. Nếu bạn cần thay đổi, hãy click vào nút "Cập nhật" và điều chỉnh lại thông tin.</span>
+
+        </td>
+		</tr>
+		
+    
+    <tr id="ctl00_cphBody_ucFilingDetailReview_tr1" valign="top" width="100%">
+			<td id="ctl00_cphBody_ucFilingDetailReview_tdFilerNameAndAddress" style="width:50%">
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucFilerName_lbl" class="&lt;%# ClassPrefix %&gt;Label" style="font-weight:bold;">Tên và địa chỉ</span>
+<span id="ctl00_cphBody_ucFilingDetailReview_ucFilerName_lblAsterisk" style="display:none">*</span>
+<br>
+
+<span id="ctl00_cphBody_ucFilingDetailReview_ucFilerName_lblvalue" class="FormControlNoEditLabel">Ngân Hàng Tmcp Việt Nam Thịnh Vượng Chi Nhánh Sài Gòn</span>
+&nbsp;
+
+
+
+
+    
+            <br>
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucFilerAddress">129 Nguyễn Chí Thanh, P9,&nbsp;Quận 5, Hồ Chí Minh,&nbsp;Việt Nam</span>
+            <br>&nbsp;<br>            
+            
+        </td>
+			<td style="width:50%">
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucNoticeType_lbl" class="&lt;%# ClassPrefix %&gt;Label" style="font-weight:bold;">Trường hợp đăng ký</span>
+<span id="ctl00_cphBody_ucFilingDetailReview_ucNoticeType_lblAsterisk" style="display:none">*</span>
+<br>
+
+<span id="ctl00_cphBody_ucFilingDetailReview_ucNoticeType_lblvalue" class="FormControlNoEditLabel">Đăng ký giao dịch bảo đảm/Hợp đồng</span>
+&nbsp;
+
+
+
+
+
+        </td>
+		</tr>
+		   
+    <tr id="ctl00_cphBody_ucFilingDetailReview_trOriginalFilingDetail" valign="top">
+		</tr>
+		          
+    <tr id="ctl00_cphBody_ucFilingDetailReview_trFilingDetail" valign="top">
+		</tr>
+		
+    <tr id="ctl00_cphBody_ucFilingDetailReview_tr2" class="wide" valign="top">
+			<td id="ctl00_cphBody_ucFilingDetailReview_tdSecuredInterestType" colspan="2">
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucSecuredInterestType_lbl" class="&lt;%= ClassPrefix %&gt;Label" style="font-weight:bold;">Loại hình giao dịch</span>
+
+<br>
+
+<span id="ctl00_cphBody_ucFilingDetailReview_ucSecuredInterestType_lblvalue" class="FormControlNoEditLabel">Giao dịch bảo đảm</span>&nbsp;
+
+
+
+
+    
+        </td>
+		</tr>
+		     
+         
+    <tr id="ctl00_cphBody_ucFilingDetailReview_tr3" class="wide" valign="top">
+			<td id="ctl00_cphBody_ucFilingDetailReview_tdReferenceNumber" width="50%">
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucReferenceNumber_lbl" class="&lt;%# ClassPrefix %&gt;Label" style="font-weight:bold;">Số hợp đồng</span>
+<span id="ctl00_cphBody_ucFilingDetailReview_ucReferenceNumber_lblAsterisk" style="display:none">*</span>
+<br>
+
+<span id="ctl00_cphBody_ucFilingDetailReview_ucReferenceNumber_lblvalue" class="FormControlNoEditLabel">qqqqqqq</span>
+&nbsp;
+
+
+
+
+
+        </td>
+			<td id="ctl00_cphBody_ucFilingDetailReview_td1" width="50%">
+            <span id="ctl00_cphBody_ucFilingDetailReview_ucAmountOfObligation_lbl" title="Thông tin này là không bắt buộc và chỉ dùng cho mục đích thống kê. Vui lòng nhập giá trị của khoản vay hoặc nghĩa vụ. Nếu nghĩa vụ không xác định hoặc thì nhập giá trị tối đa." class="&lt;%# ClassPrefix %&gt;Label" style="font-weight:bold;">Giá trị của khoản vay hoặc nghĩa vụ (VND)</span>
+<span id="ctl00_cphBody_ucFilingDetailReview_ucAmountOfObligation_lblAsterisk" style="display:none">*</span>
+<br>
+
+<span id="ctl00_cphBody_ucFilingDetailReview_ucAmountOfObligation_lblvalue" class="FormControlNoEditLabel"></span>
+&nbsp;
+
+
+
+
+
+        </td>
+		</tr>
+		      
+        
+</tbody></table> 
+            </fieldset>
+            <fieldset id="ctl00_cphBody_fldDebtors"><legend id="ctl00_cphBody_legdebtorreview_ctl">Bên bảo đảm</legend>
+  
+                <div>
+			<table class="GridView" cellspacing="0" rules="all" border="1" id="ctl00_cphBody_ucDebtorReview_gv" style="font-family:Khmer OS,Verdana;width:100%;border-collapse:collapse;">
+				<tbody><tr class="GridViewHeader">
+					<th scope="col">Phân loại chủ thể</th><th scope="col">Số giấy tờ chứng minh tư cách pháp lý</th><th scope="col">Tên</th><th scope="col">Địa chỉ</th>
+				</tr><tr class="GridViewRow">
+					<td>Công dân Việt Nam</td><td>Số CMND: 123456789</td><td>Nam</td><td>Điện Biên,  Điện Biên, Việt Nam</td>
+				</tr>
+			</tbody></table>
+		</div>
+
+            </fieldset>
+            <fieldset id="ctl00_cphBody_fldSecured"><legend id="ctl00_cphBody_legsecuredpartyreview_ctl">Bên nhận bảo đảm</legend>
+  
+                <div>
+			<table class="GridView" cellspacing="0" rules="all" border="1" id="ctl00_cphBody_ucSecuredPartyReview_gv" style="font-family:Khmer OS,Verdana;width:100%;border-collapse:collapse;">
+				<tbody><tr class="GridViewHeader">
+					<th scope="col">Tên</th><th scope="col">Địa chỉ</th>
+				</tr><tr class="GridViewRow">
+					<td>Ngan Hang A</td><td>12, Đắk GLong,  Đắk Nông, Việt Nam</td>
+				</tr>
+			</tbody></table>
+		</div>
+
+            </fieldset>
+            <fieldset><legend id="ctl00_cphBody_legcollateralreview_ctl">Tài sản</legend>
+  
+            <table>
+                <tbody><tr id="ctl00_cphBody_trCollateralDescriptionReview">
+			<td>
+                        <span id="ctl00_cphBody_txtCollateral_lbl" class="&lt;%# ClassPrefix %&gt;Label" style="font-weight:bold;">Mô tả tài sản</span>
+<span id="ctl00_cphBody_txtCollateral_lblAsterisk" style="display:none">*</span>
+<br>
+
+<span id="ctl00_cphBody_txtCollateral_lblvalue" class="FormControlNoEditLabel">TAi san A</span>
+&nbsp;
+
+
+
+
+ 
+                    </td>
+		</tr>
+		
+                
+                
+            </tbody></table>    
+            </fieldset>      
+            
+            
+        </td>
+	</tr>
+	 
+
+    <!-- form footer -->
+    
+
+    <tr>
+        <td class="BorderedFormSpacer" colspan="1">&nbsp;</td>
+    </tr>
+   <!-- 
+    <tr>
+        <td class='BorderedFormFooter' colspan='1'>						    
+            <span id="ctl00_cphBody_footer_lbl" style="display:inline-block;font-weight:bold;width:400px;">Ghi chú trên đơn đăng ký lần đầu</span>
+        </td>
+    </tr>
+    -->
+</tbody></table>
+
+
+ 
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+            
+</div>
+            <div id="ctl00_PageFooter1_pnlPageFooter" style="text-align:center;vertical-align:top; padding: 0 0 0 0;">
+	
+    <table id="PageFooter" width="960" height="80" border="0" cellpadding="0" cellspacing="0">
+	    <tbody><tr>
+		    <td id="ctl00_PageFooter1_tdPageFooter" class="Page_Footer" style="background-image:url(/images/Site/VN/en-US/footer.jpg);"><font class="PageFooter"><p class="PageFooter">
+	</p><div style="text-align: center; font-size: 0.75em;">
+	CƠ QUAN CHỦ QUẢN: CỤC ĐĂNG KÝ QUỐC GIA GIAO DỊCH BẢO ĐẢM (NRAST)
+		<br>Địa chỉ: 58-60 Trần Phú – Ba Đình – Hà Nội;
+	<br>Email: dangky@moj.gov.vn; tt_csdl@moj.gov.vn; Điện thoại: 04.62739675; Fax: 04.62739690.
+		<br>Ghi rõ nguồn "NRAST" khi phát hành lại thông tin từ website này.
+	<br>Phòng CSDL quốc gia các giao dịch, tài sản</div>
+<p></p>
+</font></td>
+	       
+        </tr>
+    </tbody></table>
+
+</div>
+
+       
+            
+        
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_cphBody_InitialNotice_vs"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cphBody_InitialNotice_vs = document.all ? document.all["ctl00_cphBody_InitialNotice_vs"] : document.getElementById("ctl00_cphBody_InitialNotice_vs");
+ctl00_cphBody_InitialNotice_vs.displaymode = "List";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+document.getElementById('ctl00_cphBody_InitialNotice_vs').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_cphBody_InitialNotice_vs'));
+}
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+//]]>
+</script>
+</form>
+    
+
+</body></html>

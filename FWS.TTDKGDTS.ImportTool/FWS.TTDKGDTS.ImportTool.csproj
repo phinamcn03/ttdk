@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95624189-FC6C-4E4C-BE65-8EB1ABA77DD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.TTDKGDTS.ImportTool</RootNamespace>
+    <AssemblyName>FWS.TTDKGDTS.ImportTool</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TTDKLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=1.25.0.25466, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\CefSharp\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=1.25.0.25471, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\CefSharp\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="iProfileUtils">
+      <HintPath>..\Dll\iProfileUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObject\CApplicationMessage.cs" />
+    <Compile Include="BusinessObject\CParaData.cs" />
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\About\FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\About\FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\CAssetBlockade.cs" />
+    <Compile Include="Mods\Import\CImport.cs" />
+    <Compile Include="Mods\Import\CNhanDon.cs" />
+    <Compile Include="Mods\Import\CTransaction.cs" />
+    <Compile Include="Mods\Import\EPage.cs" />
+    <Compile Include="Mods\Import\FEntryGCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryGCN.Designer.cs">
+      <DependentUpon>FEntryGCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryPL03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryPL03.Designer.cs">
+      <DependentUpon>FEntryPL03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryPL04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryPL04.Designer.cs">
+      <DependentUpon>FEntryPL04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryTBGT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\FEntryTBGT.Designer.cs">
+      <DependentUpon>FEntryTBGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\FOldRefNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\FOldRefNo.Designer.cs">
+      <DependentUpon>FOldRefNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryGCN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryGCN.Designer.cs">
+      <DependentUpon>UEntryGCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryPL03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryPL03.Designer.cs">
+      <DependentUpon>UEntryPL03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryPL04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryPL04.Designer.cs">
+      <DependentUpon>UEntryPL04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryTBGT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UEntryTBGT.Designer.cs">
+      <DependentUpon>UEntryTBGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Import\UImportTransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UImportTransaction.Designer.cs">
+      <DependentUpon>UImportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mods\Import\UImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mods\Import\UImport.Designer.cs">
+      <DependentUpon>UImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceReference\Soap\CAssetService.cs" />
+    <Compile Include="ServiceReference\Soap\CCoreService.cs" />
+    <Compile Include="ServiceReference\CServiceReference.cs" />
+    <Compile Include="_Base\FBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Base\FBase.Designer.cs">
+      <DependentUpon>FBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Base\UBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Base\UBase.Designer.cs">
+      <DependentUpon>UBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\CAutoComplete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\AutoCompleteTrigger.cs" />
+    <Compile Include="_Core\AutoComplete\AutoCompleteTriggerCollection.cs" />
+    <Compile Include="_Core\AutoComplete\AutoCompleteEntry.cs" />
+    <Compile Include="_Core\AutoComplete\AutoCompleteEntryCollection.cs" />
+    <Compile Include="_Core\AutoComplete\AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\CStringUtils.cs" />
+    <Compile Include="_Core\AutoComplete\IAutoCompleteEntry.cs" />
+    <Compile Include="_Core\AutoComplete\ShortCutTrigger.cs" />
+    <Compile Include="_Core\AutoComplete\TextLengthTrigger.cs" />
+    <Compile Include="_Core\AutoComplete\FDropDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\FDropDown.Designer.cs">
+      <DependentUpon>FDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\TriggerState.cs" />
+    <Compile Include="_Core\AutoComplete\UAutoComplete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Core\AutoComplete\UAutoComplete.Designer.cs">
+      <DependentUpon>UAutoComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\CObjectMapper.cs" />
+    <Compile Include="_Core\CXML.cs" />
+    <Compile Include="_Core\FWebBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Core\FWebBrowser.Designer.cs">
+      <DependentUpon>FWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Grid\CDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Core\ListBox\CListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Core\ListBox\UListBoxItemTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Core\ListBox\UListBoxItemTemplate.Designer.cs">
+      <DependentUpon>UListBoxItemTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\WebBrowser\CCefSharpPresenter.cs" />
+    <Compile Include="_Core\WebBrowser\CCefSharpView.cs" />
+    <Compile Include="_Core\WebBrowser\CDownloadHandler.cs" />
+    <Compile Include="_Core\WebBrowser\UCefSharpBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Core\WebBrowser\UCefSharpBrowser.designer.cs">
+      <DependentUpon>UCefSharpBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\WebBrowser\UWebBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Core\WebBrowser\UWebBrowser.Designer.cs">
+      <DependentUpon>UWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Core\Win32\Messages.cs" />
+    <Compile Include="_Demo\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Demo\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Global\CSession.cs" />
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\About\FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\FEntryGCN.resx">
+      <DependentUpon>FEntryGCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\FEntryPL03.resx">
+      <DependentUpon>FEntryPL03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\FEntryPL04.resx">
+      <DependentUpon>FEntryPL04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\FEntryTBGT.resx">
+      <DependentUpon>FEntryTBGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\FOldRefNo.resx">
+      <DependentUpon>FOldRefNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\UEntryGCN.resx">
+      <DependentUpon>UEntryGCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\UEntryPL03.resx">
+      <DependentUpon>UEntryPL03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\UEntryPL04.resx">
+      <DependentUpon>UEntryPL04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\UEntryTBGT.resx">
+      <DependentUpon>UEntryTBGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mods\Import\UImport.resx">
+      <DependentUpon>UImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Base\UBase.resx">
+      <DependentUpon>UBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\AutoComplete\FDropDown.resx">
+      <DependentUpon>FDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\AutoComplete\UAutoComplete.resx">
+      <DependentUpon>UAutoComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\FWebBrowser.resx">
+      <DependentUpon>FWebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\ListBox\UListBoxItemTemplate.resx">
+      <DependentUpon>UListBoxItemTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\WebBrowser\UCefSharpBrowser.resx">
+      <DependentUpon>UCefSharpBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Core\WebBrowser\UWebBrowser.resx">
+      <DependentUpon>UWebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Demo\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mods\Import\UControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02Arrow_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02Arrow_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01REFRESH_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.ico" />
+    <Content Include="Reports\[TTDKGDTS]GCN CCTT.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TTDKLogo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

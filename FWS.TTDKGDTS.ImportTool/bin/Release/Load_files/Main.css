@@ -1,0 +1,488 @@
+﻿body 
+{
+	font-family: Verdana, helvetica;
+	font-size: 10pt;
+	color: #696969;
+	text-align:left;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align:bottom; 	
+}
+a
+{
+	text-decoration:none;	
+}
+a:hover
+{
+	text-decoration:underline;
+}
+.addressddl
+{
+	width:150px;
+}
+
+/* INPUT */
+Select, Text, TextArea
+{
+	font-family: Verdana, helvetica;	
+}
+/* Select Language */
+.SelectLanguage
+{
+	text-align:right;
+	color:#696969;
+	font-size:8pt;
+	font-weight:bold;
+}
+
+/* Page Header */
+.PageHeader
+{
+	text-align:center;
+	color:#FFFFFF;
+}
+
+.PageHeaderMinor
+{
+	font-size:14pt;
+}
+
+.PageHeaderMajor
+{
+	font-size:18pt;
+}
+
+.PageHeaderLoginInfo
+{
+	text-decoration:none;	
+	vertical-align:middle;
+	text-align:right;
+	color:#FFFFFF;
+	font-size:8pt;
+	height:2em;
+}
+
+/* Page Footer */
+.PageFooter
+{
+	margin-left:75px;
+	font-size:0.85em;
+	color:#FFFFFF;
+	text-align: center;
+}
+
+/* LOGIN LINKS */
+HeaderLink
+{
+	font-size: smaller;
+}
+
+
+
+/* FORM */
+.FormTable,						.reverseForm,
+.BorderedFormTable, 			.reverseBorderedForm
+{
+	margin: 0px;
+    padding: 10px;
+}
+.BorderedFormTable, .reverseBorderedFormTable
+{
+	border: solid #656565 1px;
+	background-color: buttonface;
+}
+.LoginFormTable
+{
+	background-color: #656565;
+	color: #FFFFFF;
+}
+
+
+
+/* FORM TITLE */
+.FormTitle,						.reverseFormTitle,
+.BorderedFormTitle,				.reverseBorderedFormTitle
+{
+	font-size: 9pt;
+	font-weight: bold;
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	text-align: left;
+}
+.BorderedFormTitle, .reverseBorderedFormTitle
+{
+	color: white;
+	background-color: #656565;
+}
+
+
+
+
+/* FORM CONTROL BAR */
+.FormControlBar,				.reverseFormControlBar,
+.BorderedFormControlBar,		.reverseBorderedFormControlBar
+{
+	background-color: #EEEEEE;
+}								
+
+
+
+
+/* FORM DESCRIPTION */
+.FormDescription,				.reverseFormDescription,	
+.BorderedFormDescription,		.reverseBorderedFormDescription
+{
+	padding-top: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	white-space: normal;
+	font-size: 8pt;
+	text-align: left;
+}
+								.reverseFormDescription,
+								.reverseBorderedFormDescription
+								{
+									text-align: right;
+									padding-left: 15px;
+									padding-right: 15px;
+								}
+
+
+
+
+/* FORM SECTION */
+.FormSection,					.reverseFormSection,	
+.BorderedFormSection,			.reverseBorderedFormSection
+{
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	white-space: normal;
+	font-size: 8pt;
+	text-align: left;
+}
+								.reverseFormSection,
+								.reverseBorderedFormSection
+								{
+									text-align: right;
+									padding-left: 15px;
+									padding-right: 15px;
+								}
+
+
+/* FORM FOOTER */
+.FormFooter,					.reverseFormFooter, 
+.BorderedFormFooter,			.reverseBorderedFormFooter
+{
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-top: solid #656565 1px;
+	font-family: Verdana;
+	text-align: left;
+}
+.BorderedFormFooter,			.reverseBorderedFormFooter
+{
+	text-align: left;
+}
+								.reverseFormFooter,
+								.reverseBorderedFormFooter
+								{
+									text-align: right;
+								}
+
+
+
+/* FORM VALIDATION SUMMARY */
+.FormValidationSummary,			.reverseFormValidationSummary
+{
+	font-weight: bold;
+	border: 1px solid #1A72C7;
+	text-align: left;
+	padding: 10px;
+	color: red;
+}
+								.reverseFormValidationSummary
+								{
+									text-align: right;
+								}
+
+
+
+/* FORM LABEL */
+.FormLabel,						.reverseFormLabel,
+.BorderedFormLabel,				.reverseBorderedFormLabel,
+.LoginFormLabel,				.reverseLoginFormLabel
+{
+	white-space: nowrap;
+	font-family: Verdana, helvetica;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 5px;
+	padding-left: 15px;
+	height: 30px;
+	width: 120px;
+}
+								.reverseFormLabel,
+								.reverseBorderedFormLabel,
+								.reverseLoginFormLabel
+								{
+									text-align: left;
+									padding-right: 15px;
+									padding-left: 5px;
+								}
+
+/* TOP NAV CONTROL */
+.TopNavControl
+{
+	white-space: nowrap;
+	font-family: Verdana, helvetica;
+	font-size: 6pt;
+}
+
+/* FORM CONTROL */
+.FormControl,					.reverseFormControl,
+.BorderedFormControl,			.reverseBorderedFormControl,
+.LoginFormControl,				.reverseLoginFormControl
+{
+
+	font-family: Verdana, helvetica;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding-right: 5px;
+	padding-left: 10px;
+
+}
+								.reverseFormControl,
+								.reverseBorderedFormControl,
+								.reverseLoginFormControl
+								{
+									text-align: right;
+									padding-right: 10px;
+									padding-left: 5px;
+								}
+
+.RadComboBox
+{
+	font-family: Verdana, helvetica;
+	font-size: 8pt;
+	font-weight: normal;
+	width: 100px;
+}
+
+/* FORM CONTROL NO EDIT LABEL */
+.FormControlNoEditLabel
+{
+	font-weight: normal;
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+
+
+/* FORM SPACER */
+.FormSpacer,
+.BorderedFormSpacer	
+{
+	height: 15px;
+}
+
+.FooterText
+{
+	white-space:nowrap;
+	padding: 5px;
+}
+
+/* MENU */
+.Menu
+{
+	padding: 0px;
+	color : #FFFFFF;
+}
+
+.RootMenu
+{
+	text-align: left;
+	border-left: none;
+	font-size: 8pt;
+	height: 2em;
+	width: 100%;
+	color: #FFFFFF;
+	background-color: #2191F5;
+}
+
+.RootMenuItem
+{
+	color: #FFFFFF;
+	cursor: hand;
+	text-decoration: none;
+}
+
+.DropMenu
+{
+	border-bottom : #656565 1px solid;
+	border-top: 1px solid #656565;
+	text-align: left;
+	font-size: 8pt;
+}
+
+.DropMenuItem
+{
+	width: 100%;
+	display: block;
+	border: 1px solid #656565;
+	border-top: none;
+	text-decoration: none;
+	color: #656565;
+	cursor: hand;
+	line-height: 2em;
+	background-color : #e7e5e0;
+}
+
+#dropmenudiv
+{
+position:absolute;
+border:1px solid #656565;
+border-bottom-width: 0;
+line-height:2em;
+z-index:100;
+background-color : #e7e5e0;
+}
+
+#dropmenudiv a{
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid black;
+padding: 1px 0;
+text-decoration: none;
+font-weight: bold;
+font-size: 8pt;
+color: #656565;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #656565;
+	cursor: hand;
+}
+
+.RootMenuItem:hover, .DropMenuItem:hover
+{
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #656565;
+	cursor: hand;
+}
+
+#ContentEditor
+{
+	border: solid 1px #CCCCCC;
+	padding: 10px;
+	height: 75px;
+}
+
+#ContentEditorButtons IMG
+{
+	border: solid 1px #CCCCCC;
+	padding: 3px;
+	background-color: #DDDDFF;
+}
+
+#ContentEditorButtons a:visited
+{
+	border: solid 1px #656565;
+	background-color: #DDDDFF;
+}
+
+#ContentEditorButtons a:hover IMG
+{
+	border: solid 1px #9999CC;
+	background-color: #CCCCFF;
+}
+
+.EditableContent
+{
+	border: solid 1px #CCCCCC;
+	padding: 5px;
+}
+
+.FontSelection 
+{
+	width: 150px;
+	background-color: #DDDDFF;
+}
+
+.FontSelection A, .FontSelection A:visited 
+{
+	width: 100%;
+	display: block;
+	padding: 1px 0;
+	text-decoration: none;
+	text-indent: 5px;
+	background-color: #DDDDFF;
+	color: #656565;
+}
+
+.FontSelection A:hover 
+{
+	width: 100%;
+	display: block;
+	padding: 1px 0;
+	text-decoration: none;
+	text-indent: 5px;
+	background-color: #656565;
+	color: #FFFFFF;
+}
+
+#ColorSelector TD
+{
+    border-top: solid white 1px;
+    border-left: solid black 1px;
+    font-size: 4pt;
+    width: 10px;
+}
+
+
+.MultiPage
+    {
+        BORDER-RIGHT: gray 1px solid;
+        BORDER-TOP: gray 1px solid;
+        FONT-SIZE: 10pt;
+        BORDER-LEFT: gray 1px solid;
+        BORDER-BOTTOM: gray 1px solid;
+        width:550; 
+        height:inherit;
+    }
+ .LinkCss
+    { 
+      FONT-SIZE: 10pt;
+      COLOR: blue
+   }
+
+
+.Task IMG
+{
+	border: solid 1px #CCCCCC;
+	padding: 3px;
+	background-color: #FFFFFF;
+}
+
+.Task a:hover IMG
+{
+	border: solid 1px #9999CC;
+	background-color: #CCCCFF;
+}
+
+.SessionDetails 
+{
+	font-family: Verdana, helvetica;
+	font-size: 9pt;
+	color: #696969;
+	text-align:left;
+	font-weight:bold;	
+}
