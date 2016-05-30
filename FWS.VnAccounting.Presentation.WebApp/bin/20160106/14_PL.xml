@@ -1,0 +1,4 @@
+<Logs>
+  <Log At="06/01/2016 14:20:49" Title="PMSA.iMarkets.Presentation.WebApp.Mods.PriceBoard.Class.GetModelsConfig" Detail="The request failed with HTTP status 503: Server Too Busy." />
+  <Log At="06/01/2016 14:20:49" Title="PMSA.iMarkets.Presentation.WebApp.Mods.PriceBoard.Class.GetGridConfig" Detail="The request failed with HTTP status 503: Server Too Busy." />
+</Logs>
