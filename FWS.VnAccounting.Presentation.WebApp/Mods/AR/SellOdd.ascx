@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SellOdd.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.AR.SellOdd" %>
+<iframe src="../Mods/AR/SellOdd.aspx" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>

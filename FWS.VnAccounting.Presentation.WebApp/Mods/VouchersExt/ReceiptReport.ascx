@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ReceiptReport.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.VouchersExt.ReceiptReport" %>
+<script type="text/javascript" src="<%= Page.ResolveUrl("../Mods/VouchersExt/Js/Mods.VouchersExt.ReceiptReport.js") %>"></script>
+<iframe class="vReport" id="rptTBP" style="width: 100%; height: 100%;" scrolling="no" frameborder="0" src="../Mods/_core.report/PReportViewer.aspx"></iframe>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout Login</title>
+    <!-- Css -->
+    <link href="../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <!-- Jquery Core -->
+    <script src="../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../Js/jq/jquery.extend.js" type="text/javascript"></script>
+    <!-- Jquery Extend Plugin -->
+    <script src="../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('.easyui-linkbutton').linkbutton({ plain: true });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="easyui-window" title="Item Group Entry" modal="false" style="width: 430px; height: 270px;">
+        <div class="easyui-layout" fit="true">
+            <div region="north" style="text-align:center;" border="false">
+                <h1>Accounting</h1>
+            </div>
+            <div region="center" border="false" style="overflow: hidden;">
+                <div class="easyui-layout" fit="true">
+                    <div region="west" style="width: 150px;" border="false">
+                        <div class="img-login"></div>
+                    </div>
+                    <div region="center" border="false" style="overflow: hidden;">
+                        <fieldset class="border-layout-form form-login">
+                            <div>
+                                <label>Người dùng:</label>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <label>Mật khẩu:</label>
+                                <input type="password" />
+                            </div>
+                            <div>
+                                <label>Nhớ mật khẩu:</label>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <label>Ngôn ngữ</label>
+                                <select></select>
+                            </div>
+                            <div>
+                                <label>Doanh nghiệp:</label>
+                                <select></select>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div region="south" border="false" class="border-layout-form-action">
+                <a class="easyui-linkbutton" iconcls="icon-ok" href="javascript:void(0)">
+                    Đăng nhập</a>
+                <a class="easyui-linkbutton" iconcls="icon-cancel" href="javascript:void(0)">
+                    Thoát</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

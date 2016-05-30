@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Fee.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.ItemsDoc.Fee" %>
+<script type="text/javascript" src="<%= Page.ResolveUrl("../Mods/ItemsDoc/Js/Mods.ItemsDoc.Fee.js") %>"></script>
+<iframe class="vFrmHst" id="hstgrid-Fee-content" style="width: 100%; height: 100%;" scrolling="no" frameborder="0" src="../Mods/_core.hst/PGrid.aspx"></iframe>

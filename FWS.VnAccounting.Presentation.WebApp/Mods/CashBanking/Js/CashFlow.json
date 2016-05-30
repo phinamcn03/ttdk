@@ -1,0 +1,64 @@
+﻿{
+    "nodes": {
+        "Phiếu thu": {
+            "color": "#ccc",
+            "width": 30,
+            "shape": "circle",
+            "image": "icon.png",
+            "onclick": "function (dragged) { }"
+        },
+        "Giấy báo có": {
+            "color": "#ce0",
+            "width": 20,
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Phiếu thu 2 tỉ giá": {
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Giấy báo có 2 tỉ giá": {
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Giấy báo nợ 2 tỉ giá": {
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Phiếu chi 2 tỉ giá": {
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Giấy báo nợ": {
+            "shape": "circle",
+            "image": "icon.png"
+        },
+        "Phiếu chi": {
+            "shape": "circle",
+            "image": "icon.png"
+        }
+    },
+    "edges": {
+        "Phiếu thu": {
+            "Giấy báo có": {},
+            "Phiếu chi": {}
+        },
+        "Giấy báo có": {
+            "Giấy báo nợ": { },
+            "Phiếu thu 2 tỉ giá": { }
+        },
+        "Phiếu thu 2 tỉ giá": {
+            "Giấy báo có 2 tỉ giá": { },
+            "Phiếu chi 2 tỉ giá": { }
+        },
+        "Giấy báo nợ 2 tỉ giá": {
+            "Giấy báo có 2 tỉ giá": { },
+            "Phiếu chi 2 tỉ giá": { }
+        },
+        "Giấy báo nợ": {
+            "Phiếu chi": { },
+            "Phiếu chi 2 tỉ giá": { },
+            "Giấy báo có": { }
+        }
+    }
+};

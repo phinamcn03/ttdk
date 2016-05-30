@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VendorPayment.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.AP.VendorPayment" %>
+<%@ Register src="../ACore/PaymentPartner.ascx" tagname="PaymentPartner" tagprefix="ucPaymentPartner" %>
+<ucPaymentPartner:PaymentPartner ID="PaymentPartner_APVendorPayment" runat="server" GridID="30" InstantID="APVendorPayment" RefType="16"/>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tab - jQuery EasyUI Demo</title>
+    <link href="../../../Css/Jquery/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="../../_Global/Css/FWS.Web.COverlay.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.glob.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.glob.all.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.autocomplete.js" type="text/javascript"></script>
+    <script src="../../_Global/Js/FWS.Web.COverlay.js" type="text/javascript"></script>
+    <script src="../../_Core/Js/FWS.System.IO.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var demo =new CTabs({ fit: true });
+            demo.Init("#tt");
+        });
+    </script>
+</head>
+<body>
+    <div id="tt" style="height:400px;">
+        <div title="Tab1">
+            <table id="test" class="easyui-datagrid" fit="true">
+                <thead>
+                    <tr>
+                        <th field="f1" width="60">field1</th>
+                        <th field="f2" width="60">field2</th>
+                        <th field="f3" width="60">field3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            d1
+                        </td>
+                        <td>
+                            d2
+                        </td>
+                        <td>
+                            d3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            d11
+                        </td>
+                        <td>
+                            d21
+                        </td>
+                        <td>
+                            d31
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div title="Tab2">tab2</div>
+        <div title="Tab3">tab3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,376 @@
+﻿body
+{
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: dimGray;
+    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+    background: url(img/texture.jpg) 50% 0 !important;
+}
+.header_container
+{
+    height: 615px;
+    background: #0F0F0F url(img/header.jpg) no-repeat center;
+}
+.header_content
+{
+}
+.header_logo
+{
+    background: url(img/border_tail.png) repeat-x;
+    padding: 58px 0 46px;
+}
+a.img_logo
+{
+    display: block;
+    width: 230px;
+    height: 54px;
+    margin: 0 auto;
+    background: url(img/logoFWS.png) no-repeat;
+}
+#slider-container
+{
+    height: 376px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 900px;
+}
+#slider
+{
+    width: 900px;
+    height: 376px;
+    margin: 0;
+    padding: 0;
+}
+.nivo-caption
+{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    color: #828282;
+    opacity: 1;
+    width: 100%;
+    z-index: 8;
+    font: 22px 'News Cycle' , sans-serif;
+    text-transform: uppercase;
+    background: transparent;
+}
+.nivo-caption .intro_space p
+{
+    width: 200px;
+    white-space: nowrap;
+}
+.nivo-caption .intro_space p span
+{
+    display: block;
+    color: white;
+    font-size: 32px;
+    line-height: 40px;
+}
+.nivo-caption .intro_space p.intro_space_left
+{
+    float: left;
+    text-align: right;
+}
+.nivo-caption .intro_space p.intro_space_right
+{
+    float: right;
+    text-align: left;
+}
+.nivo-directionNav
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: url(img/slider-btns-bg.png) no-repeat;
+    margin-left: -80px;
+    width: 68px;
+    height: 39px;
+    padding: 25px 46px 0;
+    z-index: 100;
+}
+.nivo-directionNav a
+{
+    cursor: pointer;
+    display: inline-block;
+    width: 15px;
+    height: 26px;
+    font-size: 1px;
+    text-indent: -9999em;
+}
+.nivo-directionNav a.nivo-prevNav
+{
+    background: url(img/slider_btns.png) no-repeat;
+    margin-left: 38px;
+}
+.nivo-directionNav a.nivo-prevNav:hover
+{
+    background-position: 0 -26px;
+}
+.nivo-directionNav a.nivo-nextNav
+{
+    background: url(img/slider_btns.png) -15px 0 no-repeat;
+    margin-right: 38px;
+}
+.nivo-directionNav a.nivo-nextNav:hover
+{
+    background-position: -15px -26px;
+}
+.main_content_top, .main_content
+{
+    background: url(img/mainbody_texture.gif) 50% 0;
+    padding: 20px 0 15px;
+    overflow: hidden;
+}
+.items-clock
+{
+    width: 960px;
+    height: 200px;
+    margin: 0 auto;
+    list-style: none;
+    background: url(img/homepage_blocks.png) 0 100% repeat-x;
+    padding: 0 0 20px;
+}
+.main_content_block
+{
+    padding: 0 0 20px;
+    width: 960px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.items-clock li
+{
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+    background: white;
+    box-shadow: 0 0 5px rgba(208,212,185,.18);
+    text-align: center;
+    padding: 0 0 25px;
+    border-bottom: 1px dotted #CCC;
+}
+.items-clock li:first-child
+{
+    margin: 0;
+}
+.items-clock li .item-header
+{
+    text-align: left;
+    padding: 12px 20px 0 10px;
+    height: 132px;
+    margin: 0 0 18px;
+}
+.items-clock li a.item-title
+{
+    color: white;
+    font: 32px/40px 'News Cycle' , sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.items-clock li .item-intro
+{
+    padding: 0 10px 8px;
+    color: #878787;
+    line-height: 22px;
+}
+a.item-readmore
+{
+    background: #414141;
+    padding: 6px 16px;
+    color: white;
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    border: none;
+    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+a.item-readmore:hover
+{
+    background: #666;
+}
+.items-clock li.item-1
+{
+    background: url(img/block1_tail.gif) repeat-x white;
+}
+.items-clock li.item-1 .item-header
+{
+    background: url(img/page1-icon1.png) 162px 31px no-repeat;
+    height: 130px;
+}
+.items-clock li.item-2
+{
+    background: url(img/block2_tail.gif) repeat-x white;
+}
+.items-clock li.item-2 .item-header
+{
+    background: url(img/page1-icon2.png) 162px 31px no-repeat;
+    height: 130px;
+}
+.items-clock li.item-3
+{
+    background: url(img/block3_tail.gif) repeat-x white;
+}
+.items-clock li.item-3 .item-header
+{
+    background: url(img/page1-icon3.png) 162px 31px no-repeat;
+    height: 130px;
+}
+
+
+.listCategories-block
+{
+}
+.listView-block
+{
+    margin-left: 90px;
+}
+.listCategories-title, .listView-title
+{
+    margin-bottom: 25px;
+}
+.listCategories-title h2, .listView-title h2
+{
+    font-size: 25px;
+    line-height: 36px;
+    font-family: 'News Cycle' , sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #1B1B1B;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+ul.item-categories
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.item-categories li
+{
+    font: 16px 'News Cycle' , sans-serif !important;
+    background: url(img/list1_border.png) repeat-x;
+    padding: 6px 0 10px !important;
+}
+ul.item-categories li:first-child
+{
+    background: none;
+}
+ul.item-categories li a
+{
+    color: #1B1B1B;
+    padding: 0 0 0 32px;
+    background: url(img/list1_marker.gif) 2px 3px no-repeat;
+    font: 15px 'News Cycle' , sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0 0 1px rgba(27, 27, 27, .5);
+    text-decoration: none;
+}
+ul.item-categories li a:hover
+{
+    color: #666;
+}
+.listView-image
+{
+    float: left;
+    margin-right: 30px;
+}
+.listView-intro-title
+{
+    font: 20px 'News Cycle' , sans-serif;
+    text-transform: uppercase;
+    color: #1B1B1B;
+    letter-spacing: normal;
+}
+.listView-intro p
+{
+    font-size: 13px;
+    line-height: 20px;
+    color: dimGray;
+    font-family: "Trebuchet MS";
+    text-align: justify;
+}
+/**/
+.footer_block
+{
+    padding: 0 0 20px;
+    width: 960px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(img/divider.png) 279px 0 repeat-y;
+}
+.footer_container
+{
+    background: url(img/footer_bg.png) repeat-x;
+}
+.footer_top
+{
+    background: url(img/bottom_border.png) repeat-x;
+    padding: 30px 0 30px;
+    color: #F4F4F4;
+}
+.item-introtext
+{
+    font-size: 13px;
+    line-height: 20px;
+    font-family: "Trebuchet MS";
+}
+ul.item-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.item-list li
+{
+    background: url(img/bottom_list_border.png) repeat-x;
+    padding: 6px 0 9px !important;
+}
+ul.item-list li:first-child
+{
+    background: none;
+}
+ul.item-list li a
+{
+    font: 14px 'News Cycle' , sans-serif;
+    color: #F4F4F4;
+    text-decoration: none;
+}
+input.your-email
+{
+    padding: 7px 10px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1em;
+    border: 1px solid #6D6D6D;
+    margin: 5px 0;
+    width: 279px;
+    color: #F4F4F4;
+}
+textarea.messages
+{
+    height: 86px;
+    padding: 7px 10px;
+    resize: none;
+    width: 279px;
+    border: none;
+    background: none;
+    outline: none;
+    overflow: auto;
+    font-size: 1em;
+    line-height: 20px;
+    border: 1px solid #6D6D6D;
+    margin: 5px 0;
+    color: #F4F4F4;
+}
+.item-readmore.send
+{
+    float: right;
+}

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ReportPT.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.ReportDoc.ReportPT" %>
+<iframe class="vReport" id="rptPT" style="width: 100%; height: 100%;" scrolling="no" frameborder="0" src="../Mods/_core.report/PReportViewer.aspx"></iframe>

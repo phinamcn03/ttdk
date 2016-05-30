@@ -1,0 +1,24 @@
+﻿.FlowChartContainer
+{
+}
+.FlowChart
+{
+    background: #fff;
+    width: 610px;
+    height: 420px;
+    left: 50%;
+    margin: -210px 0 0 -305px;
+    position: absolute;
+    top: 50%;    
+    border: 1px solid #888;
+    padding: 10px 10px 10px 10px;
+}
+text
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

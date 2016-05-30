@@ -1,0 +1,32 @@
+﻿body {
+}
+#vtnt_filter_container{
+    margin: 3px;
+}
+fieldset 
+{
+    margin: 0px 0px;
+    padding: 5px 5px;
+}
+.vtnt_filter_action
+{
+    border-top: 1px solid #cdcdcd;
+    margin:0px 5px;
+    padding: 5px 0px;
+}
+
+.vtnt_filter_action_item
+{
+    display: inline-block;
+    float: right;
+    padding: 2px 7px;
+    margin-left:5px;
+    border:1px solid #cdcdcd;
+    cursor: pointer;
+}
+
+.vtnt_filter_action_item:hover
+{
+    border:1px solid #ff8c00;
+    color: #ff8c00;
+}

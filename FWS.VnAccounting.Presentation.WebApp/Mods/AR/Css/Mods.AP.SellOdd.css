@@ -1,0 +1,76 @@
+﻿.fsForm {
+    border: solid 1px #CCC;
+}
+
+    .fsForm legend {
+        font-size: 11px;
+    }
+
+    .fsForm > div {
+        float: left;
+        overflow: hidden;
+        padding: 0 2px 2px 0;
+    }
+
+        .fsForm > div.newrow {
+            clear: both;
+        }
+
+        .fsForm > div.fullrow {
+            width: 100%;
+        }
+
+        .fsForm > div.newrow > label {
+            display: inline-block;
+        }
+
+#SellOdd-lblPartner, #SellOdd-lblWarehouse {
+    display: inline-block;
+    width: 100px;
+}
+
+#SellOdd-MedicReceiptInfo-Dialog {
+}
+
+    #SellOdd-MedicReceiptInfo-Dialog .fsForm {
+        margin-bottom: 10px;
+    }
+
+        #SellOdd-MedicReceiptInfo-Dialog .fsForm > div.newrow {
+            width: 100px;
+        }
+
+        #SellOdd-MedicReceiptInfo-Dialog .fsForm > div > label {
+            height: 22px;
+            line-height: 24px;
+        }
+
+        #SellOdd-MedicReceiptInfo-Dialog .fsForm > div > .combo {
+            margin-left: 2px;
+        }
+
+        #SellOdd-MedicReceiptInfo-Dialog .fsForm.fsAction {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.datagrid-ftable .datagrid-row td {
+    border-right-color: transparent;
+}
+
+    .datagrid-ftable .datagrid-row td:last-child {
+        border-color: #CCC;
+    }
+
+.datagrid-ftable .datagrid-row:last-child td {
+    border-bottom-color: transparent;
+}
+
+*.datagrid-row {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Invoice.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.ItemsDoc.Invoice" %>
+<script type="text/javascript" src="<%= Page.ResolveUrl("../Mods/ItemsDoc/Js/Mods.ItemsDoc.Invoice.js") %>"></script>
+<iframe class="vFrmHst" id="hstgrid-Invoice-content" style="width: 100%; height: 100%;" scrolling="no" frameborder="0" src="../Mods/_core.hst/PGrid.aspx"></iframe>

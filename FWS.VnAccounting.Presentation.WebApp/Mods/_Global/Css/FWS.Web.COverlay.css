@@ -1,0 +1,70 @@
+﻿.COverlay {
+    background: url("img.COverlay/bg.overlay.png") repeat-x scroll 0 -15px transparent;
+    font-size: 1em;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    position: absolute;
+    position: fixed;
+    font-weight: bold;
+    -moz-border-radius: 0 0 16px 16px;
+    border-radius: 0 0 16px 16px;
+    z-index: 100;
+    color: #FFFFFF;
+    display: none;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    text-align: center;
+    /*
+    z-index: 99;
+    position: absolute;
+    right: -4px;
+    top: -4px; 
+    */
+}
+
+    .COverlay .COverlay-Fixed {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        /* IE10 Consumer Preview */
+        background-image: -ms-radial-gradient(center, circle closest-corner, #EEEEEE 0%, #7F7F7F 100%);
+        /* IE9 Consumer Preview */
+        filter: alpha(opacity=50) progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr='#EEEEEE', endColorstr='#7F7F7F');
+        /* Mozilla Firefox */
+        background-image: -moz-radial-gradient(center, circle closest-corner, #EEEEEE 0%, #7F7F7F 100%);
+        /* Opera */
+        background-image: -o-radial-gradient(center, circle closest-corner, #EEEEEE 0%, #7F7F7F 100%);
+        /* Webkit (Safari/Chrome 10) */
+        background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #EEEEEE), color-stop(1, #7F7F7F));
+        /* Webkit (Chrome 11+) */
+        background-image: -webkit-radial-gradient(center, circle closest-corner, #EEEEEE 0%, #7F7F7F 100%);
+        /* W3C Markup, IE10 Release Preview */
+        background-image: radial-gradient(circle closest-corner at center, #EEEEEE 0%, #7F7F7F 100%);
+        opacity: 0.2;
+    }
+
+    .COverlay .COverlay-Loading {
+        position: absolute;
+        right: 0;
+        width: 168px;
+        height: 40px;
+        background: url(../../../Images/Media/loading.gif) 0 -15px no-repeat;
+    }
+
+    .COverlay .COverlay-Stop {
+        position: absolute;
+        width: 55px;
+        height: 65px;
+        cursor: pointer;
+        margin-left: 55px;
+    }
+
+    .COverlay .COverlay-dots {
+        display: inline-block;
+        width: 20px;
+        text-align: left;
+    }

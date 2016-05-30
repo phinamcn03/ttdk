@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>numberspinner</title>
+    <link href="../../../Css/Jquery/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="../../_Global/Css/FWS.Web.COverlay.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.glob.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.glob.all.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script src="../../../Js/jq.plugin/jquery.autocomplete.js" type="text/javascript"></script>
+    <script src="../../_Global/Js/FWS.Web.COverlay.js" type="text/javascript"></script>
+    <script src="../../_Core/Js/FWS.System.IO.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var demo = new CNumberSpinner({
+                width: 80,
+                min: 10,
+                max: 100
+            });
+            demo.Init("#numberspinner1");
+            var demo2 = new CNumberSpinner({
+                width: 120,
+                increment: 100,
+                value: 1000
+            });
+            demo2.Init("#numberspinner2");
+        });
+    </script>
+</head>
+<body>
+    <h2>NumberSpinner</h2>
+    <span>Age: </span>
+    <input id="numberspinner1" />
+    <span>Salary: </span>
+    <input id="numberspinner2" />
+</body>
+</html>

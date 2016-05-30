@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ActiveIngredientEntry.ascx.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Mods.Items.ActiveIngredientEntry" %>
+<%@ Register src="../ACore/GroupBaseEntry.ascx" tagname="GroupBaseEntry" tagprefix="ucGroupBaseEntry" %>
+<ucGroupBaseEntry:GroupBaseEntry ID="GroupBaseEntry_ItemsProductGroupBaseEntry" runat="server" GridID="43" InstantID="ActiveIngredient" RefType="2"/>

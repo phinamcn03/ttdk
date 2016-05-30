@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CControl Demo</title>
+    <!-- Css -->
+    <link href="../../Css/Themes/jquery-ui/smothness/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/JGrid/themes/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../../Mods/_Global/Css/FWS.Web.COverlay.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Jquery/autocomplete/jquery.autocomplete.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <!-- Jquery Core -->
+    <script src="../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../Js/jq/jquery.extend.js" type="text/javascript"></script>
+    <script src="../../Js/jq/jquery-ui-1.8.13.custom.min.js" type="text/javascript"></script>
+    <!-- Jquery Grid Plugin -->
+    <script src="../../Js/jq.plugin/jquery.hotkeys.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.autocomplete.js" type="text/javascript"></script>
+    <!-- Jquery Extend Core -->
+    <script src="../_Global/Js/FWS.Web.COverlay.js" type="text/javascript"></script>
+    <script src="../_Core/Js/FWS.System.IO.js" type="text/javascript"></script>
+    <!-- Jquery Extend Plugin -->
+    <script src="../../Js/jq.plugin/jquery.glob.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.glob.all.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.splitter.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/ui.dropdownchecklist.js" type="text/javascript"></script>
+    <!-- JS manual -->
+    <script src="../_Core/Js/FWS.Web.CCSV.js" type="text/javascript"></script>
+    <script src="../_Core/Js/CControl.js" type="text/javascript"></script>
+    <style type="text/css">
+        /** Simple modifications needed for DropDownCheckList to take advantage of ThemeRoller settings */
+        .ui-dropdownchecklist .ui-widget-content, .ui-dropdownchecklist .ui-widget-header
+        {
+            border: none;
+        }
+        .ui-dropdownchecklist-indent
+        {
+            padding-left: 7px;
+        }
+        /* Font size of 0 on the -selector and an explicit medium on -text required to eliminate 
+           descender problems within the containers and still have a valid size for the text */
+        .ui-dropdownchecklist-selector-wrapper, .ui-widget.ui-dropdownchecklist-selector-wrapper
+        {
+            vertical-align: middle;
+            font-size: 0px;
+        }
+        .ui-dropdownchecklist-selector
+        {
+            padding: 1px 2px 2px 2px;
+            font-size: 0px;
+        }
+        .ui-dropdownchecklist-text
+        {
+            font-size: medium;
+        }
+        .ui-dropdownchecklist-item, .ui-dropdownchecklist-item input
+        {
+            vertical-align: middle;
+        }
+        .ui-dropdownchecklist-group
+        {
+            padding: 1px 2px 2px 2px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var options = {};
+            var control = CControl;
+            /*TreeCombo
+            control.InitTreeCombo({
+                width: 300,
+                datacode: 'Account',
+                filtercode: 'Cash',
+                id: 'cbxTreeList',
+                value: 7
+            });
+            $("#btnGet").click(function () {
+                alert(control.GetTreeCombo('#cbxTreeList'));
+            });
+            $("#btnSet").click(function () {
+                control.SetTreeCombo('#cbxTreeList', $("#txtValue").val());
+            });
+
+            control.InitCombobox({
+                width: 200,
+                inputValue: "DataCode='Account' FilterCode='Cash'",
+                id: 'cbxCombobox',
+                value: 11
+            });
+            */
+            //            control.InitCheckList({
+            //                width: 200,
+            //                inputValue: "DataCode='Account' FilterCode='Cash'",
+            //                id: '#cbxCheckList',
+            //                value: 11,
+            //                isAll: true
+            //            });
+            control.InitForm({ container: '.Form-Container' });
+        });
+    </script>
+</head>
+<body>
+    <div class="Form-Container" style="height: 800px">
+        <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-save" id="A1">
+            Get</a> <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-delete"
+                id="A2">Set</a>
+        <ul class="layout-table-column-label" style="width: 100px;">
+            <li>TreeCombo Form:</li>
+            <li>Combobox Form:</li>
+            <li>Checklist Form:</li>
+        </ul>
+        <ul class="layout-table-column-label" style="width: 700px;">
+            <li>
+                <input type="text" extype="datebox" id="txtDateBox" style="width: 100px;" />
+            </li>
+            <li>
+                <select id="frmTreeCombo" style="width: 200px;" extype="TreeCombo" datacode="Account"
+                    filtercode="Cash" defaultvalue="11" />
+            </li>
+            <li>
+                <input type="text" id="frmCbxCombobox" extype="Combobox" style="width: 300px;" datacode="Account"
+                    filtercode="Cash" defaultvalue="7" />
+            </li>
+            <li>
+                <select id="frmCbxCheckList" multiple="multiple" extype="CheckList" style="width: 200px;"
+                    datacode="Account" filtercode="Cash" defaultvalue="8" />
+            </li>
+            <li>
+                <input type="text" id="txtAutocomplete" extype="AutoComplete" style="width: 200px;" datacode="Account" filtercode="Cash" />
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

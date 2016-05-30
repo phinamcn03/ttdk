@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>autocomplete</title>
+    <link href="../../Css/Jquery/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="../_Global/Css/FWS.Web.COverlay.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <script src="../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script src="../../Js/jq.plugin/jquery.autocomplete.js" type="text/javascript"></script>
+    <script src="../_Global/Js/FWS.Web.COverlay.js" type="text/javascript"></script>
+    <script src="../_Core/Js/FWS.System.IO.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var _ac = null;
+        $(function () {
+            CreateAutocomplete();
+            /* event */
+            //            $("#set").click(function () {
+            //                var max = parseInt($("#cboMax").val());
+            //                _ac.setOptions({
+            //                    max: max
+            //                });
+            //            });
+            //            $("#clear").click(function () {
+            //                _ac.unautocomplete();
+            //            });
+            //            $("#restore").click(function () {
+            //                CreateAutocomplete();
+            //            });
+        });
+        function CreateAutocomplete() {
+            var data = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var url = "TemplateControllerService.asmx/Datass";
+            //_ac = FWS.System.IO.Autocomplete("#demo", data, {
+            _ac = FWS.System.IO.Autocomplete("#demo", url, {
+                width: 152,
+                cacheLength: 12,
+                minChars: 1,
+                max: 10,
+                delay: 500,
+                extraParams: {
+                    InputValue: "tham số mở rộngdsf|sdf|sdfs|ffs|dfsd|fsd|fs|sdf"
+                },
+                autoFill: false,
+                mustMatch: true,
+                scrollHeight: 220,
+                formatItem: function (data, i, total) {
+                    return data[0] + " - " + data[1];
+                },
+                formatResult: function (data) {
+                    return data[1]
+                }
+            }).result(function (event, item) {
+                console.log(item);
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="demo" />
+    <select id="cboMax">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+        <option value="12">12</option>
+    </select>
+    <input type="button" id="set" value="Set max" />
+    <input type="button" id="clear" value="Remove autocomplete" />
+    <input type="button" id="restore" value="Restore autocomplete" />
+</body>
+</html>

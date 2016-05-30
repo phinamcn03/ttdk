@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout Config</title>
+    <link href="../../Css/Themes/jquery-easy-ui/gray/easyui.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Themes/jquery-easy-ui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Core/core.css" rel="stylesheet" type="text/css" />
+    <!-- Jquery Core -->
+    <script src="../../Js/jq/jquery.min.lastest.js" type="text/javascript"></script>
+    <script src="../../Js/jq/jquery.extend.js" type="text/javascript"></script>
+    <!-- Jquery Extend Plugin -->
+    <script src="../../Js/jq.plugin/jquery.easy.ui.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#tt').tabs();
+        });
+    </script>
+</head>
+<body>
+    <div id="tt" class="easyui-tabs" tools="#tab-tools" style="width: 700px; height: 250px;">
+        <div title="Thông tin mặc định" tools="#p-tools"></div>
+    </div>
+    <div id="p-tools">
+        <a href="#" class="icon-mini-add" onclick="alert('add')">
+        </a>
+        <a href="#" class="icon-mini-edit" onclick="alert('edit')">
+        </a>
+        <a href="#" class="icon-mini-refresh" onclick="alert('refresh')">
+        </a>
+    </div>
+</body>
+</html>
