@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/FwsCore.Master" AutoEventWireup="true" CodeBehind="FwsCoreSub.master.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Master.FwsCoreSub" %>
+
+<asp:Content ID="TitleCoreSub" ContentPlaceHolderID="TitleCore" runat="server">
+    <asp:ContentPlaceHolder ID="TitleCoreSubPlace" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="HeadCoreSub" ContentPlaceHolderID="HeadCore" runat="server">
+    <script type="text/javascript">
+        $(function () {
+            $('#ContentCoreSub-Layout').css({
+                width: $(window).width() + "px",
+                height: $(window).height() + "px"
+            }).layout();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadCoreSubPlace" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ContentCoreSub" ContentPlaceHolderID="ContentCore" runat="server">
+    <div id="ContentCoreSub-Layout">
+        <div region="east" split="false" style="width: 180px;">
+            <div id="Accordion-Menu"></div>
+        </div>
+        <div region="center" style="background: #fafafa; overflow: hidden">
+            <asp:ContentPlaceHolder ID="ContentCoreSubPlace" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

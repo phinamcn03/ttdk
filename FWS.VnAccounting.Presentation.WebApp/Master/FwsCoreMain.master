@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/FwsCore.Master" AutoEventWireup="true"
+    CodeBehind="FwsCoreMain.master.cs" Inherits="FWS.VnAccounting.Presentation.WebApp.Master.FwsCoreMain" %>
+
+<asp:Content ID="TitleCoreMain" ContentPlaceHolderID="TitleCore" runat="server">
+    <asp:ContentPlaceHolder ID="TitleCoreMainPlace" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="HeadCoreMain" ContentPlaceHolderID="HeadCore" runat="server">
+    <!-- FlowChart -->
+    <link href="../Mods/_Core/Css/FlowChart.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Mods/_Core/Js/FWS.Web.Rraphael.js"></script>
+    <script type="text/javascript" src="../Mods/_Core/Js/FWS.Web.FlowChart.js"></script>
+    <!-- Global -->
+    <script src="../Mods/_Core/Js/FWS.System.Control.js" type="text/javascript"></script>
+    <script src="../Mods/_Global/Js/FWS.Web.CInterfaceFunction.js" type="text/javascript"></script>
+    <script src="../Mods/_Global/Js/FWS.Web.CTemplateController.js" type="text/javascript"></script>
+    <script src="../Js/core/FWS.Web.Core.js" type="text/javascript"></script>
+    <script src="../Mods/_Core/Js/FWS.System.IO.js" type="text/javascript"></script>
+    <script src="../Mods/_Core/Js/FWS.Filter.js" type="text/javascript"></script>
+    <!-- Init -->
+    <script type="text/javascript">
+        $(function () {
+            FWS.Web.Core.Init();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadCoreMainPlace" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ContentCoreMain" ContentPlaceHolderID="ContentCore" runat="server">
+    <div id="ContentCoreMain-Layout">
+        <div region="north" split="false" style="overflow: hidden; height: 99px; border: 0;">
+            <div class="easyui-layout" fit="true" border="false">
+                <div region="west" split="false" border="false" style="width: 200px; overflow: hidden;">
+                    <div id="Header-Logo">
+                        <img src="../Images/Media/logo.png" />
+                    </div>
+                </div>
+                <div region="center" split="false" border="false">
+                    <div id="Header-Description">
+                        <div style="padding: 5px; float: left;">
+                            <span>Hệ thống hỗ trợ quản lý chứng từ ® VTNT</span>
+                            <br />
+                            [&nbsp;<span id="Header-UserFullName"></span>&nbsp;]
+                        </div>
+                        <div id="Header-Description-Corner" style="float: right">
+                            <p style="display: none">
+                                <a target="_blank" href="javascript:void(0);">
+                                    <img alt="" src="../Css/Core/img.core/busy.png">Support</a>
+                            </p>
+                            <p style="display: none">
+                                <a onclick="" href="javascript:void(0);">
+                                    <img alt="" src="../Css/Core/img.core/uv_favicon.png">feedback</a></p>
+                            <%--
+                            <ul class="corner-tools">
+                                <li><a class="tools-home">Home </a></li>
+                                <li><a class="tools-messages" href="javascript:void(0);"><small>1</small> </a></li>
+                                <li><a class="tools-preferences" href="javascript:void(0);">Preferences </a></li>
+                                <li><a class="tools-info" href="javascript:void(0);">About </a></li>
+                                <li><a class="tools-help" href="javascript:void(0);">Help </a></li>
+                                <li><a class="tools-cache" href="javascript:void(0);">Clear Cache </a></li>
+                            </ul>
+                            --%>
+                            <p style="float: left;">
+                                <a href="javascript:void(0);" id="Accounting-Login">Login </a><a href="javascript:void(0);"
+                                    id="Accounting-Logout">Logout </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div region="south" border="false" style="height: 34px;">
+                    <div class="easyui-layout" fit="true" border="false">
+                        <div region="west" class="Layout-Navigation" split="false" border="false" style="width: 200px;">
+                        </div>
+                        <div region="center" class="Layout-Navigation" split="false" border="false">
+                            <div id="Navigation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--<div region="south" split="false" border="false" style="height: 22px; line-height: 22px; background-color: #434343; color: #999999; overflow: hidden; text-shadow: 0 -1px 0 #000000; text-align: center;">
+            <div>2005-Today. All rights reserved. &copy; OpenERP is a trademark of OpenERP s.a. The software is released under AGPL.</div>
+        </div>--%>
+        <div region="west" split="false" title="" border="true" style="width: 200px;">
+            <div class="panel-header">
+                <div class="panel-title main-panel-title">
+                    Danh sách các chức năng</div>
+                <div class="panel-tool">
+                    <a href="javascript:void(0)" class="layout-button-left"></a>
+                </div>
+            </div>
+            <div id="Accordion-Menu">
+            </div>
+        </div>
+        <div region="center" split="false" class="main-layout-center" border="false" title="Center Title"
+            style="background: #fafafa; overflow: hidden">
+            <div id="MainContent">
+                <asp:ContentPlaceHolder ID="ContentCoreMainPlace" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</asp:Content>
