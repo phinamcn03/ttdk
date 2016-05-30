@@ -1,0 +1,3197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0578DC6D-669E-49CE-B4BF-3C1F1E5A40D9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FWS.VnAccounting.Presentation.WebApp</RootNamespace>
+    <AssemblyName>FWS.VnAccounting.Presentation.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>Dll\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css.filter\core\CFilter.css" />
+    <Content Include="Css.filter\core\Core.css" />
+    <Content Include="Css.filter\core\CTabs.css" />
+    <Content Include="Css.filter\core\Form.css" />
+    <Content Include="Css\Core\core.css" />
+    <Content Include="Css\Core\img.core\bg_search.png" />
+    <Content Include="Css\Core\img.core\bg_toolbar.png" />
+    <Content Include="Css\Core\img.core\busy.png" />
+    <Content Include="Css\Core\img.core\clear_cache.png" />
+    <Content Include="Css\Core\img.core\header-background.png" />
+    <Content Include="Css\Core\img.core\img-login.jpg" />
+    <Content Include="Css\Core\img.core\img_search.jpg" />
+    <Content Include="Css\Core\img.core\logo-bg.png" />
+    <Content Include="Css\Core\img.core\nav-bg-a.png" />
+    <Content Include="Css\Core\img.core\nav-bg-a1.png" />
+    <Content Include="Css\Core\img.core\nav-items-a.png" />
+    <Content Include="Css\Core\img.core\search-bar-close.png" />
+    <Content Include="Css\Core\img.core\search-bar-open.f1.png" />
+    <Content Include="Css\Core\img.core\search-bar-open.png" />
+    <Content Include="Css\Core\img.core\separator_bar.png" />
+    <Content Include="Css\Core\img.core\sidenav-link-a.png" />
+    <Content Include="Css\Core\img.core\top-logout-a.png" />
+    <Content Include="Css\Core\img.core\top-sep-a.png" />
+    <Content Include="Css\Core\img.core\top-tools-a.png" />
+    <Content Include="Css\Core\img.core\tree_arrows.gif" />
+    <Content Include="Css\Core\img.core\uv_favicon.png" />
+    <Content Include="Css\Jquery\autocomplete\indicator.gif" />
+    <Content Include="Css\Jquery\autocomplete\jquery.autocomplete.css" />
+    <Content Include="Css\Jquery\token-input.css" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\basic\jquery-ui-1.7.1.custom.css" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Css\Themes\JGrid\themes\redmond\jquery-ui-1.7.1.custom.css" />
+    <Content Include="Css\Themes\JGrid\themes\ui.jqgrid.css" />
+    <Content Include="Css\Themes\JGrid\themes\ui.multiselect.css" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\easyui.css" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\accordion_collapse.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\accordion_expand.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\blank.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\button_a_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\button_plain_hover.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\button_span_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\calendar_nextmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\calendar_nextyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\calendar_prevmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\calendar_prevyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\combo_arrow.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_header_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_row_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_row_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_sort_asc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_sort_desc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datagrid_title_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\datebox_arrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\layout_button_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\layout_button_left.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\layout_button_right.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\layout_button_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\menu.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\menu_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\menu_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\menu_sep.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\menu_split_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\messager_error.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\messager_info.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\messager_question.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\messager_warning.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_first.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_last.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_load.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_next.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\pagination_prev.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_title.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_title_.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_tools.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_tool_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\panel_tool_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\searchbox_button.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\spinner_arrow_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\spinner_arrow_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tabs_close.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tabs_enabled.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tabs_leftarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tabs_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_arrows.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_checkbox_0.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_checkbox_1.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_checkbox_2.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_dnd_no.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_dnd_yes.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_file.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_folder.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_folder_open.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\tree_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\validatebox_pointer.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\darkred\images\validatebox_warning.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\easyui.css" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\accordion_collapse.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\accordion_expand.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\blank.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\button_a_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\button_plain_hover.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\button_span_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\calendar_nextmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\calendar_nextyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\calendar_prevmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\calendar_prevyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\combo_arrow.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_header_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_row_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_row_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_sort_asc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_sort_desc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datagrid_title_bg.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\datebox_arrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\layout_button_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\layout_button_left.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\layout_button_right.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\layout_button_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\menu.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\menu_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\menu_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\menu_sep.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\menu_split_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\messager_error.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\messager_info.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\messager_question.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\messager_warning.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_first.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_last.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_load.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_next.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\pagination_prev.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\panel_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\panel_title.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\panel_tools.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\panel_tool_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\panel_tool_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\searchbox_button.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\spinner_arrow_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\spinner_arrow_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tabs_active.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tabs_close.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tabs_enabled.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tabs_leftarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tabs_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_arrows.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_checkbox_0.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_checkbox_1.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_checkbox_2.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_dnd_no.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_dnd_yes.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_file.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_folder.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_folder_open.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\tree_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\validatebox_pointer.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\default\images\validatebox_warning.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\easyui.css" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\accordion_collapse.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\accordion_expand.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\blank.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\button_a_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\button_plain_hover.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\button_span_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\calendar_nextmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\calendar_nextyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\calendar_prevmonth.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\calendar_prevyear.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\combo_arrow.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_header_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_row_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datagrid_title_bg.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\datebox_arrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\layout_button_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\layout_button_left.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\layout_button_right.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\layout_button_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\menu.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\menu_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\menu_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\menu_sep.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\menu_split_downarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\messager_error.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\messager_info.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\messager_question.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\messager_warning.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_first.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_last.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_load.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_next.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\pagination_prev.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_title.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_title_red.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_tools.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_tool_collapse.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\panel_tool_expand.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\searchbox_button.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\spinner_arrow_down.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\spinner_arrow_up.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tabs_close.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tabs_enabled.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tabs_leftarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tabs_rightarrow.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_arrows.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_checkbox_0.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_checkbox_1.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_checkbox_2.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_dnd_no.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_dnd_yes.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_file.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_folder.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_folder_open.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\tree_loading.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\validatebox_pointer.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\gray\images\validatebox_warning.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icon.css" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\back.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\blank.gif" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\cancel.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\cut.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\delete.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\edit_add.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\edit_remove.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\excel.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\filesave.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\filter.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\help.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\mini_add.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\mini_edit.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\mini_refresh.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\no.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\ok.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\pencil.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\print.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\redo.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\refresh.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\reload.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\search.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\sum.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\tip.png" />
+    <Content Include="Css\Themes\jquery-easy-ui\icons\undo.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\redmond\jquery-ui.css" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Themes\jquery-ui\smothness\jquery-ui.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Demos\GetMenu.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\icon\core\AcceptReject.png" />
+    <Content Include="Images\icon\core\add.png" />
+    <Content Include="Images\icon\core\address.png" />
+    <Content Include="Images\icon\core\Apply.png" />
+    <Content Include="Images\icon\core\cancel.png" />
+    <Content Include="Images\icon\core\check.png" />
+    <Content Include="Images\icon\core\checked.png" />
+    <Content Include="Images\icon\core\close.png" />
+    <Content Include="Images\icon\core\Coins.png" />
+    <Content Include="Images\icon\core\ConfirmUpdate.png" />
+    <Content Include="Images\icon\core\copy.png" />
+    <Content Include="Images\icon\core\credit_card.png" />
+    <Content Include="Images\icon\core\deal.png" />
+    <Content Include="Images\icon\core\edit.png" />
+    <Content Include="Images\icon\core\form.png" />
+    <Content Include="Images\icon\core\icon_excel.gif" />
+    <Content Include="Images\icon\core\icon_refresh.gif" />
+    <Content Include="Images\icon\core\icon_refresh.png" />
+    <Content Include="Images\icon\core\list.png" />
+    <Content Include="Images\icon\core\Mask.png" />
+    <Content Include="Images\icon\core\minus.png" />
+    <Content Include="Images\icon\core\note.png" />
+    <Content Include="Images\icon\core\password.png" />
+    <Content Include="Images\icon\core\Payment.png" />
+    <Content Include="Images\icon\core\PlaceOrder.png" />
+    <Content Include="Images\icon\core\plus.png" />
+    <Content Include="Images\icon\core\question.png" />
+    <Content Include="Images\icon\core\ReCalculation.png" />
+    <Content Include="Images\icon\core\Reject.png" />
+    <Content Include="Images\icon\core\Release.png" />
+    <Content Include="Images\icon\core\ReleaseAll.png" />
+    <Content Include="Images\icon\core\report.png" />
+    <Content Include="Images\icon\core\resend.png" />
+    <Content Include="Images\icon\core\reshopcart.png" />
+    <Content Include="Images\icon\core\resubmit.png" />
+    <Content Include="Images\icon\core\save.png" />
+    <Content Include="Images\icon\core\Send.png" />
+    <Content Include="Images\icon\core\shopcart.png" />
+    <Content Include="Images\icon\core\signature.png" />
+    <Content Include="Images\icon\core\Submit.png" />
+    <Content Include="Images\icon\core\uncheck.png" />
+    <Content Include="Images\icon\core\undo.png" />
+    <Content Include="Images\icon\core\UnHold.png" />
+    <Content Include="Images\icon\core\Update.png" />
+    <Content Include="Images\icon\fc\Bill.png" />
+    <Content Include="Images\icon\fc\Config.png" />
+    <Content Include="Images\icon\fc\DocApprove.png" />
+    <Content Include="Images\icon\fc\DocumentApprove.png" />
+    <Content Include="Images\icon\fc\InWard.png" />
+    <Content Include="Images\icon\fc\Ledger.png" />
+    <Content Include="Images\icon\fc\Orders.png" />
+    <Content Include="Images\icon\fc\OutWard.png" />
+    <Content Include="Images\icon\fc\Payment.png" />
+    <Content Include="Images\icon\fc\Product.png" />
+    <Content Include="Images\icon\fc\Receipt.png" />
+    <Content Include="Images\icon\fc\Sales.png" />
+    <Content Include="Images\icon\fc\UserInfo.png" />
+    <Content Include="Images\icon\fc\Vendor.png" />
+    <Content Include="Images\icon\fc\_blank.png" />
+    <Content Include="Images\Media\loading.gif" />
+    <Content Include="Images\core\_Readme.txt" />
+    <Content Include="Images\Media\logo.erp.png" />
+    <Content Include="Images\Media\logo.acc.png" />
+    <Content Include="Images\Media\logo.png" />
+    <Content Include="js.final\class\CCore.js" />
+    <Content Include="js.final\class\CCSV.js" />
+    <Content Include="js.final\class\CFormat.js" />
+    <Content Include="js.final\core\jquery.core.extend.js" />
+    <Content Include="js.final\core\jquery.core.js" />
+    <Content Include="js.final\plugins\easy.ui\jquery.easy.ui.1.3.3.js" />
+    <Content Include="js.final\plugins\easy.ui\jquery.easy.ui.1.3.3.min.js" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\accordion.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\calendar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\combo.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\combobox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\datagrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\datebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\dialog.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\layout.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\linkbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\menu.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\menubutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\messager.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\pagination.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\panel.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\progressbar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\propertygrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\searchbox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\slider.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\spinner.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\splitbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\tabs.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\tooltip.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\tree.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\validatebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\black\window.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\accordion.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\calendar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\combo.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\combobox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\datagrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\datebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\dialog.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\layout.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\linkbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\menu.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\menubutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\messager.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\pagination.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\panel.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\progressbar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\propertygrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\searchbox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\slider.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\spinner.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\splitbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\tabs.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\tooltip.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\tree.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\validatebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\bootstrap\window.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\accordion.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\calendar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\combo.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\combobox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\datagrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\datebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\dialog.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\layout.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\linkbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\menu.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\menubutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\messager.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\pagination.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\panel.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\progressbar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\propertygrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\searchbox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\slider.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\spinner.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\splitbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\tabs.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\tooltip.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\tree.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\validatebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\default\window.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\easyui.extend.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icon.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\back.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\cancel.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\cut.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\edit_add.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\edit_remove.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\filesave.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\help.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\mini_add.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\mini_edit.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\mini_refresh.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\no.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\ok.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\pencil.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\print.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\redo.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\reload.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\search.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\sum.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\tip.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\icons\undo.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-blue\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-gray\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-green\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-orange\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro-red\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\accordion.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\calendar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\combo.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\combobox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\datagrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\datebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\dialog.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\easyui.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\blank.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\combo_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\layout_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\loading.gif" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\menu_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\messager_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\pagination_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\panel_tools.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\searchbox_button.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\slider_handle.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\tabs_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\tree_icons.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\layout.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\linkbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\menu.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\menubutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\messager.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\pagination.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\panel.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\progressbar.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\propertygrid.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\searchbox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\slider.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\spinner.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\splitbutton.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\tabs.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\tooltip.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\tree.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\validatebox.css" />
+    <Content Include="js.final\plugins\easy.ui\themes\metro\window.css" />
+    <Content Include="js.final\plugins\Globalization\jQuery.glob.all.js" />
+    <Content Include="js.final\plugins\Globalization\jQuery.glob.all.min.js" />
+    <Content Include="js.final\plugins\Globalization\jquery.glob.js" />
+    <Content Include="js.final\plugins\Globalization\jquery.glob.min.js" />
+    <Content Include="js.final\plugins\jquery.hotkeys.js" />
+    <Content Include="Js\core.filter\CControl.js" />
+    <Content Include="Js\core.filter\CCSV.js" />
+    <Content Include="Js\core.filter\CDialog.js" />
+    <Content Include="Js\core.filter\CFilter.js" />
+    <Content Include="Js\core.filter\CFormat.js" />
+    <Content Include="Js\core.filter\CGrid.js" />
+    <Content Include="Js\core.filter\CMaskDate.js" />
+    <Content Include="Js\core.filter\CScroll.js" />
+    <Content Include="Js\core.filter\CTabs.js" />
+    <Content Include="Js\core.filter\CXml.js" />
+    <Content Include="Js\core\CCSV.del.js" />
+    <Content Include="Js\core\CCSV_demo.htm" />
+    <Content Include="Js\core\FWS.Web.Core.js" />
+    <Content Include="Js\core\_Readme.txt" />
+    <Content Include="Js\global\_Readme.txt" />
+    <Content Include="Js\jq.plugin\jquery.autocomplete.js" />
+    <Content Include="Js\jq.plugin\jquery.easy.ui.js" />
+    <Content Include="Js\jq.plugin\jquery.glob.all.js" />
+    <Content Include="Js\jq.plugin\jquery.glob.js" />
+    <Content Include="Js\jq.plugin\jquery.hotkeys.js" />
+    <Content Include="Js\jq.plugin\jquery.jqGrid.js" />
+    <Content Include="Js\jq.plugin\jquery.jqGrid.locale-en.js" />
+    <Content Include="Js\jq.plugin\jquery.json2xml.js" />
+    <Content Include="Js\jq.plugin\jquery.slimScroll.js" />
+    <Content Include="Js\jq.plugin\jquery.splitter.js" />
+    <Content Include="Js\jq.plugin\jquery.tokeninput.js" />
+    <Content Include="Js\jq.plugin\jquery.xml2json.js" />
+    <Content Include="Js\jq.plugin\ui.dropdownchecklist.js" />
+    <Content Include="Js\jq.widgets\globalization\globalize.culture.en-US.js" />
+    <Content Include="Js\jq.widgets\globalization\globalize.js" />
+    <Content Include="Js\jq.widgets\globalization\jquery.glob.en-US.js" />
+    <Content Include="Js\jq.widgets\globalization\jquery.global.js" />
+    <Content Include="Js\jq.widgets\jqx-all.js" />
+    <Content Include="Js\jq.widgets\resources\drag.png" />
+    <Content Include="Js\jq.widgets\resources\dragcancel.png" />
+    <Content Include="Js\jq.widgets\resources\filter_dark.png" />
+    <Content Include="Js\jq.widgets\resources\filter_large_.png" />
+    <Content Include="Js\jq.widgets\resources\loader.gif" />
+    <Content Include="Js\jq.widgets\resources\loader2.gif" />
+    <Content Include="Js\jq.widgets\resources\loader3.gif" />
+    <Content Include="Js\jq.widgets\resources\loader_2.gif" />
+    <Content Include="Js\jq.widgets\resources\menubutton.png" />
+    <Content Include="Js\jq.widgets\resources\red_arrow_down.png" />
+    <Content Include="Js\jq.widgets\resources\red_arrow_up.png" />
+    <Content Include="Js\jq.widgets\resources\sortasc.png" />
+    <Content Include="Js\jq.widgets\resources\sortascbutton.png" />
+    <Content Include="Js\jq.widgets\resources\sortdesc.png" />
+    <Content Include="Js\jq.widgets\resources\sortdescbutton.png" />
+    <Content Include="Js\jq.widgets\resources\sortremove.png" />
+    <Content Include="Js\jq.widgets\styles\images\arrow_bottom.png" />
+    <Content Include="Js\jq.widgets\styles\images\arrow_left.png" />
+    <Content Include="Js\jq.widgets\styles\images\arrow_right.png" />
+    <Content Include="Js\jq.widgets\styles\images\arrow_top.png" />
+    <Content Include="Js\jq.widgets\styles\images\backgroundTop.png" />
+    <Content Include="Js\jq.widgets\styles\images\backImage.png" />
+    <Content Include="Js\jq.widgets\styles\images\bar-hue.png" />
+    <Content Include="Js\jq.widgets\styles\images\bar-saturation.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_black.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_black2.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_blackhover.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_blackhover_horizontal.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_blackpressed.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_blackpressed_horizontal.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_black_horizontal.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_blueenergy.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_darkblue.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_darkbluehover.png" />
+    <Content Include="Js\jq.widgets\styles\images\bg_darkbluepressed.png" />
+    <Content Include="Js\jq.widgets\styles\images\blackbackground.png" />
+    <Content Include="Js\jq.widgets\styles\images\black_gradient.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_black.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_disabled.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_indeterminate_black.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_indeterminate_disabled.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_indeterminate_white.png" />
+    <Content Include="Js\jq.widgets\styles\images\check_white.png" />
+    <Content Include="Js\jq.widgets\styles\images\close.png" />
+    <Content Include="Js\jq.widgets\styles\images\close_white.png" />
+    <Content Include="Js\jq.widgets\styles\images\crosshair-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\crosshair.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-icons_222222_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-icons_a83300_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-icons_cccccc_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\darkred_gradient.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-down-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-down.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-left-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-left.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-right-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-right.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-up-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\icon-up.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-icons_4eb305_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-icons_72b42d_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\le-frog\ui-icons_ffffff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-icons_222222_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-icons_228ef1_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\lightness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\map-hue.png" />
+    <Content Include="Js\jq.widgets\styles\images\map-saturation-overlay.png" />
+    <Content Include="Js\jq.widgets\styles\images\map-saturation.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-down-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-down.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-left-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-left.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-right-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-right.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-up-white.png" />
+    <Content Include="Js\jq.widgets\styles\images\metro-icon-up.png" />
+    <Content Include="Js\jq.widgets\styles\images\multi-arrow.gif" />
+    <Content Include="Js\jq.widgets\styles\images\nav-arrow-down.png" />
+    <Content Include="Js\jq.widgets\styles\images\nav-arrow-left.png" />
+    <Content Include="Js\jq.widgets\styles\images\nav-arrow-right.png" />
+    <Content Include="Js\jq.widgets\styles\images\nav-arrow-up.png" />
+    <Content Include="Js\jq.widgets\styles\images\office-icon-down.png" />
+    <Content Include="Js\jq.widgets\styles\images\office-icon-left.png" />
+    <Content Include="Js\jq.widgets\styles\images\office-icon-right.png" />
+    <Content Include="Js\jq.widgets\styles\images\office-icon-up.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-icons_3383bb_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-icons_454545_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-icons_999999_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\overcast\ui-icons_fbc856_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\pointer.png" />
+    <Content Include="Js\jq.widgets\styles\images\rangebar_classic.png" />
+    <Content Include="Js\jq.widgets\styles\images\rangebar_darkblue.png" />
+    <Content Include="Js\jq.widgets\styles\images\rangebar_shinyblack.png" />
+    <Content Include="Js\jq.widgets\styles\images\rangebar_summer.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_217bc0_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_469bdd_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\redmond\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\red_gradient.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_check_black.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_check_disabled.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_check_indeterminate.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_check_white.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_classic_hover.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_classic_normal.png" />
+    <Content Include="Js\jq.widgets\styles\images\roundbg_disabled.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\star.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_0078ae_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_056b93_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_f5e175_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\start\ui-icons_fcd113_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\star_disabled.png" />
+    <Content Include="Js\jq.widgets\styles\images\star_hover.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_d19405_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_eb990f_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\sunny\ui-icons_ffe180_256x240.png" />
+    <Content Include="Js\jq.widgets\styles\images\tick.png" />
+    <Content Include="Js\jq.widgets\styles\images\track_classic.png" />
+    <Content Include="Js\jq.widgets\styles\images\track_darkblue.png" />
+    <Content Include="Js\jq.widgets\styles\images\track_shinyblack.png" />
+    <Content Include="Js\jq.widgets\styles\images\track_summer.png" />
+    <Content Include="Js\jq.widgets\styles\jqx.base.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.black.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.bootstrap.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.classic.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.darkblue.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.energyblue.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.fresh.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.highcontrast.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.metro.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.office.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.shinyblack.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.summer.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-darkness.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-le-frog.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-lightness.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-overcast.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-redmond.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-smoothness.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-start.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.ui-sunny.css" />
+    <Content Include="Js\jq.widgets\styles\jqx.web.css" />
+    <Content Include="Js\jq\jquery-1.7.1.min.js" />
+    <Content Include="Js\jq\jquery-ui-1.8.13.custom.min.js" />
+    <Content Include="Js\jq\jquery-ui.min.1.10.2.js" />
+    <Content Include="Js\jq\jquery.min.1.9.1.js" />
+    <Content Include="Js\jq\jquery.extend.js" />
+    <Content Include="Js\jq\jquery.min.lastest.js" />
+    <Content Include="Mods\Accounts\Config.ascx" />
+    <Content Include="Mods\Accounts\ConfigEntry.ascx" />
+    <Content Include="Mods\Accounts\FlowChart.ascx" />
+    <Content Include="Mods\Accounts\Js\Mods.Accounts.Config.js" />
+    <Content Include="Mods\Accounts\Js\Mods.Accounts.ConfigEntry.js" />
+    <Content Include="Mods\Accounts\Js\Mods.Accounts.Login.js" />
+    <Content Include="Mods\Accounts\Js\Mods.Accounts.Role.js" />
+    <Content Include="Mods\Accounts\Login.ascx" />
+    <Content Include="Mods\Accounts\Role.ascx" />
+    <Content Include="Mods\Accounts\Service\ConfigService.asmx" />
+    <Content Include="Mods\Accounts\Service\LoginService.asmx" />
+    <Content Include="Mods\Accounts\Service\RoleService.asmx" />
+    <Content Include="Mods\ACore\CustomizeGL.ascx" />
+    <Content Include="Mods\ACore\GroupBase.ascx" />
+    <Content Include="Mods\ACore\GroupBaseEntry.ascx" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.CusGL.js" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.GroupBase.js" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.GroupBaseEntry.js" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.Payment.js" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.PaymentPartner.js" />
+    <Content Include="Mods\ACore\Js\Mods.ACore.Voucher.js" />
+    <Content Include="Mods\ACore\Payment.ascx" />
+    <Content Include="Mods\ACore\PaymentCashBanking.ascx" />
+    <Content Include="Mods\ACore\PaymentPartner.ascx" />
+    <Content Include="Mods\ACore\Service\GroupBaseService.asmx" />
+    <Content Include="Mods\ACore\Service\PaymentPartnerService.asmx" />
+    <Content Include="Mods\ACore\Service\PaymentService.asmx" />
+    <Content Include="Mods\ACore\Service\VoucherService.asmx" />
+    <Content Include="Mods\ACore\Voucher.ascx" />
+    <Content Include="Mods\AP\CreateOrder_Inventory.ascx" />
+    <Content Include="Mods\AP\FlowChart.ascx" />
+    <Content Include="Mods\AP\Invoice.ascx" />
+    <Content Include="Mods\AP\Js\Mods.AP.CreateOrderAuto.js" />
+    <Content Include="Mods\AP\Js\Mods.AP.OrderEntry.js" />
+    <Content Include="Mods\AP\Js\Mods.AP.Payment.js" />
+    <Content Include="Mods\AP\Order.ascx" />
+    <Content Include="Mods\AP\Payment.ascx" />
+    <Content Include="Mods\AP\Receipt.ascx" />
+    <Content Include="Mods\AP\Return.ascx" />
+    <Content Include="Mods\AP\Service\PurchaseInvoiceService.asmx" />
+    <Content Include="Mods\AP\Service\PurchaseOrderService.asmx" />
+    <Content Include="Mods\AP\Service\PurchasePaymentService.asmx" />
+    <Content Include="Mods\AP\VendorPayment.ascx" />
+    <Content Include="Mods\AR\Css\Mods.AP.SellOdd.css" />
+    <Content Include="Mods\AR\CustomerPayment.ascx" />
+    <Content Include="Mods\AR\FlowChart.ascx" />
+    <Content Include="Mods\AR\Invoice.ascx" />
+    <Content Include="Mods\AR\Js\Mods.AP.SellOdd.js" />
+    <Content Include="Mods\AR\Order.ascx" />
+    <Content Include="Mods\AR\Payment.ascx" />
+    <Content Include="Mods\AR\Receipt.ascx" />
+    <Content Include="Mods\AR\Return.ascx" />
+    <Content Include="Mods\AR\SellOdd.ascx" />
+    <Content Include="Mods\AR\SellOdd.aspx" />
+    <Content Include="Mods\Asset\Asset.ascx" />
+    <Content Include="Mods\Asset\AssetEntry.ascx" />
+    <Content Include="Mods\Asset\Js\Mods.Asset.Entry.js" />
+    <Content Include="Mods\Asset\Js\Mods.Asset.List.js" />
+    <Content Include="Mods\Asset\Service\Asset.asmx" />
+    <Content Include="Mods\Bank\Note.txt" />
+    <Content Include="Mods\CashBanking\CashBase.ascx" />
+    <Content Include="Mods\CashBanking\CashFlow.ascx" />
+    <Content Include="Mods\CashBanking\CashReceive.ascx" />
+    <Content Include="Mods\CashBanking\FlowChart.ascx" />
+    <Content Include="Mods\CashBanking\Js\arbor-tween.js" />
+    <Content Include="Mods\CashBanking\Js\arbor.js" />
+    <Content Include="Mods\CashBanking\Js\jquery.CustomArbor.js" />
+    <Content Include="Mods\CashBanking\Note.txt" />
+    <Content Include="Mods\Cash\CashAndBankingPayment.ascx" />
+    <Content Include="Mods\Cash\CashBase.ascx" />
+    <Content Include="Mods\Cash\CashBaseEntry.ascx" />
+    <Content Include="Mods\Cash\CashCreditEntry.ascx" />
+    <Content Include="Mods\Cash\CashDebitEntry.ascx" />
+    <Content Include="Mods\Cash\CashPaymentEntry.ascx" />
+    <Content Include="Mods\Cash\CashReceiveEntry.ascx" />
+    <Content Include="Mods\Cash\Css\StyleSheet1.css" />
+    <Content Include="Mods\Cash\JournalVoucher.ascx" />
+    <Content Include="Mods\Cash\Js\Mods.Cash.BaseEntry.js" />
+    <Content Include="Mods\Cash\Js\Mods.Cash.BaseList.js" />
+    <Content Include="Mods\Cash\Js\Mods.Cash.CashAndBankingPayment.js" />
+    <Content Include="Mods\Cash\Js\Mods.Cash.JournalVoucher.js" />
+    <Content Include="Mods\Cash\Note.txt" />
+    <Content Include="Mods\Cash\Service\CashService.asmx" />
+    <Content Include="Mods\Core\EmployeeDepartment.ascx" />
+    <Content Include="Mods\Core\EmployeeDepartmentEntry.ascx" />
+    <Content Include="Mods\Core\Js\Mods.Core.EmployeeDepartment.js" />
+    <Content Include="Mods\Core\Js\Mods.Core.EmployeeDepartmentEntry.js" />
+    <Content Include="Mods\Core\Service\EmployeeDepartmentService.asmx" />
+    <Content Include="Mods\Customers\Entry.ascx" />
+    <Content Include="Mods\Customers\GroupEntry.ascx" />
+    <Content Include="Mods\Customers\Note.txt" />
+    <Content Include="Mods\Dashboard\css\Mods.Db.Overview.css" />
+    <Content Include="Mods\Dashboard\js\Mods.Db.ReportViewer.js" />
+    <Content Include="Mods\Dashboard\js\Mods.Db.Report.js" />
+    <Content Include="Mods\Dashboard\js\Mods.Db.Chart.js" />
+    <Content Include="Mods\Dashboard\js\Mods.Db.Overview.js" />
+    <Content Include="Mods\Dashboard\js\Mods.Db.Task.js" />
+    <Content Include="Mods\Dashboard\overview.ascx" />
+    <Content Include="Mods\Dashboard\POverview.aspx" />
+    <Content Include="Mods\Dashboard\report.ascx" />
+    <Content Include="Mods\Dashboard\Report.aspx" />
+    <Content Include="Mods\Dashboard\ReportViewer.aspx" />
+    <Content Include="Mods\Dashboard\task.ascx" />
+    <Content Include="Mods\Front\filter.aspx" />
+    <Content Include="Mods\Front\PrintPreview.aspx" />
+    <Content Include="Mods\GeneralLedger\CreditedEntry.ascx" />
+    <Content Include="Mods\GeneralLedger\DebitEntry.ascx" />
+    <Content Include="Mods\GeneralLedger\Entry.ascx" />
+    <Content Include="Mods\GeneralLedger\Note.txt" />
+    <Content Include="Mods\GeneralLedger\PaymentEntry.ascx" />
+    <Content Include="Mods\GeneralLedger\ReceiptEntry.ascx" />
+    <Content Include="Mods\Inventory\AdjustmentStock.ascx" />
+    <Content Include="Mods\Inventory\AdjustmentStockEntry.ascx" />
+    <Content Include="Mods\Inventory\CoreStock.ascx" />
+    <Content Include="Mods\Inventory\CoreStockEntry.ascx" />
+    <Content Include="Mods\Inventory\FlowChart.ascx" />
+    <Content Include="Mods\Inventory\InwardStock.ascx" />
+    <Content Include="Mods\Inventory\InwardStockEntry.ascx" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.AdjustStock.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.AdjustStockEntry.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.CoreStock.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.CoreStockEntry.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.InwardDetailEntry.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.InwardStock.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.InwardStockEntry.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.TranferStock.js" />
+    <Content Include="Mods\Inventory\Js\Mods.Inventory.TranferStockEntry.js" />
+    <Content Include="Mods\Inventory\OutwardStock.ascx" />
+    <Content Include="Mods\Inventory\OutwardStockEntry.ascx" />
+    <Content Include="Mods\Inventory\Service\AdjustmentStockService.asmx" />
+    <Content Include="Mods\Inventory\Service\CStockService.asmx" />
+    <Content Include="Mods\Inventory\Service\TranferStockService.asmx" />
+    <Content Include="Mods\Inventory\TranferStock.ascx" />
+    <Content Include="Mods\Inventory\TranferStockEntry.ascx" />
+    <Content Include="Mods\ItemsDoc\Customers.ascx" />
+    <Content Include="Mods\ItemsDoc\Fee.ascx" />
+    <Content Include="Mods\ItemsDoc\ImportCustomer.ascx" />
+    <Content Include="Mods\ItemsDoc\ImportVoucher1.ascx" />
+    <Content Include="Mods\ItemsDoc\ImportVoucher2.ascx" />
+    <Content Include="Mods\ItemsDoc\Invoice.ascx" />
+    <Content Include="Mods\ItemsDoc\InvoiceUnknown.ascx" />
+    <Content Include="Mods\ItemsDoc\Block.ascx" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.Block.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.Fee.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.ImportCustomer.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.ImportVoucher2.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.ImportVoucher1.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.InvoiceUnknown.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.Invoice.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.Voucher.js" />
+    <Content Include="Mods\ItemsDoc\Js\Mods.ItemsDoc.Customers.js" />
+    <Content Include="Mods\ItemsDoc\Voucher.ascx" />
+    <Content Include="Mods\Items\ActiveIngredient.ascx" />
+    <Content Include="Mods\Items\ActiveIngredientEntry.ascx" />
+    <Content Include="Mods\Items\ActivePrinciple.ascx" />
+    <Content Include="Mods\Items\ActivePrincipleEntry.ascx" />
+    <Content Include="Mods\Items\BYTGroup.ascx" />
+    <Content Include="Mods\Items\BYTGroupEntry.ascx" />
+    <Content Include="Mods\Items\ChartAccount.ascx" />
+    <Content Include="Mods\Items\ChartAccountEntry.ascx" />
+    <Content Include="Mods\Items\Currency.ascx" />
+    <Content Include="Mods\Items\CurrencyEntry.ascx" />
+    <Content Include="Mods\Items\Customer.ascx" />
+    <Content Include="Mods\Items\CustomerEntry.ascx" />
+    <Content Include="Mods\Items\CustomerGroup.ascx" />
+    <Content Include="Mods\Items\CustomerGroupEntry.ascx" />
+    <Content Include="Mods\Items\Employee.ascx" />
+    <Content Include="Mods\Items\EmployeeEntry.ascx" />
+    <Content Include="Mods\Items\FlowChart.ascx" />
+    <Content Include="Mods\Items\Item.ascx" />
+    <Content Include="Mods\Items\ItemEntry.ascx" />
+    <Content Include="Mods\Items\ItemEntryTest.ascx" />
+    <Content Include="Mods\Items\ItemGroup.ascx" />
+    <Content Include="Mods\Items\ItemGroupEntry.ascx" />
+    <Content Include="Mods\Items\Js\Mods.Items.ActiveIngredient.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ActiveIngredientEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ChartAccount.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ChartAccountEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Currency.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.CurrencyEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Customer.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.CustomerEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.CustomerGroup.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.CustomerGroupEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Employee.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.EmployeeEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Product.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ProductEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ProductGroup.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.ProductGroupEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Receipt.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Simple.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.SimpleEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Stock.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.StockEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Tax.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.TaxEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Unit.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.UnitEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.Vendor.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.VendorEntry.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.VendorGroup.js" />
+    <Content Include="Mods\Items\Js\Mods.Items.VendorGroupEntry.js" />
+    <Content Include="Mods\Items\Manufacture.ascx" />
+    <Content Include="Mods\Items\ManufactureEntry.ascx" />
+    <Content Include="Mods\Items\Receipt.ascx" />
+    <Content Include="Mods\Items\Service\ChartAccountService.asmx" />
+    <Content Include="Mods\Items\Service\CurrencyService.asmx" />
+    <Content Include="Mods\Items\Service\CustomerGroupService.asmx" />
+    <Content Include="Mods\Items\Service\CustomerService.asmx" />
+    <Content Include="Mods\Items\Service\EmployeeService.asmx" />
+    <Content Include="Mods\Items\Service\ProductService.asmx" />
+    <Content Include="Mods\Items\Service\ReceiptService.asmx" />
+    <Content Include="Mods\Items\Service\StockService.asmx" />
+    <Content Include="Mods\Items\Service\TaxService.asmx" />
+    <Content Include="Mods\Items\Service\UnitService.asmx" />
+    <Content Include="Mods\Items\Service\VendorGroupService.asmx" />
+    <Content Include="Mods\Items\Service\VendorService.asmx" />
+    <Content Include="Mods\Items\Service\ActiveIngredientService.asmx" />
+    <Content Include="Mods\Items\Simple.ascx" />
+    <Content Include="Mods\Items\SimpleEntry.ascx" />
+    <Content Include="Mods\Items\Stock.ascx" />
+    <Content Include="Mods\Items\StockEntry.ascx" />
+    <Content Include="Mods\Items\Tax.ascx" />
+    <Content Include="Mods\Items\TaxEntry.ascx" />
+    <Content Include="Mods\Items\Unit.ascx" />
+    <Content Include="Mods\Items\UnitEntry.ascx" />
+    <Content Include="Mods\Items\Vendor.ascx" />
+    <Content Include="Mods\Items\VendorEntry.ascx" />
+    <Content Include="Mods\Items\VendorGroup.ascx" />
+    <Content Include="Mods\Items\VendorGroupEntry.ascx" />
+    <Content Include="Mods\ReportDoc\js\Mods.ReportDoc.ReportTBGT.js" />
+    <Content Include="Mods\ReportDoc\js\Mods.ReportDoc.ReportTBP.js" />
+    <Content Include="Mods\ReportDoc\ReportDDK.ascx" />
+    <Content Include="Mods\ReportDoc\ReportPT.ascx" />
+    <Content Include="Mods\ReportDoc\ReportTBGT.ascx" />
+    <Content Include="Mods\ReportDoc\ReportTBP.ascx" />
+    <Content Include="Mods\ReportDoc\ReportTTP.ascx" />
+    <Content Include="Mods\ReportDoc\ReportViewer.ascx" />
+    <Content Include="Mods\Report\Css\Mods.Report.Html.css" />
+    <Content Include="Mods\Report\FlowChart.ascx" />
+    <Content Include="Mods\Report\Js\Mods.Report.Filter.js" />
+    <Content Include="Mods\Report\Js\Mods.Report.Html.js" />
+    <Content Include="Mods\Report\Report.ascx" />
+    <Content Include="Mods\User\js\Mods.Users.Entry.js" />
+    <Content Include="Mods\User\js\Mods.Users.List.js" />
+    <Content Include="Mods\User\UCUserEntry.ascx" />
+    <Content Include="Mods\User\UCUserList.ascx" />
+    <Content Include="Mods\VouchersExt\Appendix.ascx" />
+    <Content Include="Mods\VouchersExt\AppendixEntry.ascx" />
+    <Content Include="Mods\VouchersExt\AppendixReport.ascx" />
+    <Content Include="Mods\VouchersExt\AReceipt.ascx" />
+    <Content Include="Mods\VouchersExt\CashReceipt.ascx" />
+    <Content Include="Mods\VouchersExt\CreateRegisterAppendix.ascx" />
+    <Content Include="Mods\VouchersExt\CRegisterAppendix.ascx" />
+    <Content Include="Mods\VouchersExt\DeleteRegisterAppendix.ascx" />
+    <Content Include="Mods\VouchersExt\EditRegisterAppendix.ascx" />
+    <Content Include="Mods\VouchersExt\Js\Mods.ItemsDoc.ReceiptTransDetail.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VoucherExt.AppendixReport.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VoucherExt.ResetReceiptNumber.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.Appendix.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.AppendixEntry.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.AReceipt.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.ARegisterAppendix.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.ConfirmDelete.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.Receipt.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.ReceiptReport.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.RegisterAppendix.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.CancelTBGTForm.js" />
+    <Content Include="Mods\VouchersExt\Js\Mods.VouchersExt.ResultMsg.js" />
+    <Content Include="Mods\VouchersExt\Receipt.ascx" />
+    <Content Include="Mods\VouchersExt\ReceiptReport.ascx" />
+    <Content Include="Mods\VouchersExt\RegisterAppendix.ascx" />
+    <Content Include="Mods\VouchersExt\Service\Appendix.asmx" />
+    <Content Include="Mods\VouchersExt\Service\Receipt.asmx" />
+    <Content Include="Mods\VouchersExt\Service\ReceiptService.asmx" />
+    <Content Include="Mods\VouchersExt\Service\CancelTBGT.asmx" />
+    <Content Include="Mods\VouchersExt\Service\ResultMsg.asmx" />
+    <Content Include="Mods\VouchersExt\TranferReciept.ascx" />
+    <Content Include="Mods\VouchersExt\ucConfirmDelete.ascx" />
+    <Content Include="Mods\VouchersExt\ucReceiptTransDetail.ascx" />
+    <Content Include="Mods\VouchersExt\ucResetReceiptNumber.ascx" />
+    <Content Include="Mods\VouchersExt\ucCancelTBGTForm.ascx" />
+    <Content Include="Mods\VouchersExt\ucResultMsg.ascx" />
+    <Content Include="Mods\VouchersExt\UpdateRegisterAppendix.ascx" />
+    <Content Include="Mods\_core.chart\amchart\amcharts.js" />
+    <Content Include="Mods\_core.chart\amchart\images\dragIcon.gif" />
+    <Content Include="Mods\_core.chart\amchart\images\dragIconH.gif" />
+    <Content Include="Mods\_core.chart\amchart\images\lens.png" />
+    <Content Include="Mods\_core.filter\css\Mods.CoreFilter.PFilter.css" />
+    <Content Include="Mods\_core.filter\Filter.ascx" />
+    <Content Include="Mods\_core.filter\filter.htm" />
+    <Content Include="Mods\_core.filter\js\Mods.CoreFilter.Filter.js" />
+    <Content Include="Mods\_core.filter\PFilter.aspx" />
+    <Content Include="Mods\_core.hst\css\handsontable.core.css" />
+    <Content Include="Mods\_core.hst\css\Mods.CoreFilter.Grid.css" />
+    <Content Include="Mods\_core.hst\dist\jquery.handsontable.css" />
+    <Content Include="Mods\_core.hst\dist\jquery.handsontable.full.css" />
+    <Content Include="Mods\_core.hst\dist\jquery.handsontable.full.js" />
+    <Content Include="Mods\_core.hst\dist\jquery.handsontable.js" />
+    <Content Include="Mods\_core.hst\Grid.ascx" />
+    <Content Include="Mods\_core.hst\GridConfigTemplate.htm" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.84.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.65.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.64.js" />
+    <Content Include="Mods\_core.hst\js\handsontable.core.js" />
+    <Content Include="Mods\_core.hst\js\jquery.core.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.50.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.59.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.61.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.66.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.74.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.79.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.80.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.83.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.Config.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.Grid.js" />
+    <Content Include="Mods\_core.hst\js\Mods.Core.Hst.GridUc.js" />
+    <Content Include="Mods\_core.hst\PGrid.aspx" />
+    <Content Include="Mods\_core.hst\service\HstService.asmx" />
+    <Content Include="Mods\_core.hst\_Grid.ascx" />
+    <Content Include="Mods\_core.report\js\Mods.CoreReport.PReportViewer.js" />
+    <Content Include="Mods\_core.report\js\Mods.CoreReport.Report.js" />
+    <Content Include="Mods\_core.report\js\Mods.CoreReport.ReportP.js" />
+    <Content Include="Mods\_core.report\PReportViewer.aspx" />
+    <Content Include="Mods\_core.report\Report.ascx" />
+    <Content Include="Mods\_core.report\ReportP.ascx" />
+    <Content Include="Mods\_Core\Css\FlowChart.css" />
+    <Content Include="Images\icon\fc\Adjust.png" />
+    <Content Include="Images\icon\fc\Asset.png" />
+    <Content Include="Images\icon\fc\Bank.png" />
+    <Content Include="Images\icon\fc\Bank1.png" />
+    <Content Include="Images\icon\fc\Customer.png" />
+    <Content Include="Images\icon\fc\Employee.png" />
+    <Content Include="Images\icon\fc\FWS.png" />
+    <Content Include="Images\icon\fc\FWS1.png" />
+    <Content Include="Images\icon\fc\Home.png" />
+    <Content Include="Images\icon\fc\InStock.png" />
+    <Content Include="Images\icon\fc\Money.png" />
+    <Content Include="Images\icon\fc\OutStock.png" />
+    <Content Include="Images\icon\fc\Price.png" />
+    <Content Include="Images\icon\fc\Purchase.png" />
+    <Content Include="Images\icon\fc\Report.png" />
+    <Content Include="Images\icon\fc\Report1.png" />
+    <Content Include="Images\icon\fc\Contact.png" />
+    <Content Include="Images\icon\fc\Stock.png" />
+    <Content Include="Images\icon\fc\Tax.png" />
+    <Content Include="Images\icon\fc\Transfer.png" />
+    <Content Include="Images\icon\fc\Vendor1.png" />
+    <Content Include="Mods\_Core\Css\FWS.Filter.css" />
+    <Content Include="Mods\_Core\Filter.ascx" />
+    <Content Include="Mods\_Core\GridBase.ascx" />
+    <Content Include="Mods\_Core\Js\CControl.js" />
+    <Content Include="Mods\_Core\Js\CGrid.js" />
+    <Content Include="Mods\_Core\Js\CGridBase.js" />
+    <Content Include="Mods\_Core\Js\CViewFilter.js" />
+    <Content Include="Mods\_Core\Js\CViewParams.js" />
+    <Content Include="Mods\_Core\Js\FWS.Filter.js" />
+    <Content Include="Mods\_Core\Js\FWS.System.Control.js" />
+    <Content Include="Mods\_Core\Js\FWS.Web.FlowChart.js" />
+    <Content Include="Mods\_Core\Js\FWS.System.Core.js" />
+    <Content Include="Mods\_Core\Js\FWS.Web.Rraphael.js" />
+    <Content Include="Mods\_Core\Js\VnAccounting.Grid.js" />
+    <Content Include="Mods\_Core\Service\ControlService.asmx" />
+    <Content Include="Mods\_Core\Service\DropDownData.asmx" />
+    <Content Include="Mods\_Core\Service\GridBaseService.asmx" />
+    <Content Include="Mods\_Demo\AutoComplete.htm" />
+    <Content Include="Mods\_Demo\ControlDemo.htm" />
+    <Content Include="Mods\_Demo\Css\Layout_EntryNoBoder.png" />
+    <Content Include="Mods\_Demo\Date_Format_Convert.htm" />
+    <Content Include="Mods\_Demo\easy-ui\combobox.html" />
+    <Content Include="Mods\_Demo\easy-ui\datetimebox.html" />
+    <Content Include="Mods\_Demo\easy-ui\messager.html" />
+    <Content Include="Mods\_Demo\easy-ui\tab.htm" />
+    <Content Include="Mods\_Demo\Entry.ascx" />
+    <Content Include="Mods\_Demo\Entry.aspx" />
+    <Content Include="Mods\Front\default.aspx" />
+    <Content Include="Mods\Front\LayoutFooter.ascx" />
+    <Content Include="Mods\Front\LayoutHeader.ascx" />
+    <Content Include="Mods\Inventory\Entry.ascx" />
+    <Content Include="Mods\Inventory\Note.txt" />
+    <Content Include="Mods\Inventory\StockEntry.ascx" />
+    <Content Include="Mods\User\BalanceEntry.ascx" />
+    <Content Include="Mods\User\Note.txt" />
+    <Content Include="Mods\_Core\Js\FWS.System.IO.js" />
+    <Content Include="Mods\_Core\Service\CoreService.asmx" />
+    <Content Include="Mods\_Core\_Readme.txt" />
+    <Content Include="Mods\_Demo\Css\Layout_Entry.png" />
+    <Content Include="Mods\_Demo\Css\Layout_List.png" />
+    <Content Include="Mods\_Demo\FunctionEntry.ascx" />
+    <Content Include="Mods\_Demo\FunctionList.ascx" />
+    <Content Include="Mods\_Demo\html5\Adjust.png" />
+    <Content Include="Mods\_Demo\Grid.aspx" />
+    <Content Include="Mods\_Demo\html5\bee.jpg" />
+    <Content Include="Mods\_Demo\html5\FlowChart.css" />
+    <Content Include="Mods\_Demo\html5\FlowChart.htm" />
+    <Content Include="Mods\_Demo\html5\FlowChart.js" />
+    <Content Include="Mods\_Demo\html5\icon\Adjust.png" />
+    <Content Include="Mods\_Demo\html5\icon\Customer.png" />
+    <Content Include="Mods\_Demo\html5\icon\Employee.png" />
+    <Content Include="Mods\_Demo\html5\icon\InStock.png" />
+    <Content Include="Mods\_Demo\html5\icon\OutStock.png" />
+    <Content Include="Mods\_Demo\html5\icon\Report.png" />
+    <Content Include="Mods\_Demo\html5\icon\Stock.png" />
+    <Content Include="Mods\_Demo\html5\icon\Transfer.png" />
+    <Content Include="Mods\_Demo\html5\icon\Vendor.png" />
+    <Content Include="Mods\_Demo\html5\raphael.f1.js" />
+    <Content Include="Mods\_Demo\html5\raphael.js" />
+    <Content Include="Mods\_Demo\html5\icon\Report1.png" />
+    <Content Include="Mods\_Demo\Js\DemoGrid.js" />
+    <Content Include="Mods\_Demo\Js\ucStep01.js" />
+    <Content Include="Mods\_Demo\Js\ucStep02.js" />
+    <Content Include="Mods\_Demo\Layout.htm" />
+    <Content Include="Mods\_Demo\LayoutInventory.htm" />
+    <Content Include="Mods\_Demo\LayoutPurchase.htm" />
+    <Content Include="Mods\_Demo\layout_login.htm" />
+    <Content Include="Mods\_Demo\Layout_outward.htm" />
+    <Content Include="Mods\_Demo\Phanquyendulieu.aspx" />
+    <Content Include="Mods\_Demo\PhanQuyenSuDung.aspx" />
+    <Content Include="Mods\_Demo\phanquyentruongdulieu.aspx" />
+    <Content Include="Mods\_Demo\TemplateControllerService.asmx" />
+    <Content Include="Mods\_Demo\template_home\AboutUs.htm" />
+    <Content Include="Mods\_Demo\template_home\Css\grid-12.css" />
+    <Content Include="Mods\_Demo\template_home\Css\img\block1_tail.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\block2_tail.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\block3_tail.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\border_tail.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\bottom_border.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\bottom_list_border.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\divider.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\down.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\earth.jpg" />
+    <Content Include="Mods\_Demo\template_home\Css\img\footer_bg.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\header.jpg" />
+    <Content Include="Mods\_Demo\template_home\Css\img\homepage_blocks.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\list1_border.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\list1_marker.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\logo.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\logoFWS.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\mainbody_texture.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\menu_border.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\page1-icon1.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\page1-icon2.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\page1-icon3.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\right.gif" />
+    <Content Include="Mods\_Demo\template_home\Css\img\slider-btns-bg.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\slider_btns.png" />
+    <Content Include="Mods\_Demo\template_home\Css\img\texture.jpg" />
+    <Content Include="Mods\_Demo\template_home\Css\main.css" />
+    <Content Include="Mods\_Demo\template_home\Home.htm" />
+    <Content Include="Mods\_Demo\template_home\Css\ddsmoothmenu-v.css" />
+    <Content Include="Mods\_Demo\template_home\Css\ddsmoothmenu.css" />
+    <Content Include="Mods\_Demo\template_home\images\border_tail.png" />
+    <Content Include="Mods\_Demo\template_home\images\down.gif" />
+    <Content Include="Mods\_Demo\template_home\images\earth.jpg" />
+    <Content Include="Mods\_Demo\template_home\images\header.jpg" />
+    <Content Include="Mods\_Demo\template_home\images\logo.png" />
+    <Content Include="Mods\_Demo\template_home\images\right.gif" />
+    <Content Include="Mods\_Demo\template_home\images\slider-btns-bg.png" />
+    <Content Include="Mods\_Demo\template_home\images\slider_btns.png" />
+    <Content Include="Mods\_Demo\template_home\Js\ddsmoothmenu.js" />
+    <Content Include="Mods\_Demo\template_home\Js\main.js" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\demo.html" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\images\dev7logo.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\images\nemo.jpg" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\images\toystory.jpg" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\images\up.jpg" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\images\walle.jpg" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\scripts\jquery-1.7.1.min.js" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\demo\style.css" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\jquery.nivo.slider.js" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\license.txt" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\nivo-slider.css" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\default\arrows.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\default\bullets.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\default\default.css" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\default\loading.gif" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\arrows.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\bullets.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\loading.gif" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\orman.css" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\readme.txt" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\ribbon.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\orman\slider.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\bullets.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\controlnav.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\featured.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\loading.gif" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\pascal.css" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\readme.txt" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\ribbon.png" />
+    <Content Include="Mods\_Demo\template_home\Js\nivo-slider\themes\pascal\slider.png" />
+    <Content Include="Mods\_Demo\validatebox.html" />
+    <Content Include="Mods\_Global\Css\FWS.Web.COverlay.css" />
+    <Content Include="Mods\_Global\Css\img.COverlay\bg.overlay.png" />
+    <Content Include="Mods\_Global\Js\FWS.Web.CInterfaceFunction.js" />
+    <Content Include="Mods\_Core\Js\FWS.Web.CCSV.js" />
+    <Content Include="Mods\_Global\Js\FWS.Web.COverlay.js" />
+    <Content Include="Mods\_Global\Js\FWS.Web.CTemplateController.js" />
+    <Content Include="Mods\_Global\Service\TemplateController.asmx" />
+    <Content Include="Mods\_Global\_Readme.txt" />
+    <Content Include="Mods\Items\Service\ChartAccountTree.ashx" />
+    <None Include="Css\Themes\jquery-easy-ui\darkred\images\Thumbs.db" />
+    <Content Include="Mods\Accounts\Service\RoleHandler.ashx" />
+    <Content Include="Mods\Report\ReportService.ashx" />
+    <Content Include="Mods\AP\Service\MasterOrderHandler.ashx" />
+    <Content Include="Mods\ACore\Service\VoucherHandler.ashx" />
+    <Content Include="Mods\ACore\Service\PaymentHandler.ashx" />
+    <Content Include="Mods\Report\ReportHandler.ashx" />
+    <Content Include="Mods\Core\Service\EmployeeDepartment.ashx" />
+    <Content Include="Mods\Cash\Service\CashHandler.ashx" />
+    <Content Include="Mods\Inventory\Service\CoreStock.ashx" />
+    <Content Include="Mods\Inventory\Service\CoreStockEntry.ashx" />
+    <Content Include="Mods\ACore\Service\PaymentPartnerHandler.ashx" />
+    <Content Include="Mods\_Core\Service\ControlHandler.ashx" />
+    <Content Include="Mods\_Core\Service\GridBaseHandler.ashx" />
+    <Content Include="Mods\ACore\Service\GroupBaseEntryHandler.ashx" />
+    <Content Include="Mods\ACore\Service\GroupBaseHandler.ashx" />
+    <Content Include="Mods\Items\Service\SimpleHandler.ashx" />
+    <Content Include="Mods\Report\ReportViewer.ashx" />
+    <None Include="js.final\plugins\easy.ui\jquery.easy.ui.1.3.3.min.js.map" />
+    <None Include="js.final\plugins\easy.ui\themes\black\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\bootstrap\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\default\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\gray\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro-blue\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro-gray\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro-green\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro-orange\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro-red\images\Thumbs.db" />
+    <None Include="js.final\plugins\easy.ui\themes\metro\images\Thumbs.db" />
+    <None Include="js.final\plugins\Globalization\jQuery.glob.all.min.js.map" />
+    <None Include="js.final\plugins\Globalization\jquery.glob.min.js.map" />
+    <Content Include="Master\ChildFrame.Master" />
+    <Content Include="Mods\VouchersExt\Service\AReceipt.ashx" />
+    <Content Include="Mods\VouchersExt\Service\ARegister.ashx" />
+    <None Include="Mods\_core.hst\dist\README.md" />
+    <None Include="Mods\_Demo\template_home\Js\nivo-slider\README" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\GetMenu.aspx.cs">
+      <DependentUpon>GetMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\GetMenu.aspx.designer.cs">
+      <DependentUpon>GetMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ChildFrame.Master.cs">
+      <DependentUpon>ChildFrame.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\ChildFrame.Master.designer.cs">
+      <DependentUpon>ChildFrame.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FwsCore.Master.cs">
+      <DependentUpon>FwsCore.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\FwsCore.Master.designer.cs">
+      <DependentUpon>FwsCore.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FwsCoreMain.master.cs">
+      <DependentUpon>FwsCoreMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\FwsCoreMain.master.designer.cs">
+      <DependentUpon>FwsCoreMain.master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FwsCoreSub.master.cs">
+      <DependentUpon>FwsCoreSub.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\FwsCoreSub.master.designer.cs">
+      <DependentUpon>FwsCoreSub.master</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\Class\ConfigUI.cs" />
+    <Compile Include="Mods\Accounts\Class\LoginUI.cs" />
+    <Compile Include="Mods\Accounts\Class\RoleUI.cs" />
+    <Compile Include="Mods\Accounts\Config.ascx.cs">
+      <DependentUpon>Config.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\Config.ascx.designer.cs">
+      <DependentUpon>Config.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\ConfigEntry.ascx.cs">
+      <DependentUpon>ConfigEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\ConfigEntry.ascx.designer.cs">
+      <DependentUpon>ConfigEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\Role.ascx.cs">
+      <DependentUpon>Role.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\Role.ascx.designer.cs">
+      <DependentUpon>Role.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\Service\ConfigService.asmx.cs">
+      <DependentUpon>ConfigService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\Service\LoginService.asmx.cs">
+      <DependentUpon>LoginService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Accounts\Service\RoleHandler.ashx.cs">
+      <DependentUpon>RoleHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Accounts\Service\RoleService.asmx.cs">
+      <DependentUpon>RoleService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Class\CGroupBase.cs" />
+    <Compile Include="Mods\ACore\Class\CPaymentPartnerUI.cs" />
+    <Compile Include="Mods\ACore\Class\CPaymentUI.cs" />
+    <Compile Include="Mods\ACore\Class\CVoucherUI.cs" />
+    <Compile Include="Mods\ACore\CustomizeGL.ascx.cs">
+      <DependentUpon>CustomizeGL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\CustomizeGL.ascx.designer.cs">
+      <DependentUpon>CustomizeGL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\GroupBase.ascx.cs">
+      <DependentUpon>GroupBase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\GroupBase.ascx.designer.cs">
+      <DependentUpon>GroupBase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\GroupBaseEntry.ascx.cs">
+      <DependentUpon>GroupBaseEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\GroupBaseEntry.ascx.designer.cs">
+      <DependentUpon>GroupBaseEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Payment.ascx.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Payment.ascx.designer.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\PaymentCashBanking.ascx.cs">
+      <DependentUpon>PaymentCashBanking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\PaymentCashBanking.ascx.designer.cs">
+      <DependentUpon>PaymentCashBanking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\PaymentPartner.ascx.cs">
+      <DependentUpon>PaymentPartner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\PaymentPartner.ascx.designer.cs">
+      <DependentUpon>PaymentPartner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\GroupBaseEntryHandler.ashx.cs">
+      <DependentUpon>GroupBaseEntryHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\GroupBaseHandler.ashx.cs">
+      <DependentUpon>GroupBaseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\GroupBaseService.asmx.cs">
+      <DependentUpon>GroupBaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\PaymentHandler.ashx.cs">
+      <DependentUpon>PaymentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\PaymentPartnerHandler.ashx.cs">
+      <DependentUpon>PaymentPartnerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\PaymentPartnerService.asmx.cs">
+      <DependentUpon>PaymentPartnerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\PaymentService.asmx.cs">
+      <DependentUpon>PaymentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\VoucherHandler.ashx.cs">
+      <DependentUpon>VoucherHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ACore\Service\VoucherService.asmx.cs">
+      <DependentUpon>VoucherService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Voucher.ascx.cs">
+      <DependentUpon>Voucher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ACore\Voucher.ascx.designer.cs">
+      <DependentUpon>Voucher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Class\PurchaseInvoiceUI.cs" />
+    <Compile Include="Mods\AP\Class\PurchaseOrderUI.cs" />
+    <Compile Include="Mods\AP\Class\PurchasePaymentUI.cs" />
+    <Compile Include="Mods\AP\CreateOrder_Inventory.ascx.cs">
+      <DependentUpon>CreateOrder_Inventory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\CreateOrder_Inventory.ascx.designer.cs">
+      <DependentUpon>CreateOrder_Inventory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Invoice.ascx.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Invoice.ascx.designer.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Order.ascx.cs">
+      <DependentUpon>Order.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Order.ascx.designer.cs">
+      <DependentUpon>Order.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Payment.ascx.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Payment.ascx.designer.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Receipt.ascx.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Receipt.ascx.designer.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Return.ascx.cs">
+      <DependentUpon>Return.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Return.ascx.designer.cs">
+      <DependentUpon>Return.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Service\MasterOrderHandler.ashx.cs">
+      <DependentUpon>MasterOrderHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AP\Service\PurchaseInvoiceService.asmx.cs">
+      <DependentUpon>PurchaseInvoiceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Service\PurchaseOrderService.asmx.cs">
+      <DependentUpon>PurchaseOrderService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\Service\PurchasePaymentService.asmx.cs">
+      <DependentUpon>PurchasePaymentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\VendorPayment.ascx.cs">
+      <DependentUpon>VendorPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AP\VendorPayment.ascx.designer.cs">
+      <DependentUpon>VendorPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\CustomerPayment.ascx.cs">
+      <DependentUpon>CustomerPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\CustomerPayment.ascx.designer.cs">
+      <DependentUpon>CustomerPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\Invoice.ascx.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\Invoice.ascx.designer.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\Order.ascx.cs">
+      <DependentUpon>Order.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\Order.ascx.designer.cs">
+      <DependentUpon>Order.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\Payment.ascx.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\Payment.ascx.designer.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\Receipt.ascx.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\Receipt.ascx.designer.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\Return.ascx.cs">
+      <DependentUpon>Return.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\Return.ascx.designer.cs">
+      <DependentUpon>Return.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\SellOdd.ascx.cs">
+      <DependentUpon>SellOdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\SellOdd.ascx.designer.cs">
+      <DependentUpon>SellOdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\AR\SellOdd.aspx.cs">
+      <DependentUpon>SellOdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\AR\SellOdd.aspx.designer.cs">
+      <DependentUpon>SellOdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Asset\Asset.ascx.cs">
+      <DependentUpon>Asset.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Asset\Asset.ascx.designer.cs">
+      <DependentUpon>Asset.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Asset\AssetEntry.ascx.cs">
+      <DependentUpon>AssetEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Asset\AssetEntry.ascx.designer.cs">
+      <DependentUpon>AssetEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Asset\Class\CAssetUI.cs" />
+    <Compile Include="Mods\Asset\Service\Asset.asmx.cs">
+      <DependentUpon>Asset.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashBase.ascx.cs">
+      <DependentUpon>CashBase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashBase.ascx.designer.cs">
+      <DependentUpon>CashBase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashFlow.ascx.cs">
+      <DependentUpon>CashFlow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashFlow.ascx.designer.cs">
+      <DependentUpon>CashFlow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashReceive.ascx.cs">
+      <DependentUpon>CashReceive.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\CashBanking\CashReceive.ascx.designer.cs">
+      <DependentUpon>CashReceive.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\CashBanking\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\CashBanking\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashAndBankingPayment.ascx.cs">
+      <DependentUpon>CashAndBankingPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashAndBankingPayment.ascx.designer.cs">
+      <DependentUpon>CashAndBankingPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashBase.ascx.cs">
+      <DependentUpon>CashBase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashBase.ascx.designer.cs">
+      <DependentUpon>CashBase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashBaseEntry.ascx.cs">
+      <DependentUpon>CashBaseEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashBaseEntry.ascx.designer.cs">
+      <DependentUpon>CashBaseEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashCreditEntry.ascx.cs">
+      <DependentUpon>CashCreditEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashCreditEntry.ascx.designer.cs">
+      <DependentUpon>CashCreditEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashDebitEntry.ascx.cs">
+      <DependentUpon>CashDebitEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashDebitEntry.ascx.designer.cs">
+      <DependentUpon>CashDebitEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashPaymentEntry.ascx.cs">
+      <DependentUpon>CashPaymentEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashPaymentEntry.ascx.designer.cs">
+      <DependentUpon>CashPaymentEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\CashReceiveEntry.ascx.cs">
+      <DependentUpon>CashReceiveEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\CashReceiveEntry.ascx.designer.cs">
+      <DependentUpon>CashReceiveEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\Class\CCashUI.cs" />
+    <Compile Include="Mods\Cash\JournalVoucher.ascx.cs">
+      <DependentUpon>JournalVoucher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Cash\JournalVoucher.ascx.designer.cs">
+      <DependentUpon>JournalVoucher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\Service\CashHandler.ashx.cs">
+      <DependentUpon>CashHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Cash\Service\CashService.asmx.cs">
+      <DependentUpon>CashService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Core\Class\CEmployeeDepartmentUI.cs" />
+    <Compile Include="Mods\Core\EmployeeDepartment.ascx.cs">
+      <DependentUpon>EmployeeDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Core\EmployeeDepartment.ascx.designer.cs">
+      <DependentUpon>EmployeeDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Core\EmployeeDepartmentEntry.ascx.cs">
+      <DependentUpon>EmployeeDepartmentEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Core\EmployeeDepartmentEntry.ascx.designer.cs">
+      <DependentUpon>EmployeeDepartmentEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Core\Service\EmployeeDepartment.ashx.cs">
+      <DependentUpon>EmployeeDepartment.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Core\Service\EmployeeDepartmentService.asmx.cs">
+      <DependentUpon>EmployeeDepartmentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Customers\Entry.ascx.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Customers\Entry.ascx.designer.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Customers\GroupEntry.ascx.cs">
+      <DependentUpon>GroupEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Customers\GroupEntry.ascx.designer.cs">
+      <DependentUpon>GroupEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\overview.ascx.cs">
+      <DependentUpon>overview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\overview.ascx.designer.cs">
+      <DependentUpon>overview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\POverview.aspx.cs">
+      <DependentUpon>POverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\POverview.aspx.designer.cs">
+      <DependentUpon>POverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\report.ascx.cs">
+      <DependentUpon>report.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\report.ascx.designer.cs">
+      <DependentUpon>report.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Dashboard\task.ascx.cs">
+      <DependentUpon>task.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Dashboard\task.ascx.designer.cs">
+      <DependentUpon>task.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Front\filter.aspx.cs">
+      <DependentUpon>filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Front\filter.aspx.designer.cs">
+      <DependentUpon>filter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Front\PrintPreview.aspx.cs">
+      <DependentUpon>PrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Front\PrintPreview.aspx.designer.cs">
+      <DependentUpon>PrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\CreditedEntry.ascx.cs">
+      <DependentUpon>CreditedEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\CreditedEntry.ascx.designer.cs">
+      <DependentUpon>CreditedEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\DebitEntry.ascx.cs">
+      <DependentUpon>DebitEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\DebitEntry.ascx.designer.cs">
+      <DependentUpon>DebitEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\Entry.ascx.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\Entry.ascx.designer.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\PaymentEntry.ascx.cs">
+      <DependentUpon>PaymentEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\PaymentEntry.ascx.designer.cs">
+      <DependentUpon>PaymentEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\ReceiptEntry.ascx.cs">
+      <DependentUpon>ReceiptEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\GeneralLedger\ReceiptEntry.ascx.designer.cs">
+      <DependentUpon>ReceiptEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\AdjustmentStock.ascx.cs">
+      <DependentUpon>AdjustmentStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\AdjustmentStock.ascx.designer.cs">
+      <DependentUpon>AdjustmentStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\AdjustmentStockEntry.ascx.cs">
+      <DependentUpon>AdjustmentStockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\AdjustmentStockEntry.ascx.designer.cs">
+      <DependentUpon>AdjustmentStockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\Class\CInwardStockUI.cs" />
+    <Compile Include="Mods\Inventory\Class\CoreStockUI.cs" />
+    <Compile Include="Mods\Inventory\Class\CStockUI.cs" />
+    <Compile Include="Mods\Inventory\Class\CTranferStockUI.cs" />
+    <Compile Include="Mods\Inventory\CoreStock.ascx.cs">
+      <DependentUpon>CoreStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\CoreStock.ascx.designer.cs">
+      <DependentUpon>CoreStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\CoreStockEntry.ascx.cs">
+      <DependentUpon>CoreStockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\CoreStockEntry.ascx.designer.cs">
+      <DependentUpon>CoreStockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\InwardStock.ascx.cs">
+      <DependentUpon>InwardStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\InwardStock.ascx.designer.cs">
+      <DependentUpon>InwardStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\InwardStockEntry.ascx.cs">
+      <DependentUpon>InwardStockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\InwardStockEntry.ascx.designer.cs">
+      <DependentUpon>InwardStockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\OutwardStock.ascx.cs">
+      <DependentUpon>OutwardStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\OutwardStock.ascx.designer.cs">
+      <DependentUpon>OutwardStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\OutwardStockEntry.ascx.cs">
+      <DependentUpon>OutwardStockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\OutwardStockEntry.ascx.designer.cs">
+      <DependentUpon>OutwardStockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\Service\AdjustmentStockService.asmx.cs">
+      <DependentUpon>AdjustmentStockService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\Service\CoreStock.ashx.cs">
+      <DependentUpon>CoreStock.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\Service\CoreStockEntry.ashx.cs">
+      <DependentUpon>CoreStockEntry.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\Service\CStockService.asmx.cs">
+      <DependentUpon>CStockService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\Service\TranferStockService.asmx.cs">
+      <DependentUpon>TranferStockService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\TranferStock.ascx.cs">
+      <DependentUpon>TranferStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\TranferStock.ascx.designer.cs">
+      <DependentUpon>TranferStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\TranferStockEntry.ascx.cs">
+      <DependentUpon>TranferStockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\TranferStockEntry.ascx.designer.cs">
+      <DependentUpon>TranferStockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Customers.ascx.cs">
+      <DependentUpon>Customers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Customers.ascx.designer.cs">
+      <DependentUpon>Customers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Fee.ascx.cs">
+      <DependentUpon>Fee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Fee.ascx.designer.cs">
+      <DependentUpon>Fee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportCustomer.ascx.cs">
+      <DependentUpon>ImportCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportCustomer.ascx.designer.cs">
+      <DependentUpon>ImportCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportVoucher1.ascx.cs">
+      <DependentUpon>ImportVoucher1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportVoucher1.ascx.designer.cs">
+      <DependentUpon>ImportVoucher1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportVoucher2.ascx.cs">
+      <DependentUpon>ImportVoucher2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\ImportVoucher2.ascx.designer.cs">
+      <DependentUpon>ImportVoucher2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Invoice.ascx.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Invoice.ascx.designer.cs">
+      <DependentUpon>Invoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\InvoiceUnknown.ascx.cs">
+      <DependentUpon>InvoiceUnknown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\InvoiceUnknown.ascx.designer.cs">
+      <DependentUpon>InvoiceUnknown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Block.ascx.cs">
+      <DependentUpon>Block.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Block.ascx.designer.cs">
+      <DependentUpon>Block.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Voucher.ascx.cs">
+      <DependentUpon>Voucher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ItemsDoc\Voucher.ascx.designer.cs">
+      <DependentUpon>Voucher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ActiveIngredient.ascx.cs">
+      <DependentUpon>ActiveIngredient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ActiveIngredient.ascx.designer.cs">
+      <DependentUpon>ActiveIngredient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ActiveIngredientEntry.ascx.cs">
+      <DependentUpon>ActiveIngredientEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ActiveIngredientEntry.ascx.designer.cs">
+      <DependentUpon>ActiveIngredientEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ActivePrinciple.ascx.cs">
+      <DependentUpon>ActivePrinciple.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ActivePrinciple.ascx.designer.cs">
+      <DependentUpon>ActivePrinciple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ActivePrincipleEntry.ascx.cs">
+      <DependentUpon>ActivePrincipleEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ActivePrincipleEntry.ascx.designer.cs">
+      <DependentUpon>ActivePrincipleEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\BYTGroup.ascx.cs">
+      <DependentUpon>BYTGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\BYTGroup.ascx.designer.cs">
+      <DependentUpon>BYTGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\BYTGroupEntry.ascx.cs">
+      <DependentUpon>BYTGroupEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\BYTGroupEntry.ascx.designer.cs">
+      <DependentUpon>BYTGroupEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ChartAccount.ascx.cs">
+      <DependentUpon>ChartAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ChartAccount.ascx.designer.cs">
+      <DependentUpon>ChartAccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ChartAccountEntry.ascx.cs">
+      <DependentUpon>ChartAccountEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ChartAccountEntry.ascx.designer.cs">
+      <DependentUpon>ChartAccountEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Class\CActiveIngredientUI.cs" />
+    <Compile Include="Mods\Items\Class\CBaseItemUI.cs" />
+    <Compile Include="Mods\Items\Class\CChartAccountUI.cs" />
+    <Compile Include="Mods\Items\Class\CCurrencyUI.cs" />
+    <Compile Include="Mods\Items\Class\CCustomerGroupUI.cs" />
+    <Compile Include="Mods\Items\Class\CCustomerUI.cs" />
+    <Compile Include="Mods\Items\Class\CEmployeeUI.cs" />
+    <Compile Include="Mods\Items\Class\CItemUI.cs" />
+    <Compile Include="Mods\Items\Class\CStockUI.cs" />
+    <Compile Include="Mods\Items\Class\CTaxUI.cs" />
+    <Compile Include="Mods\Items\Class\CUnitUI.cs" />
+    <Compile Include="Mods\Items\Class\CVendorGroupUI.cs" />
+    <Compile Include="Mods\Items\Class\CVendorUI.cs" />
+    <Compile Include="Mods\Items\Currency.ascx.cs">
+      <DependentUpon>Currency.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Currency.ascx.designer.cs">
+      <DependentUpon>Currency.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\CurrencyEntry.ascx.cs">
+      <DependentUpon>CurrencyEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\CurrencyEntry.ascx.designer.cs">
+      <DependentUpon>CurrencyEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Customer.ascx.cs">
+      <DependentUpon>Customer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Customer.ascx.designer.cs">
+      <DependentUpon>Customer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerEntry.ascx.cs">
+      <DependentUpon>CustomerEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerEntry.ascx.designer.cs">
+      <DependentUpon>CustomerEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerGroup.ascx.cs">
+      <DependentUpon>CustomerGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerGroup.ascx.designer.cs">
+      <DependentUpon>CustomerGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerGroupEntry.ascx.cs">
+      <DependentUpon>CustomerGroupEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\CustomerGroupEntry.ascx.designer.cs">
+      <DependentUpon>CustomerGroupEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Employee.ascx.cs">
+      <DependentUpon>Employee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Employee.ascx.designer.cs">
+      <DependentUpon>Employee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\EmployeeEntry.ascx.cs">
+      <DependentUpon>EmployeeEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\EmployeeEntry.ascx.designer.cs">
+      <DependentUpon>EmployeeEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Item.ascx.cs">
+      <DependentUpon>Item.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Item.ascx.designer.cs">
+      <DependentUpon>Item.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ItemEntry.ascx.cs">
+      <DependentUpon>ItemEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ItemEntry.ascx.designer.cs">
+      <DependentUpon>ItemEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ItemEntryTest.ascx.cs">
+      <DependentUpon>ItemEntryTest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ItemEntryTest.ascx.designer.cs">
+      <DependentUpon>ItemEntryTest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ItemGroup.ascx.cs">
+      <DependentUpon>ItemGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ItemGroup.ascx.designer.cs">
+      <DependentUpon>ItemGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ItemGroupEntry.ascx.cs">
+      <DependentUpon>ItemGroupEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ItemGroupEntry.ascx.designer.cs">
+      <DependentUpon>ItemGroupEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Manufacture.ascx.cs">
+      <DependentUpon>Manufacture.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Manufacture.ascx.designer.cs">
+      <DependentUpon>Manufacture.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\ManufactureEntry.ascx.cs">
+      <DependentUpon>ManufactureEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\ManufactureEntry.ascx.designer.cs">
+      <DependentUpon>ManufactureEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Receipt.ascx.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Receipt.ascx.designer.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Service\ChartAccountService.asmx.cs">
+      <DependentUpon>ChartAccountService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\ChartAccountTree.ashx.cs">
+      <DependentUpon>ChartAccountTree.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Service\CurrencyService.asmx.cs">
+      <DependentUpon>CurrencyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\CustomerGroupService.asmx.cs">
+      <DependentUpon>CustomerGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\CustomerService.asmx.cs">
+      <DependentUpon>CustomerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\EmployeeService.asmx.cs">
+      <DependentUpon>EmployeeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\Grid\CurencyService.ashx.cs">
+      <DependentUpon>CurencyService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Service\ProductService.asmx.cs">
+      <DependentUpon>ProductService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\ReceiptService.asmx.cs">
+      <DependentUpon>ReceiptService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\SimpleHandler.ashx.cs">
+      <DependentUpon>SimpleHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Service\StockService.asmx.cs">
+      <DependentUpon>StockService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\TaxService.asmx.cs">
+      <DependentUpon>TaxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\UnitService.asmx.cs">
+      <DependentUpon>UnitService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\VendorGroupService.asmx.cs">
+      <DependentUpon>VendorGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\VendorService.asmx.cs">
+      <DependentUpon>VendorService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Service\ActiveIngredientService.asmx.cs">
+      <DependentUpon>ActiveIngredientService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Simple.ascx.cs">
+      <DependentUpon>Simple.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Simple.ascx.designer.cs">
+      <DependentUpon>Simple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\SimpleEntry.ascx.cs">
+      <DependentUpon>SimpleEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\SimpleEntry.ascx.designer.cs">
+      <DependentUpon>SimpleEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Stock.ascx.cs">
+      <DependentUpon>Stock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Stock.ascx.designer.cs">
+      <DependentUpon>Stock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\StockEntry.ascx.cs">
+      <DependentUpon>StockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\StockEntry.ascx.designer.cs">
+      <DependentUpon>StockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Tax.ascx.cs">
+      <DependentUpon>Tax.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Tax.ascx.designer.cs">
+      <DependentUpon>Tax.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\TaxEntry.ascx.cs">
+      <DependentUpon>TaxEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\TaxEntry.ascx.designer.cs">
+      <DependentUpon>TaxEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Unit.ascx.cs">
+      <DependentUpon>Unit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Unit.ascx.designer.cs">
+      <DependentUpon>Unit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\UnitEntry.ascx.cs">
+      <DependentUpon>UnitEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\UnitEntry.ascx.designer.cs">
+      <DependentUpon>UnitEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\Vendor.ascx.cs">
+      <DependentUpon>Vendor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\Vendor.ascx.designer.cs">
+      <DependentUpon>Vendor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\VendorEntry.ascx.cs">
+      <DependentUpon>VendorEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\VendorEntry.ascx.designer.cs">
+      <DependentUpon>VendorEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\VendorGroup.ascx.cs">
+      <DependentUpon>VendorGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\VendorGroup.ascx.designer.cs">
+      <DependentUpon>VendorGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Items\VendorGroupEntry.ascx.cs">
+      <DependentUpon>VendorGroupEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Items\VendorGroupEntry.ascx.designer.cs">
+      <DependentUpon>VendorGroupEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportDDK.ascx.cs">
+      <DependentUpon>ReportDDK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportDDK.ascx.designer.cs">
+      <DependentUpon>ReportDDK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportPT.ascx.cs">
+      <DependentUpon>ReportPT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportPT.ascx.designer.cs">
+      <DependentUpon>ReportPT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTBGT.ascx.cs">
+      <DependentUpon>ReportTBGT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTBGT.ascx.designer.cs">
+      <DependentUpon>ReportTBGT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTBP.ascx.cs">
+      <DependentUpon>ReportTBP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTBP.ascx.designer.cs">
+      <DependentUpon>ReportTBP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTTP.ascx.cs">
+      <DependentUpon>ReportTTP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportTTP.ascx.designer.cs">
+      <DependentUpon>ReportTTP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportViewer.ascx.cs">
+      <DependentUpon>ReportViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\ReportDoc\ReportViewer.ascx.designer.cs">
+      <DependentUpon>ReportViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Report\Class\CReportServiceUI.cs" />
+    <Compile Include="Mods\Report\FlowChart.ascx.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Report\FlowChart.ascx.designer.cs">
+      <DependentUpon>FlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Report\Report.ascx.cs">
+      <DependentUpon>Report.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Report\Report.ascx.designer.cs">
+      <DependentUpon>Report.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Report\ReportHandler.ashx.cs">
+      <DependentUpon>ReportHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Report\ReportService.ashx.cs">
+      <DependentUpon>ReportService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Report\ReportViewer.ashx.cs">
+      <DependentUpon>ReportViewer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\User\UCUserEntry.ascx.cs">
+      <DependentUpon>UCUserEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\User\UCUserEntry.ascx.designer.cs">
+      <DependentUpon>UCUserEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\User\UCUserList.ascx.cs">
+      <DependentUpon>UCUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\User\UCUserList.ascx.designer.cs">
+      <DependentUpon>UCUserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Appendix.ascx.cs">
+      <DependentUpon>Appendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Appendix.ascx.designer.cs">
+      <DependentUpon>Appendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AppendixEntry.ascx.cs">
+      <DependentUpon>AppendixEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AppendixEntry.ascx.designer.cs">
+      <DependentUpon>AppendixEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AppendixReport.ascx.cs">
+      <DependentUpon>AppendixReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AppendixReport.ascx.designer.cs">
+      <DependentUpon>AppendixReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AReceipt.ascx.cs">
+      <DependentUpon>AReceipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\AReceipt.ascx.designer.cs">
+      <DependentUpon>AReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CashReceipt.ascx.cs">
+      <DependentUpon>CashReceipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CashReceipt.ascx.designer.cs">
+      <DependentUpon>CashReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CreateRegisterAppendix.ascx.cs">
+      <DependentUpon>CreateRegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CreateRegisterAppendix.ascx.designer.cs">
+      <DependentUpon>CreateRegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CRegisterAppendix.ascx.cs">
+      <DependentUpon>CRegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\CRegisterAppendix.ascx.designer.cs">
+      <DependentUpon>CRegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\DeleteRegisterAppendix.ascx.cs">
+      <DependentUpon>DeleteRegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\DeleteRegisterAppendix.ascx.designer.cs">
+      <DependentUpon>DeleteRegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\EditRegisterAppendix.ascx.cs">
+      <DependentUpon>EditRegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\EditRegisterAppendix.ascx.designer.cs">
+      <DependentUpon>EditRegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Receipt.ascx.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Receipt.ascx.designer.cs">
+      <DependentUpon>Receipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ReceiptReport.ascx.cs">
+      <DependentUpon>ReceiptReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ReceiptReport.ascx.designer.cs">
+      <DependentUpon>ReceiptReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\RegisterAppendix.ascx.cs">
+      <DependentUpon>RegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\RegisterAppendix.ascx.designer.cs">
+      <DependentUpon>RegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\Appendix.asmx.cs">
+      <DependentUpon>Appendix.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\AReceipt.ashx.cs">
+      <DependentUpon>AReceipt.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\ARegister.ashx.cs">
+      <DependentUpon>ARegister.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\Receipt.asmx.cs">
+      <DependentUpon>Receipt.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\ReceiptService.asmx.cs">
+      <DependentUpon>ReceiptService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\CancelTBGT.asmx.cs">
+      <DependentUpon>CancelTBGT.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\Service\ResultMsg.asmx.cs">
+      <DependentUpon>ResultMsg.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\TranferReciept.ascx.cs">
+      <DependentUpon>TranferReciept.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\TranferReciept.ascx.designer.cs">
+      <DependentUpon>TranferReciept.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucConfirmDelete.ascx.cs">
+      <DependentUpon>ucConfirmDelete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucConfirmDelete.ascx.designer.cs">
+      <DependentUpon>ucConfirmDelete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucReceiptTransDetail.ascx.cs">
+      <DependentUpon>ucReceiptTransDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucReceiptTransDetail.ascx.designer.cs">
+      <DependentUpon>ucReceiptTransDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucResetReceiptNumber.ascx.cs">
+      <DependentUpon>ucResetReceiptNumber.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucResetReceiptNumber.ascx.designer.cs">
+      <DependentUpon>ucResetReceiptNumber.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucCancelTBGTForm.ascx.cs">
+      <DependentUpon>ucCancelTBGTForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucCancelTBGTForm.ascx.designer.cs">
+      <DependentUpon>ucCancelTBGTForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucResultMsg.ascx.cs">
+      <DependentUpon>ucResultMsg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\ucResultMsg.ascx.designer.cs">
+      <DependentUpon>ucResultMsg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\UpdateRegisterAppendix.ascx.cs">
+      <DependentUpon>UpdateRegisterAppendix.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\VouchersExt\UpdateRegisterAppendix.ascx.designer.cs">
+      <DependentUpon>UpdateRegisterAppendix.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.filter\Filter.ascx.cs">
+      <DependentUpon>Filter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.filter\Filter.ascx.designer.cs">
+      <DependentUpon>Filter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.filter\PFilter.aspx.cs">
+      <DependentUpon>PFilter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.filter\PFilter.aspx.designer.cs">
+      <DependentUpon>PFilter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.hst\Grid.ascx.cs">
+      <DependentUpon>Grid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.hst\Grid.ascx.designer.cs">
+      <DependentUpon>Grid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.hst\PGrid.aspx.cs">
+      <DependentUpon>PGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.hst\PGrid.aspx.designer.cs">
+      <DependentUpon>PGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.hst\service\HstService.asmx.cs">
+      <DependentUpon>HstService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.hst\_Grid.ascx.cs">
+      <DependentUpon>_Grid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.hst\_Grid.ascx.designer.cs">
+      <DependentUpon>_Grid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.report\PReportViewer.aspx.cs">
+      <DependentUpon>PReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.report\PReportViewer.aspx.designer.cs">
+      <DependentUpon>PReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.report\Report.ascx.cs">
+      <DependentUpon>Report.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.report\Report.ascx.designer.cs">
+      <DependentUpon>Report.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_core.report\ReportP.ascx.cs">
+      <DependentUpon>ReportP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_core.report\ReportP.ascx.designer.cs">
+      <DependentUpon>ReportP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\Class\CAppEnvironment.cs" />
+    <Compile Include="Mods\_Core\Class\CControlUI.cs" />
+    <Compile Include="Mods\_Core\Class\CDropdownData.cs" />
+    <Compile Include="Mods\_Core\Class\CFilterUI.cs" />
+    <Compile Include="Mods\_Core\Class\CGrid.cs" />
+    <Compile Include="Mods\_Core\Class\CHTTPContext.cs" />
+    <Compile Include="Mods\_Core\Class\CJson.cs" />
+    <Compile Include="Mods\_Core\Class\CObjectMapper.cs" />
+    <Compile Include="Mods\_Core\Class\CRefType.cs" />
+    <Compile Include="Mods\_Core\Class\CSession.cs" />
+    <Compile Include="Mods\_Core\Class\CXml.cs" />
+    <Compile Include="Mods\_Core\Class\CXmlPara.cs" />
+    <Compile Include="Mods\_Core\Filter.ascx.cs">
+      <DependentUpon>Filter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Core\Filter.ascx.designer.cs">
+      <DependentUpon>Filter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\GridBase.ascx.cs">
+      <DependentUpon>GridBase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Core\GridBase.ascx.designer.cs">
+      <DependentUpon>GridBase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\ControlHandler.ashx.cs">
+      <DependentUpon>ControlHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\ControlService.asmx.cs">
+      <DependentUpon>ControlService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\DropDownData.asmx.cs">
+      <DependentUpon>DropDownData.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\GridBaseHandler.ashx.cs">
+      <DependentUpon>GridBaseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\GridBaseService.asmx.cs">
+      <DependentUpon>GridBaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\Entry.ascx.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\Entry.ascx.designer.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\Entry.aspx.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\Entry.aspx.designer.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Front\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Front\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Front\LayoutFooter.ascx.cs">
+      <DependentUpon>LayoutFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Front\LayoutFooter.ascx.designer.cs">
+      <DependentUpon>LayoutFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Front\LayoutHeader.ascx.cs">
+      <DependentUpon>LayoutHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Front\LayoutHeader.ascx.designer.cs">
+      <DependentUpon>LayoutHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\Entry.ascx.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\Entry.ascx.designer.cs">
+      <DependentUpon>Entry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\Inventory\StockEntry.ascx.cs">
+      <DependentUpon>StockEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\Inventory\StockEntry.ascx.designer.cs">
+      <DependentUpon>StockEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\User\BalanceEntry.ascx.cs">
+      <DependentUpon>BalanceEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\User\BalanceEntry.ascx.designer.cs">
+      <DependentUpon>BalanceEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Core\Service\CoreService.asmx.cs">
+      <DependentUpon>CoreService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\FunctionEntry.ascx.cs">
+      <DependentUpon>FunctionEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\FunctionEntry.ascx.designer.cs">
+      <DependentUpon>FunctionEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\FunctionList.ascx.cs">
+      <DependentUpon>FunctionList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\FunctionList.ascx.designer.cs">
+      <DependentUpon>FunctionList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\Grid.aspx.cs">
+      <DependentUpon>Grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\Grid.aspx.designer.cs">
+      <DependentUpon>Grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\Phanquyendulieu.aspx.cs">
+      <DependentUpon>Phanquyendulieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\Phanquyendulieu.aspx.designer.cs">
+      <DependentUpon>Phanquyendulieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\PhanQuyenSuDung.aspx.cs">
+      <DependentUpon>PhanQuyenSuDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\PhanQuyenSuDung.aspx.designer.cs">
+      <DependentUpon>PhanQuyenSuDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\phanquyentruongdulieu.aspx.cs">
+      <DependentUpon>phanquyentruongdulieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mods\_Demo\phanquyentruongdulieu.aspx.designer.cs">
+      <DependentUpon>phanquyentruongdulieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mods\_Demo\TemplateControllerService.asmx.cs">
+      <DependentUpon>TemplateControllerService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mods\_Core\Class\CBaseItemUI.cs" />
+    <Compile Include="Mods\_Global\Class\CGrid.cs" />
+    <Compile Include="Mods\_Global\Service\TemplateController.asmx.cs">
+      <DependentUpon>TemplateController.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="_ServiceRef\AssetService.cs" />
+    <Compile Include="_ServiceRef\BaseService.cs" />
+    <Compile Include="_ServiceRef\CoreService.cs" />
+    <Compile Include="_ServiceRef\CurrencyService.cs" />
+    <Compile Include="_ServiceRef\CustomerService.cs" />
+    <Compile Include="_ServiceRef\GeneralLedgerService.cs" />
+    <Compile Include="_ServiceRef\GridService.cs" />
+    <Compile Include="_ServiceRef\InventoryService.cs" />
+    <Compile Include="_ServiceRef\ReportService.cs" />
+    <Compile Include="_ServiceRef\VendorService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Js\ng\" />
+    <Folder Include="Mods\AP\Css\" />
+    <Folder Include="Mods\AR\Service\" />
+    <Folder Include="Mods\_core.report\css\" />
+    <Folder Include="Mods\_Core\Images\Icon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\FwsCore.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FWS.Framework\FWS.Framework.csproj">
+      <Project>{E411581A-01C2-44B3-A120-B706A0409076}</Project>
+      <Name>FWS.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FWS.VnAccounting.BusinessLayer.BusinessObjects\FWS.VnAccounting.BusinessLayer.BusinessObjects.csproj">
+      <Project>{8EE8F701-29D0-493B-9E26-A7C2EC45FA50}</Project>
+      <Name>FWS.VnAccounting.BusinessLayer.BusinessObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Css\Themes\jquery-easy-ui\default\images\Thumbs.db" />
+    <Content Include="Master\FwsCoreMain.master" />
+    <Content Include="Master\FwsCoreSub.master" />
+    <Content Include="Mods\_Global\Service\GetDataJsonTree.ashx" />
+    <None Include="Mods\CashBanking\Js\CashFlow.json" />
+    <Content Include="Mods\Items\Service\Grid\CurencyService.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10613</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
