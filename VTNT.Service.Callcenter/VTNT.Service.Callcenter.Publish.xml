@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\DEVELOP\Build\vtnt.Service.Callcenter" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="CallcenterService.asmx" publishTime="12/29/2013 22:18:52" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="10/11/2013 22:22:48" />
+    <file relUrl="bin/FWS.Framework.dll" publishTime="01/07/2014 16:28:01" />
+    <file relUrl="Web.config" publishTime="01/04/2014 22:20:53" />
+    <file relUrl="bin/FWS.Framework.pdb" publishTime="01/07/2014 16:28:01" />
+    <file relUrl="bin/Newtonsoft.Json.Net20.dll" publishTime="03/02/2012 09:33:17" />
+    <file relUrl="Global.asax" publishTime="12/29/2013 22:14:28" />
+    <file relUrl="bin/VTNT.Service.Callcenter.pdb" publishTime="01/10/2014 21:17:57" />
+    <file relUrl="bin/VTNT.Service.Callcenter.dll" publishTime="01/10/2014 21:17:57" />
+  </publishProfile>
+</publishData>
